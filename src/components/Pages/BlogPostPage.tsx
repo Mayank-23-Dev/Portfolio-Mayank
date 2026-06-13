@@ -93,6 +93,9 @@ const h = (a = 0) => ({
           () => s.disconnect()
         );
       }, [x]),
+      p.useEffect(() => {
+        t && (document.title = `${t.title} | Mayank Dev`);
+      }, [t]),
       t
         ? e.jsxs("div", {
             className: "min-h-screen bg-[#faf9f6] text-zinc-900",
@@ -163,7 +166,7 @@ const h = (a = 0) => ({
                       ],
                     }),
                   e.jsx("div", {
-                    className: "relative mx-auto w-full max-w-[548px]",
+                    className: "relative mx-auto w-full max-w-[548px] blog-post-article-container",
                     children: e.jsxs("article", {
                       children: [
                         e.jsx(
@@ -210,6 +213,20 @@ const h = (a = 0) => ({
                             ],
                           }),
                         ),
+                        t.coverImage &&
+                          e.jsx(
+                            d.div,
+                            m(l({}, h(0.12)), {
+                              className: "mt-10 overflow-hidden lg:-mx-16 xl:-mx-24",
+                              children: e.jsx("img", {
+                                src: t.coverImage,
+                                alt: t.title,
+                                className:
+                                  "w-full object-cover aspect-[16/9] border border-zinc-200/70",
+                                loading: "eager",
+                              }),
+                            }),
+                          ),
                         e.jsx(
                           d.div,
                           m(l({}, h(0.16)), {

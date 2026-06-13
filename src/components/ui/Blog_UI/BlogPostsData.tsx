@@ -9,6 +9,7 @@ const t = [
       readingTime: "6 min read",
       excerpt:
         "Discover how to access Anthropic's powerful Claude Fable 5 model completely free using GitLab's 30-day Ultimate trial — no credit card required.",
+      coverImage: "https://cdn.analyticsvidhya.com/wp-content/uploads/2026/06/I-Tested-Claude-Fable-5_-Can-Anthropics-Newest-AI-Deliver-on-the-Hype_.webp",
       tags: ["AI Tools", "Free AI", "Claude", "GitLab", "Developer Tips"],
       sections: [
         {

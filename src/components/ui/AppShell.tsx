@@ -4829,7 +4829,7 @@ function Yo() {
 }
 function qo() {
   try {
-    const e = "production";
+    return (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") ? "development" : "production";
   } catch (e) {}
   return "production";
 }
@@ -4935,7 +4935,7 @@ function hc() {
 }
 function gc() {
   try {
-    const e = "production";
+    return (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") ? "development" : "production";
   } catch (e) {}
   return "production";
 }

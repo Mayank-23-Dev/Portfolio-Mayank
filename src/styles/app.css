@@ -7623,3 +7623,10 @@ body.custom-cursor-active select {
 .\[\&_svg\]\:shrink-0 svg {
   flex-shrink: 0;
 }
+
+/* -- Blog post article column width -- */
+@media (min-width: 1024px) {
+  .blog-post-article-container {
+    max-width: 720px;
+  }
+}
