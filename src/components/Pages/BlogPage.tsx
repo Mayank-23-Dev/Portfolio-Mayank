@@ -5,9 +5,9 @@ var l = Object.getOwnPropertySymbols;
 var p = Object.prototype.hasOwnProperty,
   h = Object.prototype.propertyIsEnumerable;
 var o = (t, e, i) =>
-    e in t
-      ? c(t, e, { enumerable: !0, configurable: !0, writable: !0, value: i })
-      : (t[e] = i),
+  e in t
+    ? c(t, e, { enumerable: !0, configurable: !0, writable: !0, value: i })
+    : (t[e] = i),
   s = (t, e) => {
     for (var i in e || (e = {})) p.call(e, i) && o(t, i, e[i]);
     if (l) for (var i of l(e)) h.call(e, i) && o(t, i, e[i]);
@@ -25,10 +25,10 @@ import "../ui/_iconsVendor";
 import "../ui/Landing_UI/ConnectDropdown";
 import "../ui/_sharedIndex";
 const m = (t = 0) => ({
-    initial: { opacity: 0, y: 8 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.45, delay: t, ease: [0.25, 0.1, 0.25, 1] },
-  }),
+  initial: { opacity: 0, y: 8 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.45, delay: t, ease: [0.25, 0.1, 0.25, 1] },
+}),
   b = (t) => {
     const [, e, i] = t.split("-");
     return `${i}/${e}`;
