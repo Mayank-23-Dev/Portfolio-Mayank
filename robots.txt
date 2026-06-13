@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Prevent crawling of source and build internals
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /*.map$
+
+# Route-level noindex behavior is controlled via HTML meta tags
+Sitemap: https://www.nischalskanda.tech/sitemap.xml
