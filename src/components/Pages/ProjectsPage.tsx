@@ -22,7 +22,7 @@ const V = () => {
       {
         name: "Antigravity",
         description: "Primary AI-native IDE for rapid development",
-        icon: "https://antigravity.google/static/icons/antigravity-cli.svg",
+        icon: "/images/play/antigravity-color.svg",
         color: "bg-blue-100",
         tag: "IDE",
       },
@@ -78,7 +78,7 @@ const V = () => {
       {
         name: "Gemini CLI",
         description: "AI-powered terminal assistant for workflow automation",
-        icon: "https://geminicli.com/img/logo.svg",
+        icon: "/images/play/gemini-color.svg",
         color: "bg-orange-100",
         tag: "AI",
       },

@@ -762,11 +762,8 @@ ce.displayName = "WashiTape";
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 const le = n.lazy(() => import("../ui/Playground_UI/ComponentsShowcase"));
 const J = [
-  { src: "/images/feed/memory-01.webp" },
   { src: "/images/feed/memory-02.webp" },
   { src: "/images/feed/memory-03.webp" },
-  { src: "/images/feed/memory-04.webp" },
-  { src: "/images/feed/memory-05.webp" },
   { src: "/images/feed/memory-06.webp" },
   { src: "/images/feed/memory-07.webp" },
   { src: "/images/feed/memory-08.webp" },
@@ -806,8 +803,8 @@ const WORKFLOW_TOOLS = [
     author: "Collaboration",
   },
   {
-    src: "https://cdn.simpleicons.org/google/4285F4",
-    largeSrc: "https://cdn.simpleicons.org/google/4285F4",
+    src: "/images/play/antigravity-color.svg",
+    largeSrc: "/images/play/antigravity-color.svg",
     title: "Antigravity",
     author: "Primary IDE",
   },
@@ -824,8 +821,8 @@ const WORKFLOW_TOOLS = [
     author: "Open Source",
   },
   {
-    src: "https://cdn.simpleicons.org/googlegemini/8E75C2",
-    largeSrc: "https://cdn.simpleicons.org/googlegemini/8E75C2",
+    src: "/images/play/gemini-color.svg",
+    largeSrc: "/images/play/gemini-color.svg",
     title: "Gemini CLI",
     author: "AI Assistant",
   },
@@ -952,9 +949,9 @@ const Fe = () =>
                 className: "rounded-[1.75rem] border border-stone-200 bg-white/90 p-4 shadow-xl backdrop-blur-sm",
                 children: [
                   e.jsx("div", {
-                    className: "grid grid-cols-3 gap-3 justify-items-center",
+                    className: "grid grid-cols-2 gap-3 justify-items-center",
                     children: J.map((r, s) =>
-                      e.jsx(U, { src: r.src, rotation: [-2, 3, -1, 4, -3, 2, -4, 1, -2][s % 9], loading: "eager", developDelay: s * 250 }, r.src),
+                      e.jsx(U, { src: r.src, rotation: [-2, 3, -1, 4, -3, 2][s % 6], loading: "eager", developDelay: s * 250 }, r.src),
                     ),
                   }),
                   e.jsx("div", {
@@ -1058,16 +1055,16 @@ const Ae = () =>
       e.jsx(h, {
         x: 2550, y: 120, zIndex: 4,
         children: e.jsxs("div", {
-          className: "w-[660px] rounded-2xl border border-stone-200 bg-white/90 p-8 shadow-xl backdrop-blur-sm",
+          className: "w-[660px] h-[850px] rounded-2xl border border-stone-200 bg-white/90 p-8 shadow-xl backdrop-blur-sm",
           children: [
             e.jsx("div", {
-              className: "grid grid-cols-3 gap-8 justify-items-center",
+              className: "grid grid-cols-2 gap-8 justify-items-center",
               children: J.map((r, s) =>
-                e.jsx(U, { src: r.src, rotation: [-2, 3, -1, 4, -3, 2, -4, 1, -2][s], loading: "eager", developDelay: s * 300 }, r.src),
+                e.jsx(U, { src: r.src, rotation: [-2, 3, -1, 4, -3, 2][s], loading: "eager", developDelay: s * 300 }, r.src),
               ),
             }),
             e.jsx("div", {
-              className: "mt-8 flex justify-center",
+              className: "mt-auto flex justify-center",
               children: e.jsx(M, { content: "Moments captured with intention", color: "pink", pinType: "tape", className: "h-24 w-48 p-3 text-xs" }),
             }),
           ],
@@ -1078,16 +1075,28 @@ const Ae = () =>
       e.jsx(h, {
         x: 3450, y: 120, zIndex: 4,
         children: e.jsxs("div", {
-          className: "w-[660px] rounded-2xl border border-stone-200 bg-white/90 p-8 pb-12 shadow-xl backdrop-blur-sm",
+          className: "w-[660px] h-[850px] rounded-2xl border border-stone-200 bg-white/90 p-8 pb-12 shadow-xl backdrop-blur-sm",
           children: [
-            e.jsx("div", {
-              className: "grid grid-cols-3 gap-x-8 gap-y-[180px] justify-items-center mb-24",
-              children: WORKFLOW_TOOLS.map((r) =>
-                e.jsx("div", { className: "relative min-h-[210px] transform transition-transform hover:scale-105", children: e.jsx(ie, z(I({}, r), { loading: "eager" })) }, r.title),
-              ),
+            e.jsxs("div", {
+              className: "flex flex-col mb-16",
+              style: { gap: "80px" },
+              children: [
+                e.jsx("div", {
+                  className: "flex justify-center gap-12",
+                  children: WORKFLOW_TOOLS.slice(0, 3).map((r) =>
+                    e.jsx("div", { className: "relative transform transition-transform hover:scale-105", children: e.jsx(ie, z(I({}, r), { loading: "eager" })) }, r.title),
+                  ),
+                }),
+                e.jsx("div", {
+                  className: "flex justify-center gap-12",
+                  children: WORKFLOW_TOOLS.slice(3, 6).map((r) =>
+                    e.jsx("div", { className: "relative transform transition-transform hover:scale-105", children: e.jsx(ie, z(I({}, r), { loading: "eager" })) }, r.title),
+                  ),
+                }),
+              ],
             }),
             e.jsx("div", {
-              className: "flex justify-center",
+              className: "mt-auto flex justify-center",
               children: e.jsx(M, { content: "Tools that enhance my productivity and collaboration", color: "orange", pinType: "tape", className: "h-28 w-64 p-3 text-xs" }),
             }),
           ],
