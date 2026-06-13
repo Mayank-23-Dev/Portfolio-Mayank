@@ -97,41 +97,41 @@ const ie = () => {
     o = [
       {
         icon: e.jsx(X, { className: "h-6 w-6" }),
-        title: "Full-time Opportunities",
+        title: "Full-time & Internship",
         description:
-          "I'm actively seeking product design roles where I can create meaningful impact",
-        tags: ["Product Design", "UX Research", "Design Systems"],
+          "I'm actively seeking roles in Full Stack Development or Content Direction (Scripting & Strategy)",
+        tags: ["Full Stack", "Android", "Content Direction", "Scripting"],
         color: "bg-daisy-green",
       },
       {
         icon: e.jsx(k, { className: "h-6 w-6" }),
-        title: "Freelance Projects",
+        title: "Collaborations",
         description:
-          "Short-term projects focusing on user research, UX audits, or complete redesigns",
-        tags: ["UX Audit", "Redesign", "Research"],
+          "I'm currently in my 2nd Year, figuring things out and always open for interesting collaborations or technical chats",
+        tags: ["Open Source", "Content Projects", "Learning Together"],
         color: "bg-daisy-yellow",
       },
     ],
     u = [
       {
-        question: "What's your design process like?",
+        question: "What's your current focus?",
         answer:
-          "I start with understanding users through research, define problems clearly, design solutions iteratively, and test everything with real users. No shortcuts, just solid methodology.",
+          "As a 2nd year BTech CSE student, I am balancing my academic foundations with deep dives into full stack development and content creation. I focus on building real-world products and understanding the 'why' behind the code.",
       },
       {
-        question: "How long do projects typically take?",
+        question: "What do you mean by Content Direction?",
         answer:
-          "It depends on scope. UX audits take 1-2 weeks, full redesigns can take 2-3 months. I believe in thorough research and testing, which takes time but delivers better results.",
+          "It's about more than just making a video. I handle the scripting, hook strategy, storytelling, and overall creative direction to ensure tech content resonates and provides value.",
       },
       {
-        question: "Do you work with startups or enterprises?",
+        question: "Are you open to internships?",
         answer:
-          "Both! I've worked with enterprise platforms and startup products. Each has unique challenges, and I adapt my approach accordingly.",
+          "Yes! I am actively looking for opportunities where I can contribute to a team, learn from seniors, and apply my skills in development or content strategy.",
       },
       {
-        question: "What makes your approach different?",
+        question: "How do you manage development and content?",
         answer:
-          "My CS background helps me design solutions that are both user-friendly and technically feasible. I focus on data-driven decisions and measurable improvements.",
+          "I see them as two sides of the same coin. Building a product requires technical skill; communicating it requires content direction. I use my builds as the foundation for my tutorials and guides.",
       },
     ],
     S = [
@@ -293,13 +293,13 @@ const ie = () => {
                 }),
                 e.jsx("p", {
                   className:
-                    "text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed",
+                    "text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-stone-600",
                   children:
-                    "I'm always excited to work on projects that make a real difference. Whether it's a complete redesign or a new product from scratch, let's talk about it.",
+                    "I am learning and figuring out things nowadays. As a 2nd year BTech CSE student, I'm constantly exploring new tech and figuring out how things work. I'm always open for collaboration and interesting projects.",
                 }),
                 e.jsxs("div", {
                   className:
-                    "bg-white rounded-xl p-6 shadow-lg max-w-2xl mx-auto mb-12",
+                    "bg-white rounded-xl p-6 shadow-lg max-w-2xl mx-auto mb-12 border border-black/5",
                   children: [
                     e.jsxs("div", {
                       className: "flex items-center justify-center gap-3 mb-4",
@@ -310,14 +310,14 @@ const ie = () => {
                         }),
                         e.jsx("span", {
                           className: "font-semibold text-lg",
-                          children: "Currently Available",
+                          children: "Open for Collaboration",
                         }),
                       ],
                     }),
                     e.jsx("p", {
                       className: "text-gray-600",
                       children:
-                        "Open to full-time product design roles and select freelance projects. Response time: Usually within 24 hours.",
+                        "Currently looking for full-time opportunities as a Full Stack Developer or Content Manager. I'm still in my 2nd Year, figuring things out and ready to contribute to exciting builds.",
                     }),
                   ],
                 }),

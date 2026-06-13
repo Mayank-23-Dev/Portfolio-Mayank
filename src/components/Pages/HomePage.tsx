@@ -20,6 +20,7 @@ const R = ({
   img: t,
   video: s,
   badge: B,
+  altText: alt,
 }) => {
   const d = r.useRef(null),
     g = r.useRef(null),
@@ -95,7 +96,7 @@ const R = ({
           children: [
             e.jsx("img", {
               src: t,
-              alt: c,
+              alt: alt || c,
               loading: "lazy",
               decoding: "async",
               className: "w-full h-full object-cover",
@@ -443,71 +444,38 @@ const $ = e.jsxs("svg", {
     ],
       p = [
         {
-          content: `React &
-Vite`,
+          content: `Full Stack
+Development`,
           color: "mint",
           rotate: "left",
           pinType: "tape",
         },
         {
-          content: `Node.js &
-Express`,
+          content: `Android
+Development`,
           color: "lavender",
           rotate: "right",
           pinType: "tape",
         },
         {
-          content: `JavaScript
-& DSA`,
+          content: `Content
+Creation`,
           color: "coral",
           rotate: "none",
           pinType: "tape",
         },
         {
-          content: `Supabase &
-Firebase`,
+          content: `Video
+Editing`,
           color: "sky",
           rotate: "left",
           pinType: "tape",
         },
         {
-          content: `Git &
-GitHub`,
+          content: `Content
+Direction`,
           color: "peach",
           rotate: "right",
-          pinType: "tape",
-        },
-        {
-          content: `Figma &
-UI Design`,
-          color: "lime",
-          rotate: "none",
-          pinType: "tape",
-        },
-        {
-          content: `Content Creation`,
-          color: "rose",
-          rotate: "right",
-          pinType: "tape",
-        },
-        {
-          content: `Problem
-Solving & DSA`,
-          color: "cyan",
-          rotate: "left",
-          pinType: "tape",
-        },
-        {
-          content: `Android
-Studio`,
-          color: "sky",
-          rotate: "right",
-          pinType: "tape",
-        },
-        {
-          content: `Cloudflare`,
-          color: "peach",
-          rotate: "left",
           pinType: "tape",
         },
       ],
@@ -1286,6 +1254,130 @@ Studio`,
                         ],
                       }),
                     ],
+                  }),
+                  e.jsxs("section", {
+                    id: "about-seo",
+                    "aria-label": "Mayank Dev - Full Stack Developer Portfolio India",
+                    className: "sr-only",
+                    children: [
+                      e.jsxs("div", {
+                        className: "max-w-4xl mx-auto px-4 text-stone-800 space-y-8",
+                        children: [
+                          e.jsxs("div", {
+                            className: "space-y-4",
+                            children: [
+                              e.jsx("h2", {
+                                className: "text-2xl md:text-3xl font-bold text-stone-900",
+                                children: "Building the Future: Mayank Dev - Full Stack Developer Portfolio India"
+                              }),
+                              e.jsx("p", {
+                                className: "text-base md:text-lg leading-relaxed text-stone-600",
+                                children: "In the rapidly evolving landscape of technology, shipping products that solve real-world problems is a skill that separates the dreamers from the builders. As a second-year BTech CSE student at PSIT Kanpur, I have dedicated my journey to mastering the art of full-stack development. My portfolio at mayank-dev.in is more than just a collection of projects; it is a testament to my obsession with building meaningful digital experiences that matter."
+                              }),
+                            ]
+                          }),
+                          e.jsxs("div", {
+                            className: "space-y-4",
+                            children: [
+                              e.jsx("h3", {
+                                className: "text-xl font-bold text-stone-900",
+                                children: "BTech CSE Developer from Kanpur: Combining Academics with Innovation"
+                              }),
+                              e.jsx("p", {
+                                className: "text-sm md:text-base leading-relaxed text-stone-600",
+                                children: "Kanpur is known for its industrial heritage, but for me, it is the base where I am cultivating a future in software engineering. Being a BTech CSE student projects India landscape, I understand the importance of a strong foundational knowledge. While the classroom provides the theory, my late-night coding sessions provide the practical expertise. I specialize in the modern web stack, including React, Next.js, Node.js, TypeScript, and Tailwind CSS. This combination allows me to build high-performance, scalable systems that are both visually stunning and functionally robust."
+                              }),
+                            ]
+                          }),
+                          e.jsxs("div", {
+                            className: "space-y-4",
+                            children: [
+                              e.jsx("h3", {
+                                className: "text-xl font-bold text-stone-900",
+                                children: "Featured Projects: From Hackathons to Production"
+                              }),
+                              e.jsx("p", {
+                                className: "text-sm md:text-base leading-relaxed text-stone-600",
+                                children: "One of my most significant milestones was winning 2nd place at the PSIT Protech Hackathon with FinEase. FinEase is an AI-powered personal finance dashboard designed to help users track their spending, manage budgets, and generate intelligent financial insights. It solves the complexity of personal finance management through a clean, intuitive UI and powerful backend logic."
+                              }),
+                              e.jsx("p", {
+                                className: "text-sm md:text-base leading-relaxed text-stone-600",
+                                children: "Another project I am incredibly proud of is Hactiq, a sophisticated habit tracker. Hactiq goes beyond simple streaks; it provides deep analysis of user behavior, helping individuals build lasting habits through data-driven feedback. For those looking for utility tools, I built VaultDL, a high-performance Windows desktop application. VaultDL serves as a media downloader for hundreds of platforms, featuring multiple modes, quality control, and queue management without the need for a terminal interface."
+                              }),
+                              e.jsx("p", {
+                                className: "text-sm md:text-base leading-relaxed text-stone-600",
+                                children: "Currently, I am working on Shiq, a personal content production studio designed specifically for solo creators. Shiq streamlines the entire workflow—from idea capture and scripting to scheduling and publishing—all in one place. These projects represent my commitment to being a top-tier full stack developer Kanpur has to offer."
+                              }),
+                            ]
+                          }),
+                          e.jsxs("div", {
+                            className: "space-y-4",
+                            children: [
+                              e.jsx("h3", {
+                                className: "text-xl font-bold text-stone-900",
+                                children: "DSA Practice: The Backbone of Scalable Systems"
+                              }),
+                              e.jsx("p", {
+                                className: "text-sm md:text-base leading-relaxed text-stone-600",
+                                children: "Development without strong problem-solving skills is incomplete. As a DSA practitioner, I regularly sharpen my skills on platforms like LeetCode and GitHub. Understanding Data Structures and Algorithms is crucial for building efficient applications, especially when dealing with AI-driven dashboards or complex content studios. I believe that being a DSA full stack developer allows me to write cleaner, more optimized code that can handle high loads and complex data processing tasks."
+                              }),
+                            ]
+                          }),
+                          e.jsxs("div", {
+                            className: "space-y-4",
+                            children: [
+                              e.jsx("h3", {
+                                className: "text-xl font-bold text-stone-900",
+                                children: "Tech Content Creator: Sharing the Journey"
+                              }),
+                              e.jsx("p", {
+                                className: "text-sm md:text-base leading-relaxed text-stone-600",
+                                children: "Beyond the code, I am a tech content creator India community member. I share my learning journey, coding tutorials, and AI tool guides on Instagram and YouTube. My goal is to inspire other student developers and provide value to the young developer portfolio 2026 generation. By documenting my builds and sharing tips, I contribute to the developer blog India ecosystem, helping others navigate the challenges of modern web development."
+                              }),
+                            ]
+                          }),
+                          e.jsxs("div", {
+                            className: "space-y-4",
+                            children: [
+                              e.jsx("h3", {
+                                className: "text-xl font-bold text-stone-900",
+                                children: "My Tech Stack: React, Next.js, and Beyond"
+                              }),
+                              e.jsx("p", {
+                                className: "text-sm md:text-base leading-relaxed text-stone-600",
+                                children: "Choosing the right tools is the first step in building a successful product. I have chosen React and Next.js as my primary frontend frameworks because of their versatility and performance. Paired with TypeScript, I ensure that my codebase remains maintainable and type-safe. On the backend, Node.js and Express provide the speed and flexibility needed to handle API requests and database interactions seamlessly. For styling, Tailwind CSS is my go-to choice, enabling me to create modern, responsive designs with ease. This stack is what powers the projects you see in my web developer projects India collection."
+                              }),
+                            ]
+                          }),
+                          e.jsxs("div", {
+                            className: "space-y-4",
+                            children: [
+                              e.jsx("h3", {
+                                className: "text-xl font-bold text-stone-900",
+                                children: "Insights from the Developer Blog"
+                              }),
+                              e.jsx("p", {
+                                className: "text-sm md:text-base leading-relaxed text-stone-600",
+                                children: "My blog is a dedicated space where I dive deep into specific technical challenges and share tool guides. From explaining how I integrated AI into FinEase to giving tutorials on building performant Windows apps with electron-like frameworks, the blog is an extension of my curiosity-driven builds. It serves as a comprehensive guide for anyone looking to follow a similar path in the student developer portfolio space."
+                              }),
+                            ]
+                          }),
+                          e.jsxs("div", {
+                            className: "space-y-4",
+                            children: [
+                              e.jsx("h3", {
+                                className: "text-xl font-bold text-stone-900",
+                                children: "Looking Ahead: The Young Developer Portfolio 2026 Vision"
+                              }),
+                              e.jsx("p", {
+                                className: "text-sm md:text-base leading-relaxed text-stone-600",
+                                children: "As we move towards 2026, the role of a developer is shifting from just writing code to becoming an architect of intelligent systems. My vision for this portfolio is to serve as a beacon for other young developers in India who are navigating this transition. By focusing on high-impact projects like Shiq and FinEase, I aim to demonstrate how technology can be harnessed to empower individuals and small businesses alike. My commitment to continuous learning and community engagement remains at the core of everything I build."
+                              }),
+                            ]
+                          }),
+                        ]
+                      }),
+                    ]
                   }),
                 ],
               }),

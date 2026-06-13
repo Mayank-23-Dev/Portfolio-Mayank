@@ -1659,10 +1659,10 @@ const H = () => {
                                 "or email",
                                 " ",
                                 e.jsx("a", {
-                                  href: "mailto:nischalskanda@gmail.com",
+                                  href: "mailto:connect@mayank-dev.in",
                                   className:
                                     "text-blue-400 hover:text-blue-300 underline",
-                                  children: "nischalskanda@gmail.com",
+                                  children: "connect@mayank-dev.in",
                                 }),
                               ],
                             }),
@@ -1681,7 +1681,7 @@ const H = () => {
                               children: "Message on LinkedIn",
                             }),
                             e.jsx("a", {
-                              href: "mailto:nischalskanda@gmail.com?subject=AI Forgery Detective - Access Request",
+                              href: "mailto:connect@mayank-dev.in?subject=AI Forgery Detective - Access Request",
                               "data-sound": "nav",
                               className:
                                 "flex-1 bg-gray-800 hover:bg-gray-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-300 text-center",

@@ -82,6 +82,12 @@ const y = "connect@mayank-dev.in",
       external: !0,
     },
     {
+      label: "Approach Now",
+      href: "/contact",
+      Icon: t.jsx(L, { className: "w-4 h-4" }),
+      external: !1,
+    },
+    {
       label: "Resume",
       href: "/resume",
       Icon: t.jsx(L, { className: "w-4 h-4" }),
@@ -188,7 +194,7 @@ const y = "connect@mayank-dev.in",
               fontFamily: "'Sora', sans-serif",
             },
             children: [
-              t.jsx("span", { children: "CV & Socials" }),
+              t.jsx("span", { children: "Approach Now" }),
               t.jsx(x.svg, {
                 animate: { rotate: a ? 180 : 0 },
                 transition: {

@@ -125,10 +125,8 @@ const F = () =>
                     },
                     children: "Play",
                   }),
-                  e.jsx("a", {
-                    href: "https://blog.nischalskanda.tech/",
-                    target: "_blank",
-                    rel: "noopener noreferrer",
+                  e.jsx(d, {
+                    to: "/blog",
                     "data-sound": "nav",
                     className: `nav-link-hover nav-link-hover-dark text-white font-medium px-3 py-1.5 relative ${t ? "text-sm" : "text-sm lg:text-base"}`,
                     style: {
@@ -202,10 +200,8 @@ const F = () =>
                           style: { fontFamily: "'Sora', sans-serif" },
                           children: "Play",
                         }),
-                        e.jsx("a", {
-                          href: "https://blog.nischalskanda.tech/",
-                          target: "_blank",
-                          rel: "noopener noreferrer",
+                        e.jsx(d, {
+                          to: "/blog",
                           "data-sound": "nav",
                           className:
                             "text-white font-semibold py-3 px-4 transition-all duration-150 hover:bg-white hover:text-black focus:outline-none active:scale-[0.98] text-lg cursor-pointer",
@@ -386,6 +382,7 @@ const F = () =>
   D = () => {
     const [o, a] = h.useState(!1),
       t = [
+        { label: "Contact", href: "/contact" },
         { label: "Instagram", href: "https://www.instagram.com/mayankdev.mov/#" },
         { label: "X (Twitter)", href: "https://x.com/Mayank_Dev23" },
         { label: "GitHub", href: "https://github.com/Mayank-23-Dev" },

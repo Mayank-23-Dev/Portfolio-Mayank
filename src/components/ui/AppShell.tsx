@@ -80,7 +80,7 @@ const tr = 8e3,
   Sn = 1200,
   Ns = 0.759,
   nr = "Mayank",
-  to = "nischals-portfolio:initial-loader-seen",
+  to = "mayank-dev-portfolio:initial-loader-seen",
   rr = document.documentElement,
   ht = document.getElementById("initial-loader-stage");
 var Yr, qr;
@@ -5610,12 +5610,12 @@ const xc = () => {
       path: P.contact,
       title: "Contact | Mayank Dev",
       description:
-        "Get in touch with Mayank Dev for product design collaborations, consulting, or full-time opportunities.",
+        "Want to build something? Let's talk. Contact Mayank Dev for full stack development projects and collaborations in India.",
       keywords: oe(se, [
-        "Contact Product Designer",
-        "Hire Product Designer",
-        "Design Collaboration",
-        "Freelance Product Designer",
+        "Contact Mayank Dev",
+        "Hire Full Stack Developer India",
+        "Web Developer Kanpur",
+        "Developer Collaboration",
       ]),
       canonicalPath: P.contact,
       ogImage: Xe,
