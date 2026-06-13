@@ -19,10 +19,11 @@ var m = (l, n, o) =>
   });
 import { j as e } from "../_uiVendor.js";
 import { a as h, L as f } from "../_reactVendor.js";
-const x = "dmayank2323@gmail.com",
+const x = "connect@mayank-dev.in",
   u = () => {
     const [l, n] = h.useState(!1),
       o = [
+        { label: "Instagram", href: "https://www.instagram.com/mayankdev.mov/#" },
         { label: "X (Twitter)", href: "https://x.com/Mayank_Dev23" },
         { label: "GitHub", href: "https://github.com/Mayank-23-Dev" },
         { label: "LinkedIn", href: "https://www.linkedin.com/in/mayankdev23" },

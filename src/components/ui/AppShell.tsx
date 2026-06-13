@@ -30,6 +30,7 @@ import {
 } from "./_reactVendor";
 import { X as Cs } from "./_iconsVendor";
 import { A as Ts, m as Ps } from "./_animationVendor";
+import { SEOManager } from "./SEOManager";
 var ps = Object.defineProperty,
   ms = Object.defineProperties;
 var hs = Object.getOwnPropertyDescriptors;
@@ -6683,6 +6684,7 @@ const kd = () => {
       children: m.jsx(Tc, {
         children: m.jsxs(Ad, {
           children: [
+            m.jsx(SEOManager, {}),
             m.jsx(Oi, {}),
             m.jsx(pa, {}),
             m.jsx(Cc, {}),

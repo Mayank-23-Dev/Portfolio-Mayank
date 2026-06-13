@@ -23,12 +23,38 @@ import { b as _ } from "../_sharedIndex";
 import { p as h } from "../AppShell";
 import { m as x, A as j } from "../_animationVendor";
 import { d as N, G as C, L as E, F as L } from "../_iconsVendor";
-const y = "dmayank2323@gmail.com",
+const y = "connect@mayank-dev.in",
   w = [
     {
       label: "Email",
       Icon: t.jsx(N, { className: "w-4 h-4" }),
       action: "copy-email",
+    },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/mayankdev.mov/#",
+      Icon: t.jsxs("svg", {
+        className: "w-4 h-4",
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: 2,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        children: [
+          t.jsx("rect", {
+            x: "2",
+            y: "2",
+            width: "20",
+            height: "20",
+            rx: "5",
+            ry: "5",
+          }),
+          t.jsx("path", { d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" }),
+          t.jsx("line", { x1: "17.5", y1: "6.5", x2: "17.51", y2: "6.5" }),
+        ],
+      }),
+      external: !0,
     },
     {
       label: "X (Twitter)",

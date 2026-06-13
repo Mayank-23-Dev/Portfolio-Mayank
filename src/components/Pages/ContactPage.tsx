@@ -73,8 +73,8 @@ const ie = () => {
         icon: e.jsx(U, { className: "h-6 w-6" }),
         title: "Email",
         description: "For detailed project discussions",
-        value: "dmayank2323@gmail.com",
-        action: "mailto:dmayank2323@gmail.com",
+        value: "connect@mayank-dev.in",
+        action: "mailto:connect@mayank-dev.in",
         color: "bg-daisy-yellow",
       },
       {

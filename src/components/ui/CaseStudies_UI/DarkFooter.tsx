@@ -34,7 +34,7 @@ const F = () =>
         children: "Mayank Dev",
       }),
     }),
-  b = "dmayank2323@gmail.com",
+  b = "connect@mayank-dev.in",
   $ = () => {
     const [o, a] = h.useState(!1),
       [t, c] = h.useState(!1),
@@ -382,10 +382,11 @@ const F = () =>
       })
     );
   },
-  g = "dmayank2323@gmail.com",
+  g = "connect@mayank-dev.in",
   D = () => {
     const [o, a] = h.useState(!1),
       t = [
+        { label: "Instagram", href: "https://www.instagram.com/mayankdev.mov/#" },
         { label: "X (Twitter)", href: "https://x.com/Mayank_Dev23" },
         { label: "GitHub", href: "https://github.com/Mayank-23-Dev" },
         { label: "LinkedIn", href: "https://www.linkedin.com/in/mayankdev23" },

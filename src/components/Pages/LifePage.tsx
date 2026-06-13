@@ -171,7 +171,7 @@ const w = [
                         "rotate-[2deg] bg-white p-2.5 shadow-[0_2px_20px_rgba(0,0,0,0.08)] transition-transform duration-500 hover:rotate-0",
                       children: [
                         e.jsx("img", {
-                          src: "/images/feed/IMG_9007_optimized.webp",
+                          src: "/images/life/Mine%20(2).webp",
                           alt: "Mayank Dev",
                           className: "h-56 w-44 object-cover md:h-64 md:w-52",
                           loading: "eager",
@@ -179,7 +179,7 @@ const w = [
                         e.jsx("p", {
                           className:
                             "mt-1.5 text-center font-handwritten text-[11px] text-zinc-400",
-                          children: "Graduation day, 2025",
+                          children: "Second Year, 2026",
                         }),
                       ],
                     }),
@@ -199,14 +199,14 @@ const w = [
                       a.p,
                       s(t({}, i()), {
                         children:
-                          "I'm Mayank Dev. I studied Computer Science at Jyothy Institute of Technology in Bangalore. Went in thinking I'd write code for a living. Came out realizing I care more about how software feels than how it runs.",
+                          "I'm Mayank Dev. I'm currently a 2nd year BTech CSE student at PSIT Kanpur. I'm a full stack developer, DSA practitioner, and a tech content creator who loves building products that solve real problems.",
                       }),
                     ),
                     e.jsx(
                       a.p,
                       s(t({}, i()), {
                         children:
-                          "Somewhere between algorithms and data structures, I started noticing the gaps, the places where something technically correct still managed to confuse everyone who touched it. I'd pull friends aside, watch them use my class projects, and quietly rewrite the parts that tripped them up. That habit never stopped.",
+                          "My journey into development started with a simple curiosity about how things work on the internet. That curiosity evolved into an obsession with crafting seamless digital experiences. Whether it's optimizing an algorithm or fine-tuning a UI interaction, I care about the details that make software feel 'right'.",
                       }),
                     ),
                   ],
@@ -234,14 +234,14 @@ const w = [
                           a.p,
                           s(t({}, i()), {
                             children:
-                              "My first internship at Varcons Technologies humbled me fast. I built a flow I thought was perfect. Users broke it in minutes. That was the moment I stopped trusting my own assumptions and started trusting the people using the thing.",
+                              "One of my defining moments was winning 2nd place at the PSIT Protech Hackathon with FinEase. Building an AI-powered finance dashboard from scratch taught me how to manage complex state, integrate intelligent features, and most importantly, how to ship a functional product under pressure.",
                           }),
                         ),
                         e.jsx(
                           a.p,
                           s(t({}, i()), {
                             children:
-                              "At WinWire, I got to work on enterprise stuff, booking workflows and internal tools. I interviewed 18+ users, sat with engineers, and learned that clarity isn't decoration. It's the difference between a tool people tolerate and one they actually reach for.",
+                              "I've also built projects like Hactiq, a habit tracker focused on consistency, and VaultDL, a high-performance media downloader for Windows. Every project I take on is a new lesson in balancing technical robustness with user-centric design.",
                           }),
                         ),
                       ],
@@ -271,21 +271,21 @@ const w = [
                           a.p,
                           s(t({}, i()), {
                             children:
-                              "Park EZ started because I was tired of circling for parking. I turned that frustration into interviews, prototypes, pilots, the whole thing. It reached the Smart India Hackathon finals. That project taught me what happens when you take a personal annoyance seriously enough to research it properly.",
+                              "Beyond coding, I'm active on Instagram and YouTube as a tech content creator. I love sharing what I learn, from coding tutorials to AI tool reviews, helping other student developers find their path in the tech world. It's my way of contributing back to the community that has given me so much.",
                           }),
                         ),
                         e.jsx(
                           a.p,
                           s(t({}, i()), {
                             children:
-                              "These days I'm at Talview, designing core systems. I've picked up certifications from Google, Microsoft, and Meta along the way, not because credentials matter that much, but because I genuinely wanted to learn the frameworks behind the intuition I'd been building.",
+                              "Currently, I'm working on Shiq, a content studio for solo creators, while continuing to sharpen my problem-solving skills through daily DSA practice. I'm not just here to write code; I'm here to build the future, one project at a time.",
                           }),
                         ),
                         e.jsx(
                           a.p,
                           s(t({}, i()), {
                             children:
-                              "I'm not trying to be the designer with the flashiest portfolio. I just want to make things that work well and feel right. If you're here, you probably care about the same stuff.",
+                              "If you're interested in building something together or just want to talk tech, feel free to reach out. I'm always up for a good conversation.",
                           }),
                         ),
                         e.jsx(

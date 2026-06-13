@@ -497,6 +497,19 @@ Solving & DSA`,
           rotate: "left",
           pinType: "tape",
         },
+        {
+          content: `Android
+Studio`,
+          color: "sky",
+          rotate: "right",
+          pinType: "tape",
+        },
+        {
+          content: `Cloudflare`,
+          color: "peach",
+          rotate: "left",
+          pinType: "tape",
+        },
       ],
       [i, l] = r.useState(!1);
     return (

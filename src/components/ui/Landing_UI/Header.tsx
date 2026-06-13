@@ -34,7 +34,7 @@ const F = () =>
         children: "Mayank Dev",
       }),
     }),
-  g = "dmayank2323@gmail.com",
+  g = "connect@mayank-dev.in",
   H = ({ disableSticky: i = !1 }) => {
     const [o, t] = p.useState(!1),
       [s, m] = p.useState(!1),
@@ -119,6 +119,14 @@ const F = () =>
                     children: "Work",
                   }),
                   e.jsx(n, {
+                    to: "/life",
+                    className: `nav-link-hover font-semibold px-3 py-1.5 relative ${s ? "text-sm" : "text-base lg:text-lg"}`,
+                    style: {
+                      transition: "all 0.25s cubic-bezier(0.23, 1, 0.32, 1)",
+                    },
+                    children: "Life",
+                  }),
+                  e.jsx(n, {
                     to: "/playground",
                     className: `nav-link-hover font-semibold px-3 py-1.5 relative ${s ? "text-sm" : "text-base lg:text-lg"}`,
                     style: {
@@ -194,6 +202,14 @@ const F = () =>
                           children: "Work",
                         }),
                         e.jsx(n, {
+                          to: "/life",
+                          className:
+                            "text-black font-semibold py-3 px-4 transition-all duration-150 hover:bg-black hover:text-white focus:outline-none active:scale-[0.98] text-lg cursor-pointer border-b border-black/10",
+                          onClick: () => t(!1),
+                          style: { fontFamily: "'Sora', sans-serif" },
+                          children: "Life",
+                        }),
+                        e.jsx(n, {
                           to: "/playground",
                           className:
                             "text-black font-semibold py-3 px-4 transition-all duration-150 hover:bg-black hover:text-white focus:outline-none active:scale-[0.98] text-lg cursor-pointer border-b border-black/10",
@@ -257,6 +273,54 @@ const F = () =>
                             e.jsxs("div", {
                               className: "grid grid-cols-2 gap-2 px-4",
                               children: [
+                                e.jsxs("a", {
+                                  href: "https://www.instagram.com/mayankdev.mov/#",
+                                  target: "_blank",
+                                  rel: "noopener noreferrer",
+                                  className: `
+                        bg-white border-2 border-black font-semibold text-black
+                        px-3 py-3 text-sm flex items-center justify-center gap-2 cursor-pointer
+                        transition-all duration-150 ease-out
+                        hover:bg-black hover:text-white 
+                        active:scale-[0.98]
+                      `,
+                                  style: {
+                                    borderRadius: 0,
+                                    fontFamily: "'Sora', sans-serif",
+                                  },
+                                  onClick: () => t(!1),
+                                  children: [
+                                    e.jsxs("svg", {
+                                      className: "w-4 h-4",
+                                      viewBox: "0 0 24 24",
+                                      fill: "none",
+                                      stroke: "currentColor",
+                                      strokeWidth: "2",
+                                      strokeLinecap: "round",
+                                      strokeLinejoin: "round",
+                                      children: [
+                                        e.jsx("rect", {
+                                          x: "2",
+                                          y: "2",
+                                          width: "20",
+                                          height: "20",
+                                          rx: "5",
+                                          ry: "5",
+                                        }),
+                                        e.jsx("path", {
+                                          d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z",
+                                        }),
+                                        e.jsx("line", {
+                                          x1: "17.5",
+                                          y1: "6.5",
+                                          x2: "17.51",
+                                          y2: "6.5",
+                                        }),
+                                      ],
+                                    }),
+                                    e.jsx("span", { children: "Instagram" }),
+                                  ],
+                                }),
                                 e.jsxs("a", {
                                   href: "https://x.com/Mayank_Dev23",
                                   target: "_blank",

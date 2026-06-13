@@ -68,6 +68,20 @@ const V = () => {
         color: "bg-red-100",
         tag: "DSA",
       },
+      {
+        name: "Android Studio",
+        description: "Mobile app development & testing",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
+        color: "bg-emerald-100",
+        tag: "Mobile",
+      },
+      {
+        name: "Cloudflare",
+        description: "Edge computing & performant deployment",
+        icon: "https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/cloudflare.svg",
+        color: "bg-orange-100",
+        tag: "Infra",
+      },
     ],
     r = [
       {
@@ -590,6 +604,103 @@ const V = () => {
                             ],
                           }),
                           e.jsx("span", { children: "More" }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            }),
+          }),
+          /* ── LEETCODE SECTION ── */
+          e.jsx("section", {
+            className: "py-8 md:py-12 relative",
+            children: e.jsx("div", {
+              className: "max-w-5xl mx-auto px-4",
+              children: e.jsxs("div", {
+                className:
+                  "bg-white p-6 md:p-8 border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]",
+                children: [
+                  e.jsxs("div", {
+                    className:
+                      "flex flex-col md:flex-row justify-between md:items-end mb-8 gap-4",
+                    children: [
+                      e.jsxs("div", {
+                        className: "text-center md:text-left",
+                        children: [
+                          e.jsx("p", {
+                            className:
+                              "text-xs uppercase tracking-[0.24em] text-stone-500 mb-2",
+                            children: "LeetCode",
+                          }),
+                          e.jsx("h2", {
+                            className:
+                              "text-2xl md:text-3xl font-bold mb-2 text-stone-900",
+                            children: "Problem solving rhythm",
+                          }),
+                          e.jsx("p", {
+                            className: "text-stone-600",
+                            children:
+                              "A real-time snapshot of algorithmic consistency and progress.",
+                          }),
+                        ],
+                      }),
+                      e.jsxs("a", {
+                        href: "https://leetcode.com/u/Mayank_Dev_23/",
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className:
+                          "daisy-button inline-flex items-center gap-2 text-sm md:text-base",
+                        children: [
+                          e.jsx("span", { children: "Visit @Mayank_Dev_23" }),
+                          e.jsx("span", { children: "→" }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  e.jsx("div", {
+                    className:
+                      "overflow-x-auto pb-4 scrollbar-hide border-2 border-black bg-stone-50 p-4",
+                    children: e.jsx("img", {
+                      src: "https://leetcard.jacoblin.cool/Mayank_Dev_23?theme=light&font=Sora",
+                      alt: "LeetCode Activity Card",
+                      loading: "lazy",
+                      decoding: "async",
+                      className: "w-full min-w-[500px] md:min-w-[600px] mx-auto",
+                    }),
+                  }),
+                  e.jsxs("div", {
+                    className:
+                      "mt-6 pt-6 border-t border-black/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-stone-500",
+                    children: [
+                      e.jsx("p", { children: "Consistency graph" }),
+                      e.jsxs("div", {
+                        className: "flex items-center gap-2",
+                        children: [
+                          e.jsx("span", { children: "Easy" }),
+                          e.jsxs("div", {
+                            className: "flex gap-1",
+                            children: [
+                              e.jsx("span", {
+                                className: "w-3 h-3 bg-emerald-100 rounded-[2px]",
+                              }),
+                              e.jsx("span", {
+                                className: "w-3 h-3 bg-emerald-500 rounded-[2px]",
+                              }),
+                            ],
+                          }),
+                          e.jsx("span", { className: "ml-2", children: "Hard" }),
+                          e.jsxs("div", {
+                            className: "flex gap-1",
+                            children: [
+                              e.jsx("span", {
+                                className: "w-3 h-3 bg-red-100 rounded-[2px]",
+                              }),
+                              e.jsx("span", {
+                                className: "w-3 h-3 bg-red-500 rounded-[2px]",
+                              }),
+                            ],
+                          }),
                         ],
                       }),
                     ],
