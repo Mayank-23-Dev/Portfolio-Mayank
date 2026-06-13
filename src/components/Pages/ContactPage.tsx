@@ -99,8 +99,8 @@ const ie = () => {
         icon: e.jsx(X, { className: "h-6 w-6" }),
         title: "Full-time & Internship",
         description:
-          "I'm actively seeking roles in Full Stack Development or Content Direction (Scripting & Strategy)",
-        tags: ["Full Stack", "Android", "Content Direction", "Scripting"],
+          "I'm actively seeking roles in Full Stack, Android Development, or Content Strategy & Production.",
+        tags: ["Full Stack", "Android", "Content Strategy", "Viral Packaging"],
         color: "bg-daisy-green",
       },
       {
@@ -119,9 +119,9 @@ const ie = () => {
           "As a 2nd year BTech CSE student, I am balancing my academic foundations with deep dives into full stack development and content creation. I focus on building real-world products and understanding the 'why' behind the code.",
       },
       {
-        question: "What do you mean by Content Direction?",
+        question: "What do you mean by Content Strategy & Production?",
         answer:
-          "It's about more than just making a video. I handle the scripting, hook strategy, storytelling, and overall creative direction to ensure tech content resonates and provides value.",
+          "It's about engineering content for reach. Gaining over 12.5M+ views in the last 3 years across different channels (Insta & YT), I specialize in the psychology of viral packaging. I handle everything from cinematography and shot selection to data-driven scripting and viewer psychology.",
       },
       {
         question: "Are you open to internships?",
@@ -133,25 +133,54 @@ const ie = () => {
         answer:
           "I see them as two sides of the same coin. Building a product requires technical skill; communicating it requires content direction. I use my builds as the foundation for my tutorials and guides.",
       },
+      {
+        question: "Are you familiar with AI tools?",
+        answer:
+          "Absolutely. I integrate AI extensively into my workflow—whether it's using CLI-based models, fine-tuning prompts for engineering tasks, or leveraging AI for content optimization. I treat AI as a force multiplier for both development and production.",
+      },
     ],
     S = [
       {
         content:
-          "I believe in collaborative design. Your domain expertise + my design thinking = amazing results.",
+          "I believe in collaborative growth. Your domain expertise + my content engineering = viral results.",
         color: "yellow",
         rotate: "left",
       },
       {
         content:
-          "Every project starts with understanding your users, not just your business goals.",
+          "Every piece of content starts with understanding viewer psychology, not just the technical details.",
         color: "green",
         rotate: "right",
       },
       {
         content:
-          "I document everything. Process, decisions, learnings - you'll always know why we made certain choices.",
+          "I document the strategy. Hooks, pacing, packaging - you'll always know the science behind the views.",
         color: "purple",
         rotate: "none",
+      },
+      {
+        content:
+          "Architecture: Across Web, Android, and Desktop, I build scalable foundations with high-performance code that handles complexity with ease.",
+        color: "blue",
+        rotate: "left",
+      },
+      {
+        content:
+          "Experience: Expect fluid, native-feeling interactions and Material Design principles that make every app feel intuitive and zero-latency.",
+        color: "orange",
+        rotate: "right",
+      },
+      {
+        content:
+          "Delivery: Clean, maintainable code with technical SEO—including sitemaps and metadata—ensures long-term utility and search discoverability.",
+        color: "cyan",
+        rotate: "left",
+      },
+      {
+        content:
+          "Workflow: I am fully compatible with Discord and Notion for seamless asynchronous communication, project tracking, and feedback loops.",
+        color: "peach",
+        rotate: "right",
       },
     ],
     d = (s) => {
@@ -485,12 +514,16 @@ const ie = () => {
                                           children: "Freelance Project",
                                         }),
                                         e.jsx("option", {
-                                          value: "consultation",
-                                          children: "UX Consultation",
+                                          value: "content-strategy",
+                                          children: "Content Strategy",
                                         }),
                                         e.jsx("option", {
-                                          value: "audit",
-                                          children: "UX Audit",
+                                          value: "content-production",
+                                          children: "Content Production",
+                                        }),
+                                        e.jsx("option", {
+                                          value: "viral-packaging",
+                                          children: "Viral Packaging",
                                         }),
                                         e.jsx("option", {
                                           value: "other",
@@ -744,27 +777,8 @@ const ie = () => {
                   }),
                   e.jsxs("div", {
                     className:
-                      "grid grid-cols-1 md:grid-cols-3 gap-8 text-center",
+                      "grid grid-cols-1 md:grid-cols-2 gap-8 text-center",
                     children: [
-                      e.jsxs("div", {
-                        children: [
-                          e.jsx(W, {
-                            className: "h-8 w-8 mx-auto mb-4 text-daisy-purple",
-                          }),
-                          e.jsx("h3", {
-                            className: "font-bold mb-2",
-                            children: "Location",
-                          }),
-                          e.jsxs("p", {
-                            className: "text-gray-600",
-                            children: [
-                              "Based in India",
-                              e.jsx("br", {}),
-                              "Open to remote work",
-                            ],
-                          }),
-                        ],
-                      }),
                       e.jsxs("div", {
                         children: [
                           e.jsx(M, {

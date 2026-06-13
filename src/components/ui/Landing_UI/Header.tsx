@@ -342,25 +342,6 @@ const F = () =>
                                     e.jsx("span", { children: "X" }),
                                   ],
                                 }),
-                                e.jsxs(n, {
-                                  to: "/contact",
-                                  className: `
-                        bg-white border-2 border-black font-semibold text-black
-                        px-3 py-3 text-sm flex items-center justify-center gap-2 cursor-pointer
-                        transition-all duration-150 ease-out
-                        hover:bg-black hover:text-white 
-                        active:scale-[0.98]
-                      `,
-                                  style: {
-                                    borderRadius: 0,
-                                    fontFamily: "'Sora', sans-serif",
-                                  },
-                                  onClick: () => t(!1),
-                                  children: [
-                                    e.jsx(w, { className: "w-4 h-4" }),
-                                    e.jsx("span", { children: "Contact" }),
-                                  ],
-                                }),
                                 e.jsxs("a", {
                                   href: "https://leetcode.com/u/Mayank_Dev_23/",
                                   target: "_blank",

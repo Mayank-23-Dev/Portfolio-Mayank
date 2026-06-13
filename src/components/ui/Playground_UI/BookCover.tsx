@@ -202,7 +202,7 @@ const U = [
                             src: e,
                             alt: s,
                             className: k(
-                              "w-full h-full object-cover transition-opacity duration-300",
+                              "w-full h-full object-contain p-4 transition-opacity duration-300",
                               h ? "opacity-100" : "opacity-0",
                             ),
                             onLoad: () => u(!0),

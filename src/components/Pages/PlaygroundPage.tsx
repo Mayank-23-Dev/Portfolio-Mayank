@@ -80,19 +80,11 @@ const Pe = [
     hoverColor: "hover:bg-purple-100 hover:text-purple-700",
   },
   {
-    label: "Games",
-    x: 3900,
-    y: 350,
-    hoverColor: "hover:bg-blue-100 hover:text-blue-700",
-  },
-  {
-    label: "Watch",
-    x: 4900,
+    label: "Digital Stack",
+    x: 3550,
     y: 350,
     hoverColor: "hover:bg-orange-100 hover:text-orange-700",
   },
-  // { label: "Content", x: 5900, y: 350, hoverColor: "hover:bg-red-100 hover:text-red-700" },
-  // { label: "Grind", x: 6900, y: 350, hoverColor: "hover:bg-pink-100 hover:text-pink-700" },
 ];
 // ─── INFINITE CANVAS SHELL (original logic — untouched) ──────────────────────
 const Ee = ({
@@ -284,16 +276,7 @@ const Ee = ({
             (A(2950, 400), o.preventDefault());
             break;
           case "4":
-            (A(3900, 350), o.preventDefault());
-            break;
-          case "5":
-            (A(4900, 350), o.preventDefault());
-            break;
-          case "6":
-            (A(5900, 350), o.preventDefault());
-            break;
-          case "7":
-            (A(6900, 350), o.preventDefault());
+            (A(3550, 350), o.preventDefault());
             break;
         }
       };
@@ -529,12 +512,8 @@ const U = W.memo(
                   e.jsx("div", {
                     className:
                       "absolute inset-0 bg-gradient-to-br from-stone-200 via-stone-100 to-stone-200 animate-pulse z-0",
-                    children: e.jsx("div", {
-                      className:
-                        "w-full h-full flex items-center justify-center",
-                      children: e.jsx(ae, {
-                        className: "w-6 h-6 text-stone-300",
-                      }),
+                    children: e.jsx(ae, {
+                      className: "w-6 h-6 text-stone-300",
                     }),
                   }),
                 k
@@ -780,206 +759,6 @@ const ce = W.memo(
     }),
 );
 ce.displayName = "WashiTape";
-// ─── BEFORE / AFTER SLIDER ────────────────────────────────────────────────────
-// To use real photos, replace the two placeholder inner <div>s with <img> tags:
-//   <img src="/images/grind/before.webp" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} alt="Before" />
-//   <img src="/images/grind/after.webp"  style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} alt="After"  />
-const BeforeAfterSlider = W.memo(() => {
-  const [pos, setPos] = n.useState(50);
-  const [dragging, setDragging] = n.useState(false);
-  const ref = n.useRef(null);
-  const calc = (clientX) => {
-    const rect = ref.current?.getBoundingClientRect();
-    if (!rect) return;
-    const x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
-    setPos((prev) => {
-      const target = (x / rect.width) * 100;
-      return prev + (target - prev) * 0.12;
-    });
-  };
-  const onPointerDown = (ev) => {
-    ev.stopPropagation();
-    setDragging(true);
-    ev.currentTarget.setPointerCapture(ev.pointerId);
-  };
-  const onPointerMove = (ev) => {
-    if (!dragging) return;
-    ev.stopPropagation();
-    calc(ev.clientX);
-  };
-  const onPointerUp = (ev) => {
-    ev.stopPropagation();
-    setDragging(false);
-  };
-  // Shared style for the two full-bleed background panels
-  const panelBase = {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-  };
-  return e.jsxs("div", {
-    ref,
-    style: {
-      position: "relative",
-      width: "100%",
-      height: 420,
-      borderRadius: 16,
-      overflow: "hidden",
-      userSelect: "none",
-      cursor: dragging ? "ew-resize" : "default",
-    },
-    onPointerMove,
-    onPointerUp,
-    onPointerLeave: onPointerUp,
-    children: [
-      /* ── BEFORE panel — full size, clipped. Content padded to center in LEFT half ── */
-      e.jsxs("div", {
-        style: {
-          ...panelBase,
-          clipPath: `inset(0 ${100 - pos}% 0 0)`,
-          overflow: "hidden",
-        },
-        children: [
-          e.jsx("img", {
-            src: "/images/grind/before.webp",
-            alt: "Before",
-            style: {
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-              display: "block",
-            },
-          }),
-          e.jsx("div", {
-            style: {
-              position: "absolute",
-              bottom: 12,
-              left: 12,
-              padding: "4px 10px",
-              borderRadius: 999,
-              fontSize: 11,
-              fontWeight: 600,
-              background: "rgba(0,0,0,0.45)",
-              color: "#fff",
-              backdropFilter: "blur(6px)",
-            },
-            children: "BEFORE",
-          }),
-        ],
-      }),
-      /* ── AFTER panel — full size, clipped. Content padded to center in RIGHT half ── */
-      e.jsxs("div", {
-        style: {
-          ...panelBase,
-          clipPath: `inset(0 0 0 ${pos}%)`,
-          overflow: "hidden",
-        },
-        children: [
-          e.jsx("img", {
-            src: "/images/grind/after.webp",
-            alt: "After",
-            style: {
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-              display: "block",
-            },
-          }),
-          e.jsx("div", {
-            style: {
-              position: "absolute",
-              bottom: 12,
-              right: 12,
-              padding: "4px 10px",
-              borderRadius: 999,
-              fontSize: 11,
-              fontWeight: 600,
-              background: "rgba(22,163,74,0.75)",
-              color: "#fff",
-              backdropFilter: "blur(6px)",
-            },
-            children: "AFTER",
-          }),
-        ],
-      }),
-      /* ── Drag handle ─────────────────────────────────────────────── */
-      e.jsxs("div", {
-        style: {
-          position: "absolute",
-          top: 0,
-          bottom: 0,
-          left: `${pos}%`,
-          transform: "translateX(-50%)",
-          zIndex: 20,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          touchAction: "none",
-        },
-        onPointerDown,
-        children: [
-          /* divider line */
-          e.jsx("div", {
-            style: {
-              position: "absolute",
-              top: 0,
-              bottom: 0,
-              left: "50%",
-              width: 2,
-              background: "rgba(255,255,255,0.9)",
-              transform: "translateX(-50%)",
-            },
-          }),
-          /* pill handle */
-          e.jsxs("div", {
-            style: {
-              position: "relative",
-              zIndex: 10,
-              display: "flex",
-              alignItems: "center",
-              gap: 4,
-              padding: "8px 10px",
-              borderRadius: 999,
-              background: "white",
-              cursor: "ew-resize",
-              boxShadow: "0 2px 16px rgba(0,0,0,0.18)",
-              border: "1.5px solid rgba(0,0,0,0.08)",
-            },
-            children: [
-              e.jsx("svg", {
-                width: 14,
-                height: 14,
-                viewBox: "0 0 24 24",
-                fill: "none",
-                stroke: "#334155",
-                strokeWidth: "2.5",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                children: e.jsx("path", { d: "M15 18l-6-6 6-6" }),
-              }),
-              e.jsx("svg", {
-                width: 14,
-                height: 14,
-                viewBox: "0 0 24 24",
-                fill: "none",
-                stroke: "#334155",
-                strokeWidth: "2.5",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                children: e.jsx("path", { d: "M9 18l6-6-6-6" }),
-              }),
-            ],
-          }),
-        ],
-      }),
-    ],
-  });
-});
-BeforeAfterSlider.displayName = "BeforeAfterSlider";
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 const le = n.lazy(() => import("../ui/Playground_UI/ComponentsShowcase"));
 const J = [
@@ -1013,135 +792,60 @@ const Q = [
     author: "Brianna Wiest",
   },
 ];
-const GAMES = [
+const WORKFLOW_TOOLS = [
   {
-    src: "/images/play/minecraft.webp",
-    caption: "Minecraft",
-    rotation: -2,
-    developDelay: 0,
+    src: "https://cdn.simpleicons.org/notion/000000",
+    largeSrc: "https://cdn.simpleicons.org/notion/000000",
+    title: "Notion",
+    author: "Workspace OS",
   },
   {
-    src: "/images/play/gta5.webp",
-    caption: "GTA V",
-    rotation: 3,
-    developDelay: 200,
+    src: "https://cdn.simpleicons.org/discord/5865F2",
+    largeSrc: "https://cdn.simpleicons.org/discord/5865F2",
+    title: "Discord",
+    author: "Collaboration",
   },
   {
-    src: "/images/play/valorant.webp",
-    caption: "Valorant",
-    rotation: -1,
-    developDelay: 400,
+    src: "https://cdn.simpleicons.org/google/4285F4",
+    largeSrc: "https://cdn.simpleicons.org/google/4285F4",
+    title: "Antigravity",
+    author: "Primary IDE",
   },
   {
-    src: "/images/play/cs2.webp",
-    caption: "CS2",
-    rotation: 4,
-    developDelay: 600,
+    src: "https://cdn.simpleicons.org/figma/F24E1E",
+    largeSrc: "https://cdn.simpleicons.org/figma/F24E1E",
+    title: "Figma",
+    author: "Product Design",
   },
   {
-    src: "/images/play/rdr2.webp",
-    caption: "Red Dead 2",
-    rotation: -3,
-    developDelay: 800,
+    src: "https://cdn.simpleicons.org/github/181717",
+    largeSrc: "https://cdn.simpleicons.org/github/181717",
+    title: "GitHub",
+    author: "Open Source",
   },
   {
-    src: "/images/play/fallguys.webp",
-    caption: "Fall Guys",
-    rotation: 2,
-    developDelay: 1000,
-  },
-];
-const WATCH = [
-  {
-    src: "/images/play/nolan.webp",
-    caption: "Nolan Films",
-    rotation: -2,
-    developDelay: 0,
-  },
-  {
-    src: "/images/play/marvel.webp",
-    caption: "Marvel",
-    rotation: 3,
-    developDelay: 200,
-  },
-  {
-    src: "/images/play/mrbeast.webp",
-    caption: "MrBeast",
-    rotation: -1,
-    developDelay: 400,
-  },
-  {
-    src: "/images/play/mkbhd.webp",
-    caption: "MKBHD",
-    rotation: 4,
-    developDelay: 600,
-  },
-  {
-    src: "/images/play/whosetheboss.webp",
-    caption: "Whose the Boss",
-    rotation: -3,
-    developDelay: 800,
-  },
-  {
-    src: "/images/play/optimumvenom.webp",
-    caption: "Optimum",
-    rotation: 2,
-    developDelay: 1000,
-  },
-];
-const CONTENT_STATS = [
-  {
-    num: "2.2M",
-    label: "YouTube Views",
-    bg: "#fff1f2",
-    border: "#fecdd3",
-    color: "#ef4444",
-  },
-  {
-    num: "1.1M",
-    label: "Instagram Views",
-    bg: "#fdf2f8",
-    border: "#f9a8d4",
-    color: "#ec4899",
-  },
-  {
-    num: "1.5K",
-    label: "People Gained",
-    bg: "#fff7ed",
-    border: "#fed7aa",
-    color: "#f97316",
-  },
-  {
-    num: "3.3M",
-    label: "Total Views",
-    bg: "#f0fdf4",
-    border: "#bbf7d0",
-    color: "#16a34a",
+    src: "https://cdn.simpleicons.org/googlegemini/8E75C2",
+    largeSrc: "https://cdn.simpleicons.org/googlegemini/8E75C2",
+    title: "Gemini CLI",
+    author: "AI Assistant",
   },
 ];
 const B = {
   hidden: { opacity: 0, y: 36 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
-  },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 const Re = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
 };
 const Te = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
-// ─── MOBILE DETECTION ────────────────────────────────────────────────────────
 const K = 768;
 function Se() {
   const [r, s] = n.useState(void 0);
   return (
     n.useEffect(() => {
       const a = window.matchMedia(`(max-width: ${K - 1}px)`),
-        i = () => {
-          s(window.innerWidth < K);
-        };
+        i = () => { s(window.innerWidth < K); };
       return (
         a.addEventListener("change", i),
         s(window.innerWidth < K),
@@ -1151,7 +855,6 @@ function Se() {
     !!r
   );
 }
-// ─── MOBILE PAGE ──────────────────────────────────────────────────────────────
 const Fe = () =>
   e.jsxs("div", {
     className: "min-h-screen bg-[#f8f6f1]",
@@ -1159,8 +862,7 @@ const Fe = () =>
       e.jsx("div", {
         className: "fixed inset-0 pointer-events-none z-0",
         style: {
-          backgroundImage:
-            "radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)",
           backgroundSize: "20px 20px",
         },
       }),
@@ -1168,13 +870,9 @@ const Fe = () =>
         className: "relative z-10 px-4 pb-12 pt-20",
         children: [
           e.jsx(m.section, {
-            initial: "hidden",
-            animate: "visible",
-            variants: B,
-            className: "mb-8",
+            initial: "hidden", animate: "visible", variants: B, className: "mb-8",
             children: e.jsxs("div", {
-              className:
-                "rounded-[1.75rem] border-2 border-stone-200 bg-white p-5 shadow-lg",
+              className: "rounded-[1.75rem] border-2 border-stone-200 bg-white p-5 shadow-lg",
               children: [
                 e.jsxs("div", {
                   className: "mb-3 flex items-center gap-2",
@@ -1188,18 +886,13 @@ const Fe = () =>
                 }),
                 e.jsx("p", {
                   className: "text-sm leading-7 text-stone-600",
-                  children:
-                    "This page is the focused lab for interface experiments, component ideas, and interaction patterns.",
+                  children: "This page is the focused lab for interface experiments, component ideas, and interaction patterns.",
                 }),
               ],
             }),
           }),
           e.jsxs(m.section, {
-            initial: "hidden",
-            whileInView: "visible",
-            viewport: { once: !0, margin: "-60px" },
-            variants: B,
-            className: "mb-10",
+            initial: "hidden", whileInView: "visible", viewport: { once: !0, margin: "-60px" }, variants: B, className: "mb-10",
             children: [
               e.jsxs("div", {
                 className: "mb-4 flex items-center gap-3",
@@ -1209,27 +902,16 @@ const Fe = () =>
                 ],
               }),
               e.jsx("div", {
-                className:
-                  "rounded-[1.75rem] border border-stone-200 bg-white/90 p-4 shadow-xl backdrop-blur-sm",
+                className: "rounded-[1.75rem] border border-stone-200 bg-white/90 p-4 shadow-xl backdrop-blur-sm",
                 children: e.jsx(n.Suspense, {
-                  fallback: e.jsx("div", {
-                    className: "flex items-center justify-center p-12",
-                    children: e.jsx("div", {
-                      className:
-                        "h-8 w-8 animate-spin rounded-full border-b-2 border-stone-800",
-                    }),
-                  }),
+                  fallback: e.jsx("div", { className: "flex items-center justify-center p-12", children: e.jsx("div", { className: "h-8 w-8 animate-spin rounded-full border-b-2 border-stone-800" }) }),
                   children: e.jsx(le, {}),
                 }),
               }),
             ],
           }),
           e.jsxs(m.section, {
-            initial: "hidden",
-            whileInView: "visible",
-            viewport: { once: !0, margin: "-60px" },
-            variants: B,
-            className: "mb-10",
+            initial: "hidden", whileInView: "visible", viewport: { once: !0, margin: "-60px" }, variants: B, className: "mb-10",
             children: [
               e.jsxs("div", {
                 className: "mb-4 flex items-center gap-3",
@@ -1239,51 +921,25 @@ const Fe = () =>
                 ],
               }),
               e.jsxs("div", {
-                className:
-                  "rounded-[1.75rem] border border-stone-200 bg-white/90 p-6 shadow-xl backdrop-blur-sm",
+                className: "rounded-[1.75rem] border border-stone-200 bg-white/90 p-6 shadow-xl backdrop-blur-sm",
                 children: [
                   e.jsx(m.div, {
-                    variants: Re,
-                    initial: "hidden",
-                    whileInView: "visible",
-                    viewport: { once: !0 },
+                    variants: Re, initial: "hidden", whileInView: "visible", viewport: { once: !0 },
                     className: "flex flex-wrap items-end justify-center gap-4",
                     children: Q.map((r) =>
-                      e.jsx(
-                        m.div,
-                        {
-                          variants: Te,
-                          className:
-                            "transform transition-transform active:scale-95",
-                          children: e.jsx(
-                            ie,
-                            z(I({}, r), { loading: "eager" }),
-                          ),
-                        },
-                        r.title,
-                      ),
+                      e.jsx(m.div, { variants: Te, className: "transform transition-transform active:scale-95", children: e.jsx(ie, z(I({}, r), { loading: "eager" })) }, r.title),
                     ),
                   }),
                   e.jsx("div", {
                     className: "mt-6 flex justify-center",
-                    children: e.jsx(M, {
-                      content:
-                        "Books that shaped my thinking on design, wealth & self-improvement",
-                      color: "yellow",
-                      pinType: "tape",
-                      className: "h-auto w-full max-w-xs p-3 text-xs",
-                    }),
+                    children: e.jsx(M, { content: "Books that shaped my thinking on design, wealth & self-improvement", color: "yellow", pinType: "tape", className: "h-auto w-full max-w-xs p-3 text-xs" }),
                   }),
                 ],
               }),
             ],
           }),
           e.jsxs(m.section, {
-            initial: "hidden",
-            whileInView: "visible",
-            viewport: { once: !0, margin: "-60px" },
-            variants: B,
-            className: "mb-10",
+            initial: "hidden", whileInView: "visible", viewport: { once: !0, margin: "-60px" }, variants: B, className: "mb-10",
             children: [
               e.jsxs("div", {
                 className: "mb-4 flex items-center gap-3",
@@ -1293,495 +949,153 @@ const Fe = () =>
                 ],
               }),
               e.jsxs("div", {
-                className:
-                  "rounded-[1.75rem] border border-stone-200 bg-white/90 p-4 shadow-xl backdrop-blur-sm",
+                className: "rounded-[1.75rem] border border-stone-200 bg-white/90 p-4 shadow-xl backdrop-blur-sm",
                 children: [
                   e.jsx("div", {
                     className: "grid grid-cols-3 gap-3 justify-items-center",
                     children: J.map((r, s) =>
-                      e.jsx(
-                        U,
-                        {
-                          src: r.src,
-                          rotation: [-2, 3, -1, 4, -3, 2, -4, 1, -2][s % 9],
-                          loading: "eager",
-                          developDelay: s * 250,
-                        },
-                        r.src,
-                      ),
+                      e.jsx(U, { src: r.src, rotation: [-2, 3, -1, 4, -3, 2, -4, 1, -2][s % 9], loading: "eager", developDelay: s * 250 }, r.src),
                     ),
                   }),
                   e.jsx("div", {
                     className: "mt-6 flex justify-center",
-                    children: e.jsx(M, {
-                      content: "Moments captured with intention",
-                      color: "pink",
-                      pinType: "tape",
-                      className: "h-auto w-48 p-3 text-xs",
-                    }),
+                    children: e.jsx(M, { content: "Moments captured with intention", color: "pink", pinType: "tape", className: "h-auto w-48 p-3 text-xs" }),
                   }),
                 ],
               }),
             ],
           }),
           e.jsxs(m.section, {
-            initial: "hidden",
-            whileInView: "visible",
-            viewport: { once: !0, margin: "-60px" },
-            variants: B,
-            className: "mb-10",
+            initial: "hidden", whileInView: "visible", viewport: { once: !0, margin: "-60px" }, variants: B, className: "mb-10",
             children: [
               e.jsxs("div", {
                 className: "mb-4 flex items-center gap-3",
                 children: [
-                  e.jsx(P, { color: "#93C5FD", children: "Games" }),
-                  e.jsx(f, { type: "star", size: 24, color: "#3b82f6" }),
-                ],
-              }),
-              e.jsxs("div", {
-                className:
-                  "rounded-[1.75rem] border border-stone-200 bg-white/90 p-4 shadow-xl backdrop-blur-sm",
-                children: [
-                  e.jsx("div", {
-                    className: "grid grid-cols-3 gap-3 justify-items-center",
-                    children: GAMES.map((r) =>
-                      e.jsx(
-                        U,
-                        {
-                          src: r.src,
-                          caption: r.caption,
-                          rotation: r.rotation,
-                          loading: "eager",
-                          developDelay: r.developDelay,
-                        },
-                        r.src,
-                      ),
-                    ),
-                  }),
-                  e.jsx("div", { className: "mt-6 flex justify-center" }),
-                ],
-              }),
-            ],
-          }),
-          e.jsxs(m.section, {
-            initial: "hidden",
-            whileInView: "visible",
-            viewport: { once: !0, margin: "-60px" },
-            variants: B,
-            className: "mb-10",
-            children: [
-              e.jsxs("div", {
-                className: "mb-4 flex items-center gap-3",
-                children: [
-                  e.jsx(P, { color: "#FFA07A", children: "What I Watch" }),
+                  e.jsx(P, { color: "#FFA07A", children: "Digital Stack" }),
                   e.jsx(f, { type: "sparkle", size: 24, color: "#f97316" }),
                 ],
               }),
               e.jsxs("div", {
-                className:
-                  "rounded-[1.75rem] border border-stone-200 bg-white/90 p-4 shadow-xl backdrop-blur-sm",
+                className: "rounded-[1.75rem] border border-stone-200 bg-white/90 p-6 shadow-xl backdrop-blur-sm",
                 children: [
-                  e.jsx("div", {
-                    className: "grid grid-cols-3 gap-3 justify-items-center",
-                    children: WATCH.map((r) =>
-                      e.jsx(
-                        U,
-                        {
-                          src: r.src,
-                          caption: r.caption,
-                          rotation: r.rotation,
-                          loading: "eager",
-                          developDelay: r.developDelay,
-                        },
-                        r.src,
-                      ),
+                  e.jsx(m.div, {
+                    variants: Re, initial: "hidden", whileInView: "visible", viewport: { once: !0 },
+                    className: "flex flex-wrap items-end justify-center gap-x-4 gap-y-24",
+                    children: WORKFLOW_TOOLS.map((r) =>
+                      e.jsx(m.div, { variants: Te, className: "transform transition-transform active:scale-95", children: e.jsx(ie, z(I({}, r), { loading: "eager" })) }, r.title),
                     ),
                   }),
-                  e.jsx("div", { className: "mt-6 flex justify-center" }),
+                  e.jsx("div", {
+                    className: "mt-6 flex justify-center",
+                    children: e.jsx(M, { content: "Tools that enhance my productivity and collaboration", color: "orange", pinType: "tape", className: "h-auto w-full max-w-xs p-3 text-xs" }),
+                  }),
                 ],
               }),
             ],
           }),
-          // e.jsxs(m.section, { initial: "hidden", whileInView: "visible", viewport: { once: !0, margin: "-60px" }, variants: B, className: "mb-10", children: [e.jsxs("div", { className: "mb-4 flex items-center gap-3", children: [e.jsx(P, { color: "#A2FF86", children: "Algorithm Reading" }), e.jsx(f, { type: "sparkle", size: 24, color: "#A2FF86" })] }), e.jsxs("div", { className: "rounded-[1.75rem] border border-stone-200 bg-white/90 p-6 shadow-xl backdrop-blur-sm", children: [e.jsx("div", { className: "grid grid-cols-2 gap-3 mb-4", children: CONTENT_STATS.map(s => e.jsx("div", { style: { background: s.bg, border: `0.5px solid ${s.border}`, borderRadius: 10, padding: "12px 14px", textAlign: "center" }, children: [e.jsx("div", { style: { fontSize: 26, fontWeight: 600, color: s.color, lineHeight: 1 }, children: s.num }), e.jsx("div", { style: { fontSize: 10, color: "#888", marginTop: 3 }, children: s.label })] }, s.label)) }), e.jsx("p", { className: "text-xs text-stone-500 text-center mt-2", children: "100 videos in 30 days · Minecraft shorts · one reel hit 545K views" })] })] }),
-          // ── MOBILE: THE GRIND (updated — slider replaces stats/notes) ────────────
-          // e.jsxs(m.section, {
-          //   initial: "hidden", whileInView: "visible", viewport: { once: !0, margin: "-60px" }, variants: B, className: "mb-10", children: [
-          //     e.jsxs("div", {
-          //       className: "mb-4 flex items-center gap-3", children: [
-          //         e.jsx(P, { color: "#E5C1F0", children: "The Grind" }),
-          //         e.jsx(f, { type: "heart", size: 24, color: "#f472b6" }),
-          //       ]
-          //     }),
-          //     e.jsxs("div", {
-          //       className: "rounded-[1.75rem] border border-stone-200 bg-white/90 p-4 shadow-xl backdrop-blur-sm", children: [
-          //         // Weight summary row
-          //         e.jsxs("div", {
-          //           className: "flex items-center justify-around mb-4", children: [
-          //             e.jsxs("div", {
-          //               style: { textAlign: "center" }, children: [
-          //                 e.jsx("div", { style: { fontSize: 36, fontWeight: 700, color: "#1a1a1a", lineHeight: 1 }, children: "107" }),
-          //                 e.jsx("div", { style: { fontSize: 10, color: "#888", marginTop: 3 }, children: "kg · Aug 2025" }),
-          //               ]
-          //             }),
-          //             e.jsx("div", { style: { fontSize: 22, color: "#d1d5db" }, children: "→" }),
-          //             e.jsxs("div", {
-          //               style: { textAlign: "center" }, children: [
-          //                 e.jsx("div", { style: { fontSize: 36, fontWeight: 700, color: "#22c55e", lineHeight: 1 }, children: "84" }),
-          //                 e.jsx("div", { style: { fontSize: 10, color: "#888", marginTop: 3 }, children: "kg now" }),
-          //               ]
-          //             }),
-          //             e.jsxs("div", {
-          //               style: { background: "#f0fdf4", border: "0.5px solid #bbf7d0", borderRadius: 10, padding: "10px 14px", textAlign: "center" }, children: [
-          //                 e.jsx("div", { style: { fontSize: 20, fontWeight: 700, color: "#16a34a", lineHeight: 1 }, children: "-23kg" }),
-          //                 e.jsx("div", { style: { fontSize: 10, color: "#16a34a", marginTop: 3 }, children: "lost 💪" }),
-          //               ]
-          //             }),
-          //           ]
-          //         }),
-          //         // Before/After slider
-          //         e.jsx(BeforeAfterSlider, {}),
-          //       ]
-          //     }),
-          //   ]
-          // }),
         ],
       }),
     ],
   });
-// ─── DESKTOP CANVAS ───────────────────────────────────────────────────────────
+
 const Ae = () =>
   e.jsxs(Ee, {
-    initialPosition: { x: 50, y: 100 },
-    initialZoom: 0.45,
-    minZoom: 0.2,
-    maxZoom: 1.5,
+    initialPosition: { x: 50, y: 100 }, initialZoom: 0.45, minZoom: 0.2, maxZoom: 1.5,
     children: [
-      // Welcome card
       e.jsx(h, {
-        x: 50,
-        y: 120,
-        zIndex: 10,
+        x: 50, y: 120, zIndex: 10,
         children: e.jsxs("div", {
-          className:
-            "w-64 rounded-xl border-2 border-stone-200 bg-white p-5 shadow-lg",
+          className: "w-64 rounded-xl border-2 border-stone-200 bg-white p-5 shadow-lg",
           children: [
-            e.jsx("h3", {
-              className: "mb-2 font-handwritten text-lg text-stone-800",
-              children: "Welcome!",
-            }),
-            e.jsx("p", {
-              className: "text-sm leading-relaxed text-stone-600",
-              children: "Drag to pan. Pinch to zoom. Click items to expand.",
-            }),
+            e.jsx("h3", { className: "mb-2 font-handwritten text-lg text-stone-800", children: "Welcome!" }),
+            e.jsx("p", { className: "text-sm leading-relaxed text-stone-600", children: "Drag to pan. Pinch to zoom. Click items to expand." }),
             e.jsxs("div", {
               className: "mt-3 flex flex-wrap gap-2",
               children: [
-                e.jsx("span", {
-                  className:
-                    "rounded-full bg-green-100  px-2 py-1 text-xs text-green-700",
-                  children: "1 → Components",
-                }),
-                e.jsx("span", {
-                  className:
-                    "rounded-full bg-yellow-100 px-2 py-1 text-xs text-yellow-700",
-                  children: "2 → Books",
-                }),
-                e.jsx("span", {
-                  className:
-                    "rounded-full bg-purple-100 px-2 py-1 text-xs text-purple-700",
-                  children: "3 → Photos",
-                }),
-                e.jsx("span", {
-                  className:
-                    "rounded-full bg-blue-100   px-2 py-1 text-xs text-blue-700",
-                  children: "4 → Games I Like",
-                }),
-                e.jsx("span", {
-                  className:
-                    "rounded-full bg-orange-100 px-2 py-1 text-xs text-orange-700",
-                  children: "5 → Watch",
-                }),
-                e.jsx("span", {
-                  className:
-                    "rounded-full bg-red-100    px-2 py-1 text-xs text-red-700",
-                  children: "6 → Content",
-                }),
-                e.jsx("span", {
-                  className:
-                    "rounded-full bg-pink-100   px-2 py-1 text-xs text-pink-700",
-                  children: "7 → Grind",
-                }),
+                e.jsx("span", { className: "rounded-full bg-green-100  px-2 py-1 text-xs text-green-700", children: "1 → Components" }),
+                e.jsx("span", { className: "rounded-full bg-yellow-100 px-2 py-1 text-xs text-yellow-700", children: "2 → Books" }),
+                e.jsx("span", { className: "rounded-full bg-purple-100 px-2 py-1 text-xs text-purple-700", children: "3 → Photos" }),
+                e.jsx("span", { className: "rounded-full bg-orange-100 px-2 py-1 text-xs text-orange-700", children: "4 → Digital Stack" }),
               ],
             }),
           ],
         }),
       }),
-      // ── 1. COMPONENTS ────────────────────────────────────────────────────────
+      e.jsx(h, { x: 350, y: 50, zIndex: 5, children: e.jsx(P, { color: "#A2FF86", children: "Components" }) }),
+      e.jsx(h, { x: 310, y: 180, zIndex: 2, children: e.jsx(f, { type: "sparkle", size: 28, color: "#A2FF86" }) }),
       e.jsx(h, {
-        x: 350,
-        y: 50,
-        zIndex: 5,
-        children: e.jsx(P, { color: "#A2FF86", children: "Components" }),
-      }),
-      e.jsx(h, {
-        x: 310,
-        y: 180,
-        zIndex: 2,
-        children: e.jsx(f, { type: "sparkle", size: 28, color: "#A2FF86" }),
-      }),
-      e.jsx(h, {
-        x: 350,
-        y: 120,
-        zIndex: 4,
+        x: 350, y: 120, zIndex: 4,
         children: e.jsx("div", {
-          className:
-            "w-[1400px] rounded-2xl border border-stone-200 bg-white/90 p-6 shadow-xl backdrop-blur-sm",
+          className: "w-[1400px] rounded-2xl border border-stone-200 bg-white/90 p-6 shadow-xl backdrop-blur-sm",
           children: e.jsx(n.Suspense, {
-            fallback: e.jsx("div", {
-              className: "flex items-center justify-center p-12",
-              children: e.jsx("div", {
-                className:
-                  "h-8 w-8 animate-spin rounded-full border-b-2 border-stone-800",
-              }),
-            }),
+            fallback: e.jsx("div", { className: "flex items-center justify-center p-12", children: e.jsx("div", { className: "h-8 w-8 animate-spin rounded-full border-b-2 border-stone-800" }) }),
             children: e.jsx(le, {}),
           }),
         }),
       }),
-      // ── 2. BOOKS ─────────────────────────────────────────────────────────────
+      e.jsx(h, { x: 1850, y: 50, zIndex: 5, children: e.jsx(P, { color: "#FFDE59", children: "Books" }) }),
+      e.jsx(h, { x: 1810, y: 180, zIndex: 2, children: e.jsx(f, { type: "coffee", size: 36, color: "#d4a574" }) }),
       e.jsx(h, {
-        x: 1850,
-        y: 50,
-        zIndex: 5,
-        children: e.jsx(P, { color: "#FFDE59", children: "Books" }),
-      }),
-      e.jsx(h, {
-        x: 1810,
-        y: 180,
-        zIndex: 2,
-        children: e.jsx(f, { type: "coffee", size: 36, color: "#d4a574" }),
-      }),
-      e.jsx(h, {
-        x: 1850,
-        y: 120,
-        zIndex: 4,
+        x: 1850, y: 120, zIndex: 4,
         children: e.jsxs("div", {
-          className:
-            "w-[600px] rounded-2xl border border-stone-200 bg-white/90 p-8 pb-12 shadow-xl backdrop-blur-sm",
+          className: "w-[600px] rounded-2xl border border-stone-200 bg-white/90 p-8 pb-12 shadow-xl backdrop-blur-sm",
           children: [
             e.jsx("div", {
               className: "mb-16 flex items-end justify-center gap-12",
               children: Q.map((r) =>
-                e.jsx(
-                  "div",
-                  {
-                    className:
-                      "relative transform transition-transform hover:scale-105",
-                    children: e.jsx(ie, z(I({}, r), { loading: "eager" })),
-                  },
-                  r.title,
-                ),
+                e.jsx("div", { className: "relative transform transition-transform hover:scale-105", children: e.jsx(ie, z(I({}, r), { loading: "eager" })) }, r.title),
               ),
             }),
             e.jsx("div", {
               className: "flex justify-center",
-              children: e.jsx(M, {
-                content:
-                  "Books that shaped my thinking on design, wealth & self-improvement",
-                color: "yellow",
-                pinType: "tape",
-                className: "h-28 w-64 p-3 text-xs",
-              }),
+              children: e.jsx(M, { content: "Books that shaped my thinking on design, wealth & self-improvement", color: "yellow", pinType: "tape", className: "h-28 w-64 p-3 text-xs" }),
             }),
           ],
         }),
       }),
-      // ── 3. PHOTOGRAPHY ───────────────────────────────────────────────────────
+      e.jsx(h, { x: 2550, y: 50, zIndex: 5, children: e.jsx(P, { color: "#E5C1F0", children: "Photography" }) }),
+      e.jsx(h, { x: 2510, y: 180, zIndex: 2, children: e.jsx(f, { type: "heart", size: 30, color: "#f472b6" }) }),
       e.jsx(h, {
-        x: 2550,
-        y: 50,
-        zIndex: 5,
-        children: e.jsx(P, { color: "#E5C1F0", children: "Photography" }),
-      }),
-      e.jsx(h, {
-        x: 2510,
-        y: 180,
-        zIndex: 2,
-        children: e.jsx(f, { type: "heart", size: 30, color: "#f472b6" }),
-      }),
-      e.jsx(h, {
-        x: 2550,
-        y: 120,
-        zIndex: 4,
+        x: 2550, y: 120, zIndex: 4,
         children: e.jsxs("div", {
-          className:
-            "w-[660px] rounded-2xl border border-stone-200 bg-white/90 p-8 shadow-xl backdrop-blur-sm",
+          className: "w-[660px] rounded-2xl border border-stone-200 bg-white/90 p-8 shadow-xl backdrop-blur-sm",
           children: [
             e.jsx("div", {
               className: "grid grid-cols-3 gap-8 justify-items-center",
               children: J.map((r, s) =>
-                e.jsx(
-                  U,
-                  {
-                    src: r.src,
-                    rotation: [-2, 3, -1, 4, -3, 2, -4, 1, -2][s],
-                    loading: "eager",
-                    developDelay: s * 300,
-                  },
-                  r.src,
-                ),
+                e.jsx(U, { src: r.src, rotation: [-2, 3, -1, 4, -3, 2, -4, 1, -2][s], loading: "eager", developDelay: s * 300 }, r.src),
               ),
             }),
             e.jsx("div", {
               className: "mt-8 flex justify-center",
-              children: e.jsx(M, {
-                content: "Moments captured with intention",
-                color: "pink",
-                pinType: "tape",
-                className: "h-24 w-48 p-3 text-xs",
-              }),
+              children: e.jsx(M, { content: "Moments captured with intention", color: "pink", pinType: "tape", className: "h-24 w-48 p-3 text-xs" }),
             }),
           ],
         }),
       }),
-      // ── 4. GAMES ─────────────────────────────────────────────────────────────
+      e.jsx(h, { x: 3450, y: 50, zIndex: 5, children: e.jsx(P, { color: "#FFA07A", children: "Digital Stack" }) }),
+      e.jsx(h, { x: 3410, y: 180, zIndex: 2, children: e.jsx(f, { type: "sparkle", size: 36, color: "#f97316" }) }),
       e.jsx(h, {
-        x: 3400,
-        y: 50,
-        zIndex: 5,
-        children: e.jsx(P, { color: "#93C5FD", children: "Games I Like" }),
-      }),
-      e.jsx(h, {
-        x: 3360,
-        y: 180,
-        zIndex: 2,
-        children: e.jsx(f, { type: "star", size: 32, color: "#3b82f6" }),
-      }),
-      e.jsx(h, {
-        x: 3400,
-        y: 120,
-        zIndex: 4,
+        x: 3450, y: 120, zIndex: 4,
         children: e.jsxs("div", {
-          className:
-            "w-[660px] rounded-2xl border border-stone-200 bg-white/90 p-8 shadow-xl backdrop-blur-sm",
+          className: "w-[660px] rounded-2xl border border-stone-200 bg-white/90 p-8 pb-12 shadow-xl backdrop-blur-sm",
           children: [
             e.jsx("div", {
-              className: "grid grid-cols-3 gap-8 justify-items-center",
-              children: GAMES.map((r) =>
-                e.jsx(
-                  U,
-                  {
-                    src: r.src,
-                    caption: r.caption,
-                    rotation: r.rotation,
-                    loading: "eager",
-                    developDelay: r.developDelay,
-                  },
-                  r.src,
-                ),
+              className: "grid grid-cols-3 gap-x-8 gap-y-[180px] justify-items-center mb-24",
+              children: WORKFLOW_TOOLS.map((r) =>
+                e.jsx("div", { className: "relative min-h-[210px] transform transition-transform hover:scale-105", children: e.jsx(ie, z(I({}, r), { loading: "eager" })) }, r.title),
               ),
             }),
-            e.jsx("div", { className: "mt-8 flex justify-center" }),
-          ],
-        }),
-      }),
-      // ── 5. WHAT I WATCH ──────────────────────────────────────────────────────
-      e.jsx(h, {
-        x: 4400,
-        y: 50,
-        zIndex: 5,
-        children: e.jsx(P, { color: "#FFA07A", children: "What I Watch" }),
-      }),
-      e.jsx(h, {
-        x: 4360,
-        y: 180,
-        zIndex: 2,
-        children: e.jsx(f, { type: "sparkle", size: 30, color: "#f97316" }),
-      }),
-      e.jsx(h, {
-        x: 4400,
-        y: 120,
-        zIndex: 4,
-        children: e.jsxs("div", {
-          className:
-            "w-[660px] rounded-2xl border border-stone-200 bg-white/90 p-8 shadow-xl backdrop-blur-sm",
-          children: [
             e.jsx("div", {
-              className: "grid grid-cols-3 gap-8 justify-items-center",
-              children: WATCH.map((r) =>
-                e.jsx(
-                  U,
-                  {
-                    src: r.src,
-                    caption: r.caption,
-                    rotation: r.rotation,
-                    loading: "eager",
-                    developDelay: r.developDelay,
-                  },
-                  r.src,
-                ),
-              ),
+              className: "flex justify-center",
+              children: e.jsx(M, { content: "Tools that enhance my productivity and collaboration", color: "orange", pinType: "tape", className: "h-28 w-64 p-3 text-xs" }),
             }),
-            e.jsx("div", { className: "mt-8 flex justify-center" }),
           ],
         }),
       }),
-      // ── 6. CONTENT CREATOR ───────────────────────────────────────────────────
-      // e.jsx(h, { x: 5400, y: 50, zIndex: 5, children: e.jsx(P, { color: "#A2FF86", children: "Algorithm Reading" }) }),
-      // e.jsx(h, { x: 5360, y: 180, zIndex: 2, children: e.jsx(f, { type: "sparkle", size: 32, color: "#A2FF86" }) }),
-      // e.jsx(h, {
-      //   x: 5400, y: 120, zIndex: 4, children: e.jsxs("div", {
-      //     className: "w-[660px] rounded-2xl border border-stone-200 bg-white/90 p-8 shadow-xl backdrop-blur-sm", children: [
-      //       e.jsx("div", { className: "grid grid-cols-4 gap-3 mb-6", children: CONTENT_STATS.map(s => e.jsx("div", { style: { background: s.bg, border: `0.5px solid ${s.border}`, borderRadius: 10, padding: "12px 10px", textAlign: "center" }, children: [e.jsx("div", { style: { fontSize: 24, fontWeight: 600, color: s.color, lineHeight: 1 }, children: s.num }), e.jsx("div", { style: { fontSize: 9, color: "#888", marginTop: 3 }, children: s.label })] }, s.label)) }),
-      //       e.jsx("div", { className: "rounded-xl bg-stone-50 border border-stone-100 p-4 mb-5", children: e.jsxs("div", { className: "flex items-start gap-3", children: [e.jsx("div", { style: { fontSize: 28 }, children: "🎯" }), e.jsxs("div", { children: [e.jsx("div", { className: "text-sm font-semibold text-stone-800 mb-1", children: "30-Day Content Sprint" }), e.jsx("div", { className: "text-xs text-stone-500 leading-relaxed", children: "Posted 100 videos across YouTube & Instagram. Minecraft content, gaming stories, viral shorts. One reel hit 545K views alone." })] })] }) }),
-      //       e.jsxs("div", {
-      //         className: "flex gap-3 justify-center", children: [
-      //           e.jsx(M, { content: "Core Byte @corebyte.ig · Minecraft & Gaming", color: "mint", pinType: "tape", className: "h-24 w-48 p-3 text-xs" }),
-      //           e.jsx(M, { content: "Future: Lifestyle, Tech & Self-Dev 🎬", color: "yellow", pinType: "tape", className: "h-24 w-48 p-3 text-xs" }),
-      //         ]
-      //       }),
-      //     ]
-      //   })
-      // }),
-      // ── 7. THE GRIND (updated — slider replaces stats/notes) ─────────────────
-      // e.jsx(h, { x: 6400, y: 50, zIndex: 5, children: e.jsx(P, { color: "#E5C1F0", children: "The Grind" }) }),
-      // e.jsx(h, { x: 6360, y: 180, zIndex: 2, children: e.jsx(f, { type: "heart", size: 32, color: "#f472b6" }) }),
-      // e.jsx(h, {
-      //   x: 6400, y: 120, zIndex: 4, children: e.jsxs("div", {
-      //     className: "w-[600px] rounded-2xl border border-stone-200 bg-white/90 p-8 shadow-xl backdrop-blur-sm", children: [
-      //       // Weight summary row
-      //       e.jsxs("div", {
-      //         style: { display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 24 }, children: [
-      //           e.jsxs("div", {
-      //             style: { textAlign: "center" }, children: [
-      //               e.jsx("div", { style: { fontSize: 44, fontWeight: 800, color: "#1a1a1a", lineHeight: 1 }, children: "107" }),
-      //               e.jsx("div", { style: { fontSize: 12, color: "#888", marginTop: 4 }, children: "kg · Aug 2025" }),
-      //             ]
-      //           }),
-      //           e.jsx("div", { style: { fontSize: 24, color: "#d1d5db", margin: "0 4px" }, children: "→" }),
-      //           e.jsxs("div", {
-      //             style: { textAlign: "center" }, children: [
-      //               e.jsx("div", { style: { fontSize: 44, fontWeight: 800, color: "#22c55e", lineHeight: 1 }, children: "84" }),
-      //               e.jsx("div", { style: { fontSize: 12, color: "#888", marginTop: 4 }, children: "kg now" }),
-      //             ]
-      //           }),
-      //           e.jsx("div", { style: { width: 1, height: 40, background: "#e7e5e4", margin: "0 8px" } }),
-      //           e.jsxs("div", {
-      //             style: { background: "#f0fdf4", border: "0.5px solid #bbf7d0", borderRadius: 12, padding: "10px 16px", textAlign: "center" }, children: [
-      //               e.jsx("div", { style: { fontSize: 24, fontWeight: 800, color: "#16a34a", lineHeight: 1 }, children: "-23kg" }),
-      //               e.jsx("div", { style: { fontSize: 11, color: "#16a34a", marginTop: 3 }, children: "lost 💪" }),
-      //             ]
-      //           }),
-      //         ]
-      //       }),
-      //       // Before/After slider — full width of card
-      //       e.jsx(BeforeAfterSlider, {}),
-      //     ]
-      //   }),
-      // }),
     ],
   });
-// ─── ROOT EXPORT ──────────────────────────────────────────────────────────────
+
 const _e = () => {
   const r = Se();
   return (
@@ -1797,49 +1111,32 @@ const _e = () => {
           return ((c.src = i.src), c);
         });
       return () => {
-        (s.flat().forEach((i) => {
-          i.src = "";
-        }),
-          a.forEach((i) => {
-            i.src = "";
-          }));
+        s.flat().forEach((i) => { i.src = ""; });
+        a.forEach((i) => { i.src = ""; });
       };
     }, []),
     e.jsxs("div", {
       className: "relative",
       children: [
         e.jsx(m.header, {
-          initial: { opacity: 0, y: -20 },
-          animate: { opacity: 1, y: 0 },
-          className:
-            "fixed left-0 right-0 top-0 z-50 px-4 py-3 md:px-6 md:py-4",
+          initial: { opacity: 0, y: -20 }, animate: { opacity: 1, y: 0 },
+          className: "fixed left-0 right-0 top-0 z-50 px-4 py-3 md:px-6 md:py-4",
           children: e.jsxs("div", {
             className: "mx-auto flex max-w-7xl items-center justify-between",
             children: [
               e.jsxs(je, {
                 to: "/",
-                className:
-                  "group flex items-center gap-2 rounded-full border border-stone-200 bg-white/95 px-3 py-2 shadow-md backdrop-blur-sm transition-all hover:shadow-lg md:px-4",
+                className: "group flex items-center gap-2 rounded-full border border-stone-200 bg-white/95 px-3 py-2 shadow-md backdrop-blur-sm transition-all hover:shadow-lg md:px-4",
                 children: [
-                  e.jsx(Ne, {
-                    className:
-                      "h-4 w-4 text-stone-600 transition-transform group-hover:-translate-x-1",
-                  }),
-                  e.jsx("span", {
-                    className: "text-sm font-medium text-stone-700",
-                    children: "Back",
-                  }),
+                  e.jsx(Ne, { className: "h-4 w-4 text-stone-600 transition-transform group-hover:-translate-x-1" }),
+                  e.jsx("span", { className: "text-sm font-medium text-stone-700", children: "Back" }),
                 ],
               }),
               e.jsxs("div", {
-                className:
-                  "flex items-center gap-2 rounded-full border border-stone-200 bg-white/95 px-3 py-2 shadow-md backdrop-blur-sm md:px-4",
+                className: "flex items-center gap-2 rounded-full border border-stone-200 bg-white/95 px-3 py-2 shadow-md backdrop-blur-sm md:px-4",
                 children: [
                   e.jsx(oe, { className: "h-4 w-4 text-yellow-500" }),
-                  e.jsx("span", {
-                    className: "text-sm font-medium text-stone-700",
-                    children: "Playground",
-                  }),
+                  e.jsx("span", { className: "text-sm font-medium text-stone-700", children: "Playground" }),
                 ],
               }),
             ],
@@ -1850,12 +1147,7 @@ const _e = () => {
     })
   );
 };
-const Ze = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: _e }, Symbol.toStringTag, {
-    value: "Module",
-  }),
-);
+const Ze = Object.freeze(Object.defineProperty({ __proto__: null, default: _e }, Symbol.toStringTag, { value: "Module" }));
 const et = Ze.default;
 export { Ze as P, Se as u };
 export { et as default };
-

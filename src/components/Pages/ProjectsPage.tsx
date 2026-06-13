@@ -20,11 +20,11 @@ const V = () => {
         tag: "Design",
       },
       {
-        name: "VS Code",
-        description: "Primary editor with Antigravity extension",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+        name: "Antigravity",
+        description: "Primary AI-native IDE for rapid development",
+        icon: "https://antigravity.google/static/icons/antigravity-cli.svg",
         color: "bg-blue-100",
-        tag: "Editor",
+        tag: "IDE",
       },
       {
         name: "React + Vite",
@@ -76,11 +76,11 @@ const V = () => {
         tag: "Mobile",
       },
       {
-        name: "Cloudflare",
-        description: "Edge computing & performant deployment",
-        icon: "https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/cloudflare.svg",
+        name: "Gemini CLI",
+        description: "AI-powered terminal assistant for workflow automation",
+        icon: "https://geminicli.com/img/logo.svg",
         color: "bg-orange-100",
-        tag: "Infra",
+        tag: "AI",
       },
     ],
     r = [

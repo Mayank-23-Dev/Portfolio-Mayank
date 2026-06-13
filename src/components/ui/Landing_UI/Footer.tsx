@@ -23,7 +23,6 @@ const x = "connect@mayank-dev.in",
   u = () => {
     const [l, n] = h.useState(!1),
       o = [
-        { label: "Contact", href: "/contact" },
         { label: "Instagram", href: "https://www.instagram.com/mayankdev.mov/#" },
         { label: "X (Twitter)", href: "https://x.com/Mayank_Dev23" },
         { label: "GitHub", href: "https://github.com/Mayank-23-Dev" },
@@ -68,13 +67,13 @@ const x = "connect@mayank-dev.in",
                 className:
                   "text-base md:text-xl text-[#4b3b29]/70 mb-10 max-w-2xl mx-auto",
                 children:
-                  "I am always looking for new challenges and opportunities to collaborate. Whether you want to hire a full stack developer India or just chat about tech, feel free to reach out.",
+                  "I am always looking for new challenges and opportunities to collaborate. Whether you want to build a high-performance app or engineer a viral content strategy, feel free to reach out.",
               }),
               e.jsx(f, {
                 to: "/contact",
                 className:
                   "daisy-button inline-flex items-center gap-2 text-base md:text-lg bg-[#A2FF86] hover:bg-black hover:text-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]",
-                children: "Approach Now →",
+                children: "Let's Connect →",
               }),
             ],
           }),

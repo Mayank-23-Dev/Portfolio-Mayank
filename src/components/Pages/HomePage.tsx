@@ -465,17 +465,10 @@ Creation`,
           pinType: "tape",
         },
         {
-          content: `Video
-Editing`,
+          content: `Content Strategy
+& Production`,
           color: "sky",
           rotate: "left",
-          pinType: "tape",
-        },
-        {
-          content: `Content
-Direction`,
-          color: "peach",
-          rotate: "right",
           pinType: "tape",
         },
       ],
@@ -990,7 +983,7 @@ Direction`,
                                             className:
                                               "bg-green-200 px-1 rounded",
                                             children:
-                                              "FinEase and real-world projects",
+                                              "Shiq and real-world projects",
                                           }),
                                           " on the side. 🚀",
                                         ],
@@ -1019,6 +1012,32 @@ Direction`,
                                               "clean, useful, user-focused experiences",
                                           }),
                                           ". 🎯",
+                                        ],
+                                      }),
+                                    }),
+                                  }),
+                                  e.jsx("div", {
+                                    className: "rotate-[0.55deg]",
+                                    children: e.jsx("div", {
+                                      className: "px-7 pt-10 pb-9",
+                                      style: {
+                                        backgroundColor: j,
+                                        backgroundImage: w,
+                                        clipPath:
+                                          "polygon(0% 14%, 2.5% 3%, 5% 13%, 7.5% 1%, 10% 14%, 12.5% 4%, 15% 12%, 17.5% 0%, 20% 14%, 22.5% 3%, 25% 13%, 27.5% 2%, 30% 14%, 32.5% 1%, 35% 13%, 37.5% 4%, 40% 14%, 42.5% 0%, 45% 13%, 47.5% 3%, 50% 14%, 52.5% 2%, 55% 13%, 57.5% 0%, 60% 14%, 62.5% 4%, 65% 12%, 67.5% 1%, 70% 14%, 72.5% 3%, 75% 13%, 77.5% 0%, 80% 14%, 82.5% 2%, 85% 13%, 87.5% 1%, 90% 14%, 92.5% 3%, 95% 12%, 97.5% 2%, 100% 14%, 100% 86%, 97.5% 97%, 95% 86%, 92.5% 99%, 90% 87%, 87.5% 100%, 85% 86%, 82.5% 98%, 80% 87%, 77.5% 100%, 75% 87%, 72.5% 99%, 70% 86%, 67.5% 98%, 65% 87%, 62.5% 100%, 60% 86%, 57.5% 99%, 55% 87%, 52.5% 100%, 50% 86%, 47.5% 98%, 45% 87%, 42.5% 100%, 40% 86%, 37.5% 99%, 35% 87%, 32.5% 100%, 30% 86%, 27.5% 98%, 25% 87%, 22.5% 100%, 20% 87%, 17.5% 99%, 15% 86%, 12.5% 98%, 10% 87%, 7.5% 100%, 5% 86%, 2.5% 98%, 0% 86%)",
+                                      },
+                                      children: e.jsxs("p", {
+                                        className:
+                                          "text-sm lg:text-base leading-relaxed text-black",
+                                        children: [
+                                          "I tried engineering virality across platforms and achieved ",
+                                          e.jsx("span", {
+                                            className:
+                                              "bg-cyan-200 px-1 rounded",
+                                            children:
+                                              "over 3.5M views on a single page",
+                                          }),
+                                          " across Insta & YT. 🎥",
                                         ],
                                       }),
                                     }),
@@ -1217,7 +1236,7 @@ Direction`,
                                       e.jsx("span", {
                                         className: "bg-green-200 px-1 rounded",
                                         children:
-                                          "FinEase and real-world projects",
+                                          "Shiq and real-world projects",
                                       }),
                                       " on the side. 🚀",
                                     ],
@@ -1245,6 +1264,31 @@ Direction`,
                                           "clean, useful, user-focused experiences",
                                       }),
                                       ". 🎯",
+                                    ],
+                                  }),
+                                }),
+                              }),
+                              e.jsx("div", {
+                                className: "rotate-[0.4deg]",
+                                children: e.jsx("div", {
+                                  className: "px-5 pt-9 pb-8",
+                                  style: {
+                                    backgroundColor: j,
+                                    backgroundImage: w,
+                                    clipPath:
+                                      "polygon(0% 14%, 5% 2%, 10% 14%, 15% 1%, 20% 14%, 25% 3%, 30% 14%, 35% 0%, 40% 14%, 45% 3%, 50% 14%, 55% 1%, 60% 14%, 65% 4%, 70% 14%, 75% 0%, 80% 14%, 85% 2%, 90% 14%, 95% 3%, 100% 14%, 100% 86%, 95% 99%, 90% 87%, 85% 100%, 80% 86%, 75% 99%, 70% 87%, 65% 100%, 60% 86%, 55% 99%, 50% 87%, 45% 100%, 40% 86%, 35% 99%, 30% 87%, 25% 100%, 20% 86%, 15% 99%, 10% 87%, 5% 100%, 0% 86%)",
+                                  },
+                                  children: e.jsxs("p", {
+                                    className:
+                                      "text-sm leading-relaxed text-black",
+                                    children: [
+                                      "I tried engineering virality across platforms and achieved ",
+                                      e.jsx("span", {
+                                        className: "bg-cyan-200 px-1 rounded",
+                                        children:
+                                          "over 3.5M views on a single page",
+                                      }),
+                                      " across Insta & YT. 🎥",
                                     ],
                                   }),
                                 }),
@@ -1328,11 +1372,11 @@ Direction`,
                             children: [
                               e.jsx("h3", {
                                 className: "text-xl font-bold text-stone-900",
-                                children: "Tech Content Creator: Sharing the Journey"
+                                children: "Viral Content Strategy & Engineering: 12.5M+ Views"
                               }),
                               e.jsx("p", {
                                 className: "text-sm md:text-base leading-relaxed text-stone-600",
-                                children: "Beyond the code, I am a tech content creator India community member. I share my learning journey, coding tutorials, and AI tool guides on Instagram and YouTube. My goal is to inspire other student developers and provide value to the young developer portfolio 2026 generation. By documenting my builds and sharing tips, I contribute to the developer blog India ecosystem, helping others navigate the challenges of modern web development."
+                                children: "I don't just create content; I engineer it for reach. With over 10M+ views on Instagram and 2.5M+ on YouTube, I've mastered the psychology of viral packaging. My approach combines cinematography, data-driven scripting, and viewer psychology to enhance content impact. My role is to bridge the gap between technical complexity and viral appeal, ensuring that tech content resonates with a global audience."
                               }),
                             ]
                           }),
