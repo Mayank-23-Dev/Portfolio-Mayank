@@ -1,41 +1,35 @@
-const __vite__mapDeps = (
-  i,
-  m = __vite__mapDeps,
-  d = m.f ||
-    (m.f = [
-      "assets/HomePage.js",
-      "assets/_uiVendor.js",
-      "assets/_reactVendor.js",
-      "assets/Header.js",
-      "assets/MenuToggleIcon.js",
-      "assets/ConnectDropdown.js",
-      "assets/_sharedIndex.js",
-      "assets/_iconsVendor.js",
-      "assets/_animationVendor.js",
-      "assets/ScribbleUnderline.js",
-      "assets/StickyNote.js",
-      "assets/Footer.js",
-      "assets/PaperBackground.js",
-      "assets/ProjectsPage.js",
-      "assets/LifePage.js",
-      "assets/BookCover.js",
-      "assets/JourneyPage.js",
-      "assets/ContactPage.js",
-      "assets/FloatingCircle.js",
-      "assets/BlogPage.js",
-      "assets/BlogPostsData.js",
-      "assets/BlogPostPage.js",
-      "assets/ResponsiveImage.js",
-      "assets/HactiqCaseStudy.js",
-      "assets/DarkFooter.js",
-      "assets/FinEaseCaseStudy.js",
-      "assets/AIForgeryDetectiveCaseStudy.js",
-      "assets/BasicNumberTicker.js",
-      "assets/QuestionLibraryCaseStudy.js",
-      "assets/NotFoundPage.js",
-      "assets/PlaygroundPage.js",
-    ]),
-) => i.map((i) => d[i]);
+import {
+  j as m,
+  V as Xr,
+  R as Gr,
+  A as Kr,
+  C as Zr,
+  T as Jr,
+  D as Qr,
+  P as gs,
+  a as Ht,
+  u as xn,
+  c as eo,
+  b as Yt,
+  d as ys,
+  e as vs,
+  f as ws,
+  g as bs,
+  h as nt,
+} from "./_uiVendor";
+import {
+  d as xs,
+  a as g,
+  R as x,
+  v as Ss,
+  b as Es,
+  u as qt,
+  B as As,
+  e as ks,
+  f as re,
+} from "./_reactVendor";
+import { X as Cs } from "./_iconsVendor";
+import { A as Ts, m as Ps } from "./_animationVendor";
 var ps = Object.defineProperty,
   ms = Object.defineProperties;
 var hs = Object.getOwnPropertyDescriptors;
@@ -79,128 +73,7 @@ var Q = (e, t, n) =>
       a = (l) => (l.done ? r(l.value) : Promise.resolve(l.value).then(s, i));
     a((n = n.apply(e, t)).next());
   });
-import {
-  j as m,
-  V as Xr,
-  R as Gr,
-  A as Kr,
-  C as Zr,
-  T as Jr,
-  D as Qr,
-  P as gs,
-  a as Ht,
-  u as xn,
-  c as eo,
-  b as Yt,
-  d as ys,
-  e as vs,
-  f as ws,
-  g as bs,
-  h as nt,
-} from "./_uiVendor";
-import {
-  d as xs,
-  a as g,
-  R as x,
-  v as Ss,
-  b as Es,
-  u as qt,
-  B as As,
-  e as ks,
-  f as re,
-} from "./_reactVendor";
-import { X as Cs } from "./_iconsVendor";
-import { A as Ts, m as Ps } from "./_animationVendor";
-(function () {
-  const t = document.createElement("link").relList;
-  if (t && t.supports && t.supports("modulepreload")) return;
-  for (const o of document.querySelectorAll('link[rel="modulepreload"]')) r(o);
-  new MutationObserver((o) => {
-    for (const s of o)
-      if (s.type === "childList")
-        for (const i of s.addedNodes)
-          i.tagName === "LINK" && i.rel === "modulepreload" && r(i);
-  }).observe(document, { childList: !0, subtree: !0 });
-  function n(o) {
-    const s = {};
-    return (
-      o.integrity && (s.integrity = o.integrity),
-      o.referrerPolicy && (s.referrerPolicy = o.referrerPolicy),
-      o.crossOrigin === "use-credentials"
-        ? (s.credentials = "include")
-        : o.crossOrigin === "anonymous"
-          ? (s.credentials = "omit")
-          : (s.credentials = "same-origin"),
-      s
-    );
-  }
-  function r(o) {
-    if (o.ep) return;
-    o.ep = !0;
-    const s = n(o);
-    fetch(o.href, s);
-  }
-})();
-const Rs = "modulepreload",
-  Ls = function (e) {
-    return "/" + e;
-  },
-  er = {},
-  ne = function (t, n, r) {
-    let o = Promise.resolve();
-    if (n && n.length > 0) {
-      let l = function (d) {
-        return Promise.all(
-          d.map((u) =>
-            Promise.resolve(u).then(
-              (f) => ({ status: "fulfilled", value: f }),
-              (f) => ({ status: "rejected", reason: f }),
-            ),
-          ),
-        );
-      };
-      document.getElementsByTagName("link");
-      const i = document.querySelector("meta[property=csp-nonce]"),
-        a =
-          (i == null ? void 0 : i.nonce) ||
-          (i == null ? void 0 : i.getAttribute("nonce"));
-      o = l(
-        n.map((d) => {
-          if (((d = Ls(d)), d in er)) return;
-          er[d] = !0;
-          const u = d.endsWith(".css"),
-            f = u ? '[rel="stylesheet"]' : "";
-          if (document.querySelector(`link[href="${d}"]${f}`)) return;
-          const p = document.createElement("link");
-          if (
-            ((p.rel = u ? "stylesheet" : Rs),
-            u || (p.as = "script"),
-            (p.crossOrigin = ""),
-            (p.href = d),
-            a && p.setAttribute("nonce", a),
-            document.head.appendChild(p),
-            u)
-          )
-            return new Promise((c, y) => {
-              (p.addEventListener("load", c),
-                p.addEventListener("error", () =>
-                  y(new Error(`Unable to preload CSS for ${d}`)),
-                ));
-            });
-        }),
-      );
-    }
-    function s(i) {
-      const a = new Event("vite:preloadError", { cancelable: !0 });
-      if (((a.payload = i), window.dispatchEvent(a), !a.defaultPrevented))
-        throw i;
-    }
-    return o.then((i) => {
-      for (const a of i || []) a.status === "rejected" && s(a.reason);
-      return t().catch(s);
-    });
-  },
-  tr = 8e3,
+const tr = 8e3,
   _s = 12e3,
   Is = 1100,
   Sn = 1200,
@@ -306,8 +179,8 @@ function Us() {
       return "static";
     try {
       const [{ TegakiEngine: e }, t] = yield Promise.all([
-        ne(() => import("./_tegakiEngine"), []),
-        ne(() => import("./_kalamBundle"), []),
+        import("./_tegakiEngine"),
+        import("./_kalamBundle"),
       ]);
       return (
         (ht.textContent = ""),
@@ -6730,78 +6603,19 @@ function wt(e) {
       id: e.id,
     });
 }
-const ad = g.lazy(() =>
-    ne(
-      () => import("../Pages/HomePage"),
-      __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
-    ),
-  ),
-  ld = g.lazy(() =>
-    ne(
-      () => import("../Pages/ProjectsPage"),
-      __vite__mapDeps([13, 1, 2, 3, 4, 5, 6, 7, 8, 11, 12]),
-    ),
-  ),
-  cd = g.lazy(() =>
-    ne(
-      () => import("../Pages/LifePage"),
-      __vite__mapDeps([14, 1, 2, 3, 4, 5, 6, 7, 8, 11, 12, 15]),
-    ),
-  ),
-  dd = g.lazy(() =>
-    ne(
-      () => import("../Pages/JourneyPage"),
-      __vite__mapDeps([16, 1, 2, 3, 4, 5, 6, 7, 8, 11, 12]),
-    ),
-  ),
-  ud = g.lazy(() =>
-    ne(
-      () => import("../Pages/ContactPage"),
-      __vite__mapDeps([17, 1, 2, 3, 4, 5, 6, 7, 8, 11, 18, 10, 12]),
-    ),
-  ),
-  fd = g.lazy(() =>
-    ne(
-      () => import("../Pages/BlogPage"),
-      __vite__mapDeps([19, 1, 2, 3, 4, 5, 6, 7, 8, 20]),
-    ),
-  ),
-  pd = g.lazy(() =>
-    ne(
-      () => import("../Pages/BlogPostPage"),
-      __vite__mapDeps([21, 1, 2, 3, 4, 5, 6, 7, 8, 20]),
-    ),
-  ),
-  gd = g.lazy(() =>
-    ne(
-      () => import("../Pages/HactiqCaseStudy"),
-      __vite__mapDeps([25, 1, 2, 26, 4, 5, 6, 7, 8, 23]),
-    ),
-  ),
-  yd = g.lazy(() =>
-    ne(
-      () => import("../Pages/FinEaseCaseStudy"),
-      __vite__mapDeps([27, 1, 2, 26, 4, 5, 6, 7, 8, 23]),
-    ),
-  ),
-  sd2 = g.lazy(() =>
-    ne(() => import("../Pages/ShiqCaseStudy"), [])
-  ),
-  vd = g.lazy(() =>
-    ne(() => import("../Pages/VaultDLCaseStudy"), [])
-  ),
-  Sd = g.lazy(() =>
-    ne(
-      () => import("../Pages/NotFoundPage"),
-      __vite__mapDeps([34, 1, 2, 10]),
-    ),
-  ),
-  Ed = g.lazy(() =>
-    ne(
-      () => import("../Pages/PlaygroundPage"),
-      __vite__mapDeps([35, 1, 2, 6, 7, 8, 15, 10]),
-    ),
-  );
+const ad = g.lazy(() => import("../Pages/HomePage")),
+  ld = g.lazy(() => import("../Pages/ProjectsPage")),
+  cd = g.lazy(() => import("../Pages/LifePage")),
+  dd = g.lazy(() => import("../Pages/JourneyPage")),
+  ud = g.lazy(() => import("../Pages/ContactPage")),
+  fd = g.lazy(() => import("../Pages/BlogPage")),
+  pd = g.lazy(() => import("../Pages/BlogPostPage")),
+  gd = g.lazy(() => import("../Pages/HactiqCaseStudy")),
+  yd = g.lazy(() => import("../Pages/FinEaseCaseStudy")),
+  sd2 = g.lazy(() => import("../Pages/ShiqCaseStudy")),
+  vd = g.lazy(() => import("../Pages/VaultDLCaseStudy")),
+  Sd = g.lazy(() => import("../Pages/NotFoundPage")),
+  Ed = g.lazy(() => import("../Pages/PlaygroundPage"));
 class Ad extends x.Component {
   constructor(t) {
     (super(t), (this.state = { hasError: !1, error: null }));
@@ -6890,7 +6704,7 @@ const kd = () => {
 const AppRoutes = kd;
 const AppShell = Cd;
 
-export { ne as _, Ke as c, vn as p, AppRoutes };
+export { Ke as c, vn as p, AppRoutes };
 export default AppShell;
 
 

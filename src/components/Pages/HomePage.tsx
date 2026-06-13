@@ -529,7 +529,7 @@ Solving & DSA`,
                           children: [
                             e.jsx("p", {
                               className: "text-base font-medium leading-snug",
-                              children: "First-year BTech CSE @ PSIT Kanpur.",
+                              children: "Second-year BTech CSE @ PSIT Kanpur.",
                             }),
                             e.jsx("p", {
                               className: "text-base font-medium leading-snug",
@@ -577,7 +577,7 @@ Solving & DSA`,
                             e.jsx("p", {
                               className:
                                 "text-lg lg:text-xl font-medium leading-snug",
-                              children: "First-year BTech CSE @ PSIT Kanpur.",
+                              children: "Second-year BTech CSE @ PSIT Kanpur.",
                             }),
                             e.jsx("p", {
                               className:
@@ -985,7 +985,7 @@ Solving & DSA`,
                                               "bg-yellow-200 px-1 rounded",
                                             children: "Plot twist:",
                                           }),
-                                          " First-year BTech CSE who loves turning ideas into real products. 💡",
+                                          " Second-year BTech CSE who loves turning ideas into real products. 💡",
                                         ],
                                       }),
                                     }),
@@ -1213,7 +1213,7 @@ Solving & DSA`,
                                         className: "bg-yellow-200 px-1 rounded",
                                         children: "Plot twist:",
                                       }),
-                                      " First-year BTech CSE who loves turning ideas into real products. 💡",
+                                      " Second-year BTech CSE who loves turning ideas into real products. 💡",
                                     ],
                                   }),
                                 }),

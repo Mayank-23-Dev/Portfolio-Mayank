@@ -1,22 +1,3 @@
-const __vite__mapDeps = (
-  i,
-  m = __vite__mapDeps,
-  d = m.f ||
-    (m.f = [
-      "assets/ComponentsShowcase.js",
-      "assets/_uiVendor.js",
-      "assets/_reactVendor.js",
-      "assets/_iconsVendor.js",
-      "assets/_animationVendor.js",
-      "assets/ScribbleUnderline.js",
-      "assets/AppShell.js",
-      "assets/index-B7cA2ULC.css",
-      "assets/StickyNote.js",
-      "assets/ConnectDropdown.js",
-      "assets/_sharedIndex.js",
-      "assets/BookCover.js",
-    ]),
-) => i.map((i) => d[i]);
 var me = Object.defineProperty,
   pe = Object.defineProperties;
 var ue = Object.getOwnPropertyDescriptors;
@@ -33,7 +14,7 @@ var ne = (r, s, a) =>
     return r;
   },
   z = (r, s) => pe(r, ue(s));
-import { c as N, _ as ye } from "../ui/AppShell";
+import { c as N } from "../ui/AppShell";
 import { j as e } from "../ui/_uiVendor";
 import { a as n, R as W, b as be, L as je } from "../ui/_reactVendor";
 import { S as oe } from "../ui/_sharedIndex";
@@ -1000,12 +981,7 @@ const BeforeAfterSlider = W.memo(() => {
 });
 BeforeAfterSlider.displayName = "BeforeAfterSlider";
 // ─── DATA ─────────────────────────────────────────────────────────────────────
-const le = n.lazy(() =>
-  ye(
-    () => import("../ui/Playground_UI/ComponentsShowcase"),
-    __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
-  ),
-);
+const le = n.lazy(() => import("../ui/Playground_UI/ComponentsShowcase"));
 const J = [
   { src: "/images/feed/memory-01.webp" },
   { src: "/images/feed/memory-02.webp" },
