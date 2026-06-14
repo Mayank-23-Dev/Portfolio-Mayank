@@ -4852,9 +4852,7 @@ function ac(e) {
     ? e.scriptSrc
     : In()
       ? "https://va.vercel-scripts.com/v1/script.debug.js"
-      : e.basePath
-        ? `${e.basePath}/insights/script.js`
-        : "/_vercel/insights/script.js";
+      : "https://va.vercel-scripts.com/v1/script.js";
 }
 function lc(e = { debug: !0 }) {
   var t;

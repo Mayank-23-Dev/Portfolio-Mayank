@@ -325,7 +325,7 @@ const D = () =>
                     children: e.jsx("h2", {
                       className: "mt-2 font-serif italic text-4xl md:text-7xl text-zinc-900 text-center leading-tight",
                       style: { fontSize: "clamp(1.8rem, 8vw, 3rem)" },
-                      children: "Input without output becomes noise",
+                      children: '"Input without output becomes noise"',
                     }),
                   })),
                 ],

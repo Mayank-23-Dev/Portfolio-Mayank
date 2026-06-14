@@ -43,24 +43,26 @@ const f = [
     title: "Under The Hood",
     yearRange: "2022 - 2023",
     story: {
-      short: "Cracked Windows login through CMD at 10. Just needed access badly enough.",
+      short: "Cracked Windows login through CMD at 10. No tutorial. Just needed access badly enough.",
       medium: "At ten, I wasn't just using computers — I was trying to take them apart and put them back together. I learned to swap out system files like Utilman for CMD to bypass the Windows login screen. I was reinstalling entire operating systems from pendrives I built myself, and chasing activation workarounds just to keep machines running.",
       long: "At ten, I wasn't just using computers — I was trying to take them apart and put them back together. I learned to swap out system files like Utilman for CMD to bypass the Windows login screen. I was reinstalling entire operating systems from pendrives I built myself, and chasing activation workarounds just to keep machines running. I'd bring these tricks into the school computer lab to show friends, fascinated by what was happening underneath the interface.",
     },
     list: {
       short: [
-        "Cracked Windows login through CMD at 10. Just needed access.",
+        "Cracked Windows login through CMD at 10. No tutorial. Just needed access badly enough.",
         "Built bootable pendrives. Reinstalled OS. Activated everything from scratch.",
-        "Started showing tricks to friends. Realised knowledge is its own kind of power.",
+        "Started showing the tricks to friends in the school lab. Realised knowledge is its own kind of power.",
       ],
       medium: [
         "Swapped system files (Utilman with CMD) to bypass Windows security",
         "Self-taught OS reinstallation and manual activation methods",
         "Built bootable pendrives and managed system-level recovery",
+        "Gained reputation in school for technical knowledge and problem-solving",
       ],
       long: [
         "Developed deep familiarity with Windows system architecture early on",
         "Used Utilman to CMD swaps as a gateway to system administration",
+        "Provided technical solutions for friends' hardware and software issues",
         "Internalized that there is always a way through if you understand the system",
       ],
     },
@@ -75,15 +77,15 @@ const f = [
     },
     list: {
       short: [
-        "Taught myself Premiere Pro CC 2014. Laptop could just about run it.",
-        "NotGamerzReact hit 15k subs and millions of views. YouTube rejected monetization.",
-        "Sold the channel. Opened Fiverr the same week. Edited for creators with 300K+ subs.",
+        "Taught myself Premiere Pro CC 2014. Laptop could just about run it without lagging.",
+        "NotGamerzReact hit thousands of subscribers and millions of views. YouTube rejected monetization.",
+        "Sold the channel. Opened Fiverr the same week. Edited for creators with 300K+ subscribers.",
       ],
       medium: [
         "Mastered professional editing workflows under hardware constraints",
         "Built and sold a digital asset after monetization rejection",
         "Started professional freelancing on Fiverr in 2023",
-        "Worked with major creators like Slice of Sabby (300k+ subscribers)",
+        "Worked with major creators like savvy_bg (300k+ subscribers)",
       ],
       long: [
         "Developed professional editing workflows under hardware constraints",
@@ -105,7 +107,7 @@ const f = [
       short: [
         "Technically doing things. Not really present in any of it.",
         "Looked in the mirror one day and genuinely didn't like who was looking back.",
-        "Gym at 5 AM. Angirasoft apprenticeship. Changed the circle. Changed the weight.",
+        "Dietician. Gym at 5 AM. Angirasoft apprenticeship. Books. Changed the circle. Changed the weight.",
       ],
       medium: [
         "Reclaimed physical health and self-respect through rigorous discipline",
@@ -125,21 +127,21 @@ const f = [
     title: "Building",
     yearRange: "2025 - Present",
     story: {
-      short: "Built Hactiq, claimed 2nd in Hackathon with FinEase, and hit millions through data experiments.",
+      short: "Built Hactiq, won 2nd in Hackathon with FinEase, and hit millions through data experiments.",
       medium: "I walked into PSIT Kanpur for my first semester carrying that new discipline with me. I built Hactiq for free and the next semester, I built FinEase, which won 2nd place at the Protech Hackathon. Alongside that, I ran CoreByte on YouTube and Instagram, racking up millions of views through experimentation.",
       long: "I walked into PSIT Kanpur for my first semester carrying that new discipline with me. I built Hactiq because I saw people charging for what should've been free templates — so I made it free. The next semester, I built FinEase to untangle the mess of scattered digital payments, and it won 2nd place at the Protech Hackathon. Alongside that, I ran CoreByte on YouTube and Instagram, racking up millions of views purely through data-driven experimentation. After a stretch where I thought I'd burned myself out, I came out the other end with strong grades and a real sense of finally competing in the right field.",
     },
     list: {
       short: [
         "First sem: built Hactiq from scratch, made it free, ended with strong grades.",
-        "Ran 100-video experiments on YT & Insta. Millions of views. Pure data collection.",
-        "FinEase → Hackathon 2nd place. Only team with a working deployed product.",
+        "Ran 100-video experiments on YouTube and Instagram. Millions of views. Pure data collection.",
+        "FinEase → PSIT Protech Hackathon 2nd place. Only team with a working deployed product in the room.",
       ],
       medium: [
         "Developed Hactiq as a free consistency tool for students",
-        "Claimed 2nd place at PSIT Protech Hackathon with FinEase",
+        "Won 2nd place at PSIT Protech Hackathon with FinEase",
         "Reached millions through algorithmic experiments on CoreByte",
-        "Alongside managing strong academic performance in BTech first year",
+        "Achieved strong academic performance in BTech first year",
       ],
       long: [
         "Successfully transitioned to BTech at PSIT Kanpur with strong grades",
@@ -160,13 +162,14 @@ const f = [
     list: {
       short: [
         "DSA every day. Not for exams. To actually think through problems cleanly.",
-        "Built VaultDL — a Windows app because everything else needed a terminal.",
-        "Shiq in progress. Learning to film properly. Passing it forward immediately.",
+        "Built VaultDL — a Windows desktop app because everything existing needed a terminal or felt bad.",
+        "Shiq in progress. Learning to film properly. Whatever I figure out, I pass it forward immediately.",
       ],
       medium: [
         "Mastering desktop development with VaultDL (yt-dlp based)",
         "Architecting Shiq: the production pipeline tool for solo creators",
-        "Sharpening filmmaking knowledge: light, composition, viewer psychology",
+        "Deepening filmmaking knowledge: light, composition, intentionality",
+        "Mentoring others by sharing real-time technical discoveries",
       ],
       long: [
         "Architecting VaultDL to solve the complexity of media downloading",
@@ -190,7 +193,7 @@ const y = [
 ];
 
 const x = { chapters: f, timeline: y };
-const b = { prose: "Story", list: "List", timeline: "Timeline" };
+const b_data = { prose: "Story", list: "List", timeline: "Timeline" };
 
 const w_comp = ({ value: n, onChange: a }) => {
   const i = ["prose", "list", "timeline"];
@@ -207,7 +210,7 @@ const w_comp = ({ value: n, onChange: a }) => {
             s ? "font-medium text-zinc-900" : "text-zinc-400 hover:text-zinc-600",
           ].join(" "),
           onClick: () => a(t),
-          children: b[t],
+          children: b_data[t],
         },
         t
       );
@@ -248,9 +251,9 @@ const j_comp = ({ value: n, onChange: a }) => {
               e.jsx(
                 "div",
                 {
+                  key: o,
                   className: `h-1 w-1 rounded-full transition-colors ${o === n ? "bg-zinc-900" : "bg-zinc-200"}`,
                 },
-                o
               )
             ),
           }),
@@ -328,7 +331,7 @@ const v_comp = ({ chapters: n, lengthMode: a }) =>
   });
 
 const k_comp = ({ chapters: n, lengthMode: a }) => {
-  const i = [
+  const i_colors = [
     "bg-daisy-yellow",
     "bg-daisy-green",
     "bg-daisy-purple",
@@ -339,8 +342,8 @@ const k_comp = ({ chapters: n, lengthMode: a }) => {
   return e.jsx("div", {
     className: "space-y-10",
     children: n.map((t, idx) => {
-      const s = i[idx % i.length],
-        r = t.list[a];
+      const s_color = i_colors[idx % i_colors.length],
+        r_list = t.list[a];
       return e.jsxs(
         "section",
         {
@@ -370,22 +373,22 @@ const k_comp = ({ chapters: n, lengthMode: a }) => {
                     animate: { opacity: 1 },
                     exit: { opacity: 0 },
                     transition: { duration: 0.2 },
-                    children: r.map((o, m_idx) =>
+                    children: r_list.map((o, m_idx) =>
                       e.jsxs(
                         "li",
                         {
+                          key: m_idx,
                           className: "flex items-start gap-3 text-base text-zinc-600 mb-3 last:mb-0",
                           children: [
                             e.jsx("span", {
-                              className: `mt-2 h-2 w-2 shrink-0 rounded-full border border-black ${s}`,
+                              className: `mt-2 h-2 w-2 shrink-0 rounded-full border border-black ${s_color}`,
                             }),
                             e.jsx("span", {
-                              className: "leading-relaxed",
+                              className: "leading-relaxed text-left",
                               children: o,
                             }),
                           ],
                         },
-                        m_idx
                       )
                     ),
                   },
@@ -402,7 +405,7 @@ const k_comp = ({ chapters: n, lengthMode: a }) => {
 };
 
 const I_comp = ({ events: n }) => {
-  const a = [
+  const a_colors = [
     "bg-daisy-yellow",
     "bg-daisy-green",
     "bg-daisy-purple",
@@ -422,7 +425,7 @@ const I_comp = ({ events: n }) => {
           className: "relative pl-8",
           children: [
             e.jsx("div", {
-              className: `absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full border border-black ${a[t % a.length]}`,
+              className: `absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full border border-black ${a_colors[t % a_colors.length]}`,
             }),
             e.jsx("div", {
               className: "flex flex-col gap-1",
@@ -430,7 +433,7 @@ const I_comp = ({ events: n }) => {
                 className: "flex items-baseline gap-3",
                 children: [
                   e.jsx("span", {
-                    className: "text-sm font-medium text-zinc-900",
+                    className: "text-sm font-medium text-zinc-900 text-left",
                     children: i.label,
                   }),
                   e.jsx("span", {
@@ -448,12 +451,12 @@ const I_comp = ({ events: n }) => {
   });
 };
 
-const c = x;
+const c_data = x;
 
 const N_comp = () => {
   const [n, a] = h.useState("prose"),
     [i, t] = h.useState("medium"),
-    s = c.timeline;
+    s = c_data.timeline;
   return e.jsx("section", {
     id: "journey",
     className: "mx-auto max-w-7xl px-6 pt-4 pb-24",
@@ -495,8 +498,8 @@ const N_comp = () => {
                     exit: { opacity: 0, y: -10 },
                     transition: { duration: 0.3, ease: "easeInOut" },
                     children: [
-                      n === "prose" && e.jsx(v_comp, { chapters: c.chapters, lengthMode: i }),
-                      n === "list" && e.jsx(k_comp, { chapters: c.chapters, lengthMode: i }),
+                      n === "prose" && e.jsx(v_comp, { chapters: c_data.chapters, lengthMode: i }),
+                      n === "list" && e.jsx(k_comp, { chapters: c_data.chapters, lengthMode: i }),
                       n === "timeline" && e.jsx(I_comp, { events: s }),
                     ],
                   },
