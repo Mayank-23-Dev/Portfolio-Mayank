@@ -34,10 +34,10 @@ const w = [
       author: "Eric Jorgenson",
     },
     {
-      src: "https://covers.openlibrary.org/b/isbn/9780465050659-M.jpg",
-      largeSrc: "https://covers.openlibrary.org/b/isbn/9780465050659-L.jpg",
-      title: "Design of Everyday Things",
-      author: "Don Norman",
+      src: "https://covers.openlibrary.org/b/isbn/9780761169253-M.jpg",
+      largeSrc: "https://covers.openlibrary.org/b/isbn/9780761169253-L.jpg",
+      title: "Steal Like an Artist",
+      author: "Austin Kleon",
     },
     {
       src: "https://covers.openlibrary.org/b/isbn/9781949759228-M.jpg",
@@ -179,7 +179,7 @@ const w = [
                         e.jsx("p", {
                           className:
                             "mt-1.5 text-center font-handwritten text-[11px] text-zinc-400",
-                          children: "Second Year, 2026",
+                          children: "Second Year",
                         }),
                       ],
                     }),
@@ -192,21 +192,28 @@ const w = [
                     e.jsx(
                       a.p,
                       s(t({}, i()), {
-                        children: "Hey, thanks for being here.",
+                        children: "I remember the computer I ever touched. It belonged to my father. He used it for work like Microsoft Office and documents. He did work on it. I was a kid who was probably in class 2 watching from the side. He taught me how to type on that computer. I learned English first then Kruti Dev 010 so I could type in Hindi so that I could actually help my father with his files.",
                       }),
                     ),
                     e.jsx(
                       a.p,
                       s(t({}, i()), {
                         children:
-                          "I'm Mayank Dev. I'm currently a 2nd year BTech CSE student at PSIT Kanpur. I'm a full stack developer, DSA practitioner, and a tech content creator who loves building products that solve real problems.",
+                          "I do not think he had any idea what he was starting. Because once I had access to that machine I could not stop. I found GTA. I found IGI. I found out how to download games I was not supposed to download. I filled up the drive with things my father did not know existed. He would find them. Delete everything. I would find a way back in. That loop—I still love those days—discovering new ways to download and hide games and get caught then again figure out another route has honestly been my story.",
                       }),
                     ),
                     e.jsx(
                       a.p,
                       s(t({}, i()), {
                         children:
-                          "My journey into development started with a simple curiosity about how things work on the internet. That curiosity evolved into an obsession with crafting seamless digital experiences. Whether it's optimizing an algorithm or fine-tuning a UI interaction, I care about the details that make software feel 'right'.",
+                          "By the time I was 10 I was already obsessed. I was swapping system files like Utilman with CMD to navigate the Windows login and reinstalling Windows from a pendrive I made myself. I was figuring out how to activate it just so I could keep using the machine. Nobody taught me any of that. I just loved those machines enough to stay in that loop. I showed the tricks to my friends on the school computer lab PCs—I was the kid who knew his way around machines in a way nobody else did yet. That felt like something then.",
+                      }),
+                    ),
+                    e.jsx(
+                      a.p,
+                      s(t({}, i()), {
+                        children:
+                          "I am telling you this because I want you to understand from the start there was never a moment where someone handed me the door. I have always been the kid finding the window.",
                       }),
                     ),
                   ],
@@ -234,14 +241,49 @@ const w = [
                           a.p,
                           s(t({}, i()), {
                             children:
-                              "One of my defining moments was winning 2nd place at the PSIT Protech Hackathon with FinEase. Building an AI-powered finance dashboard from scratch taught me how to manage complex state, integrate intelligent features, and most importantly, how to ship a functional product under pressure.",
+                              "By the time I reached Class 11 I had a laptop from the COVID period. It was the machine that was entirely mine. There were no one Files on it. Nobody was watching what I did with it. I started learning video editing. Not out of passion at first honestly. I saw that editors were making money online. That felt like a path. I started on Premiere Pro CC 2014 because my laptop could run that version without lagging. I just taught myself from there.",
                           }),
                         ),
                         e.jsx(
                           a.p,
                           s(t({}, i()), {
                             children:
-                              "I've also built projects like Hactiq, a habit tracker focused on consistency, and VaultDL, a high-performance media downloader for Windows. Every project I take on is a new lesson in balancing technical robustness with user-centric design.",
+                              "That turned into a YouTube channel called GamerzReact. I made gaming montages, meme edits, long-form videos of creators gameplay cut together with energy and timing. No strategy. Just a kid who had learned to edit and wanted to put something out. That channel hit 15,000 subscribers. One video crossed 1.6 million views. I thought this was the beginning of something. Then YouTube rejected my monetization application. The content was not eligible. I was using peoples gameplay. That had a ceiling I had not seen coming.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "So I did the math quickly—the money was not coming from here. I sold the channel for ₹12,000 to a guy named Nishant. I opened a Fiverr account the week. I started editing for creators—one of them was savvy_bg, who had 300,000 subscribers. I kept moving. I did not stop to grieve it. That is how I have always operated. When something closes I do not stand at that door. I find the next one already open.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "What came after that is the part I talk about the least. Because it does not have a story to it. On the surface I was doing things—freelancing on Fiverr, nominally preparing for JEE, technically showing up for school. But I was also just sitting. Hours in a chair. Eating without paying attention. Gaining weight I did not notice accumulating until one day I looked in the mirror. I genuinely did not like the person looking back at me. Not the number on the scale—I mean the distance between who I was and who I kept telling myself I would eventually become.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "I touched 107 kg. I was always kind to everyone around me. I was completely careless with myself. I nearly failed Class 11 barely crossing the border. I left JEE coaching because I figured out quickly that JEE and school together was not something I could manage. Somewhere in that decision I also just lost direction for a while. No drama. No single breakdown moment. Just a slow quiet kind of drift that looks completely fine from the outside. It sits very heavy from the inside. I was just not respecting myself. That is the accurate way I know how to say it.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "The change did not arrive in one moment. It came in a set of decisions I started making when I got tired enough of the alternative. I went to a dietician. I started hitting the gym at 5 AM. I got an apprenticeship at Angirasoft Pvt. Ltd., a software company. For the time someone actually trained me properly—C, then C++, all the way through object-oriented programming. Until I could sit in front of a LeetCode problem. Work through it without panicking.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "I started reading books that changed how I thought, The Almanack of Naval Ravikant, Steal Like an Artist by Austin Kleon, books on psychology. I changed who I spent time with slowly and without making a deal of it. I started building things for myself—not for a portfolio, not for anyone to see, just because I had a problem I wanted to solve. The weight started coming down. The confidence started coming—not the fake kind you perform, the real kind that arrives quietly when you are actually doing the work.",
                           }),
                         ),
                       ],
@@ -271,21 +313,63 @@ const w = [
                           a.p,
                           s(t({}, i()), {
                             children:
-                              "Beyond coding, I'm active on Instagram and YouTube as a tech content creator. I love sharing what I learn, from coding tutorials to AI tool reviews, helping other student developers find their path in the tech world. It's my way of contributing back to the community that has given me so much.",
+                              "I walked into PSIT, Kanpur for my semester carrying all of that. The first thing I did was build Hactiq, a habit tracker I made because I kept seeing people selling template versions of it for ₹200 to ₹300. I thought that was pointless. So I built the thing. Full authentication, a database, real-time statistics—usable from any phone or laptop just by logging in. I made it completely free because I built it for myself first. If it helps me it will help someone. That is always how I think.",
                           }),
                         ),
                         e.jsx(
                           a.p,
                           s(t({}, i()), {
                             children:
-                              "Currently, I'm working on Shiq, a content studio for solo creators, while continuing to sharpen my problem-solving skills through daily DSA practice. I'm not just here to write code; I'm here to build the future, one project at a time.",
+                              "While that was happening I also ran a 100-video experiment on YouTube under a channel called CoreByte—cinematic Minecraft content, one video every day purely to understand how the algorithm makes decisions about what gets pushed and what gets ignored. Not for a brand, not for subscribers, for data. By the end of those 100 videos I had 2.2 million views. The channel is still there. Sem 1 ended with 8.5 CGPA. After 73% in boards—after thinking I had genuinely finished myself—8.5. I was not jumping around about it. I just felt like I was finally competing in the field.",
                           }),
                         ),
                         e.jsx(
                           a.p,
                           s(t({}, i()), {
                             children:
-                              "If you're interested in building something together or just want to talk tech, feel free to reach out. I'm always up for a good conversation.",
+                              "Sem 2 I ran the experiment on Instagram and hit another 1.5 million views. I also built FinEase that semester—started it as a project built around a real problem I had. Money in India is scattered everywhere—Paytm, PhonePe, bank accounts, wallets, cash, subscriptions. There is no single clean place to see all of it. FinEase centralises that. Adds AI-backed analysis on top of it. Smart expense tracking, budget monitoring, spending analytics, a receipt scanner, AutoPay tracking—the whole thing deployed properly as a PWA with a database working on desktop and mobile.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "Then I heard about the PSIT Protech Hackathon. Submitted it. When I walked into that room I was not nervous honestly because when I looked around I realised we were the team with something actually deployed and working. Everyone else had AI-generated sites running on localhost. We finished 2nd. I was not surprised. I was just glad the work showed up the way it was supposed to.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "Now I am in sem 3. The work has gotten wider. DSA is something I do every day—not because any exam requires it but because I want to be the kind of developer who can actually think through a problem cleanly, not just find a solution and paste it. There is a difference between those two things and DSA is where that difference lives. I am working on it consistently.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "I have also been getting deep into desktop application development, which is a completely different world from web—local file handling, queue management, running without a browser, thinking about performance in a different way. That led to VaultDL—a Windows desktop application I built for media downloading that supports hundreds of platforms, has modes, quality control and queue management and works without the user ever needing to touch a terminal. I built it because I kept wanting something like it and everything that existed either needed command line knowledge or just felt bad to use. So I made it myself.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "I am also working on Shiq now—a full content production pipeline for solo creators covering everything from idea capture to scripting, storyboarding, recording checklists, editing progress and publishing analytics all in one place. It is the tool I would have wanted from day one. It does not exist yet the way I want it to. So I am building it.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "I am also learning to film—aspect ratio, frame rate, exposure—how light actually behaves, what makes a composition feel intentional. I am at the beginning of that curve. I am fine with that. That is the whole point of how I operate. I learn something I start using it and I pass it forward as fast as I can. Not to build an audience, not to prove anything, just because if someone is giving me their time and attention the least I can do is make sure they leave with something.",
+                          }),
+                        ),
+                        e.jsx(
+                          a.p,
+                          s(t({}, i()), {
+                            children:
+                              "I have never had someone one step ahead of me saying 'try this, this actually works.' I had to find everything—on my broken system files, a channel sold for ₹12,000, an exam result I thought had finished me, a mirror I did not want to look at. If I can be that one step, for even one person sitting where I was sitting, then everything I am building right now is worth it.",
                           }),
                         ),
                         e.jsx(
@@ -335,7 +419,7 @@ const w = [
                       e.jsx("p", {
                         className:
                           "text-[11px] uppercase tracking-[0.3em] text-zinc-400",
-                        children: "Want the structured version?",
+                        children: "WANT THE STRUCTURED VERSION?",
                       }),
                       e.jsxs("div", {
                         className: "flex gap-3",

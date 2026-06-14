@@ -126,14 +126,25 @@ const R = ({
               className: `text-xl font-bold leading-tight transition-colors duration-200 ${h ? x : "text-gray-900"}`,
               children: c,
             }),
-            B && e.jsx("span", {
-              className: "inline-block border border-green-700 bg-green-100 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-green-800 whitespace-nowrap",
-              children: B,
-            }),
+            B &&
+              (() => {
+                const colors = {
+                  LIVE: "border-green-700 bg-green-100 text-green-800",
+                  "IN PRODUCTION": "border-yellow-400 bg-yellow-50 text-yellow-700",
+                  OFFLINE: "border-red-600 bg-red-50 text-red-700",
+                };
+                const colorClass =
+                  colors[B.toUpperCase()] ||
+                  "border-green-700 bg-green-100 text-green-800";
+                return e.jsx("span", {
+                  className: `inline-block border px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] whitespace-nowrap ${colorClass}`,
+                  children: B,
+                });
+              })(),
           ],
         }),
         e.jsx("p", {
-          className: "font-sans text-sm leading-relaxed text-gray-500 line-clamp-2 h-[2.8rem] overflow-hidden",
+          className: "font-sans text-sm leading-relaxed text-gray-500 line-clamp-3 h-[4.2rem] overflow-hidden",
           children: o,
         }),
       ],
@@ -440,6 +451,7 @@ const $ = e.jsxs("svg", {
         img: "/images/case%20studies/postyai/thumbnail.webp",
         link: "/projects/finease",
         isDevelopment: !0,
+        badge: "LIVE",
       },
     ],
       p = [
@@ -634,7 +646,7 @@ Creation`,
                                     },
                                     children: e.jsx(T, {
                                       to: t.link,
-                                      className: "block group h-[380px]",
+                                      className: "block group h-[440px]",
                                       children: e.jsx(R, {
                                         title: t.title,
                                         description: t.description,
@@ -756,7 +768,7 @@ Creation`,
                   e.jsxs("section", {
                     id: "about",
                     "aria-label": "About Mayank Dev",
-                    className: "py-8 md:py-16 pb-24 md:pb-32 relative",
+                    className: "py-8 md:py-16 pb-0 md:pb-0 relative",
                     children: [
                       e.jsx("div", {
                         className:
@@ -771,7 +783,7 @@ Creation`,
                         }),
                       }),
                       e.jsxs("div", {
-                        className: "max-w-5xl mx-auto px-4 pb-24 md:pb-32",
+                        className: "max-w-5xl mx-auto px-4 pb-0 md:pb-0",
                         children: [
                           e.jsx("h2", {
                             className:
@@ -798,7 +810,7 @@ Creation`,
                                       children: [
                                         e.jsx("img", {
                                           src: "/images/feed/memory-04.webp",
-                                          alt: "Mayank Dev - Product Designer",
+                                          alt: "Mayank Dev - Full Stack Developer",
                                           className:
                                             "w-full h-32 lg:h-40 object-cover bg-gray-100 transition-all duration-300 group-hover:brightness-110",
                                           loading: "eager",
@@ -1035,7 +1047,7 @@ Creation`,
                                             className:
                                               "bg-cyan-200 px-1 rounded",
                                             children:
-                                              "over 3.5M views on a single page",
+                                              "massive reach on a single page",
                                           }),
                                           " across Insta & YT. 🎥",
                                         ],
@@ -1061,7 +1073,7 @@ Creation`,
                                       children: [
                                         e.jsx("img", {
                                           src: "/images/feed/memory-04.webp",
-                                          alt: "Mayank Dev - Product Designer",
+                                          alt: "Mayank Dev - Full Stack Developer",
                                           className:
                                             "w-full h-32 object-cover bg-gray-100",
                                           loading: "eager",
@@ -1286,12 +1298,40 @@ Creation`,
                                       e.jsx("span", {
                                         className: "bg-cyan-200 px-1 rounded",
                                         children:
-                                          "over 3.5M views on a single page",
+                                          "massive reach on a single page",
                                       }),
                                       " across Insta & YT. 🎥",
                                     ],
                                   }),
                                 }),
+                              }),
+                            ],
+                          }),
+                          e.jsxs(D.div, {
+                            className:
+                              "mt-6 flex flex-col items-center gap-3 border-t border-zinc-200 pt-6 sm:flex-row sm:justify-between",
+                            children: [
+                              e.jsx("p", {
+                                className:
+                                  "text-[11px] uppercase tracking-[0.3em] text-zinc-400",
+                                children: "WANT THE STRUCTURED VERSION?",
+                              }),
+                              e.jsxs("div", {
+                                className: "flex gap-3",
+                                children: [
+                                  e.jsx(T, {
+                                    to: "/life",
+                                    className:
+                                      "rounded-full border border-zinc-300 px-5 py-2 text-sm font-semibold text-zinc-500 transition-colors hover:border-zinc-900 hover:text-zinc-900",
+                                    children: "Life",
+                                  }),
+                                  e.jsx(T, {
+                                    to: "/journey",
+                                    className:
+                                      "rounded-full border border-zinc-900 px-5 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-900 hover:text-white",
+                                    children: "Journey",
+                                  }),
+                                ],
                               }),
                             ],
                           }),

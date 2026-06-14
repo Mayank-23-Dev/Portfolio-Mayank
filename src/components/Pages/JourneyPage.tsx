@@ -1,7 +1,7 @@
 import { j as e } from "../ui/_uiVendor.js";
 import { H as g } from "../ui/Landing_UI/Header.js";
 import { F as p } from "../ui/Landing_UI/Footer.js";
-import { a as h } from "../ui/_reactVendor.js";
+import { a as h, L as m } from "../ui/_reactVendor.js";
 import { A as d, m as l } from "../ui/_animationVendor.js";
 import { P as u } from "../ui/Landing_UI/PaperBackground.js";
 import "../ui/Landing_UI/MenuToggleIcon.js";
@@ -11,138 +11,123 @@ import "../ui/Landing_UI/ConnectDropdown.js";
 import "../ui/_sharedIndex.js";
 const f = [
     {
-      title: "The Foundation",
-      yearRange: "2021-2025",
+      title: "The Window",
+      yearRange: "2014 - 2022",
       story: {
-        short:
-          "I started at Jyothy Institute of Technology aiming to become a software engineer, but I was drawn toward the friction people experienced with software. I explored usability inside class projects, ran quick tests with friends, and graduated with an 8.7 CGPA and a clear interest in designing for clarity, not complexity.",
-        medium: `I joined Jyothy Institute of Technology expecting to spend my four years inside code. But somewhere between algorithms and data structures, I became fascinated by the gap between how systems work and how people experience them. I ran small usability walkthroughs for class projects, refined flows based on peer reactions, and slowly drifted toward product thinking.
-
-By the time I graduated with an 8.7 CGPA, I realized that good software isn't defined by how efficiently the code runs, but by how intuitively it guides the person using it.`,
-        long: `I entered Jyothy Institute of Technology with a straightforward plan: become a software engineer. But in the middle of algorithms and data structures, I discovered a different kind of bug, the one that appears when people struggle with something that's technically correct. While my peers optimized logic, I found myself adjusting flows, simplifying interactions, and observing how tiny design changes affected people.
-
-I started running informal usability sessions with friends, tweaking prototypes, and building an intuition for clarity. These experiments quietly shaped my direction.
-
-Graduating with an 8.7 CGPA proved I could build technology, but understanding how it should feel became the part that mattered most.`,
+        short: "Started with my father's PC in 2014, learned typing to help him, and soon got obsessed with understanding how the machine worked from the inside out.",
+        medium: "My journey began in 2014 on my father's work computer. I learned to type to help him, but soon I was obsessed—learning to swap system files like Utilman with CMD and reinstalling Windows from scratch. It wasn't about being a hacker; I just loved those machines and needed to know how they worked. It was my first lesson in technical autonomy.",
+        long: "I remember the first computer I ever touched in 2014. It belonged to my father, who taught me how to type so I could help with his files. Once I had access, I couldn't stop. I found GTA, learned to hide games, and eventually got obsessed with CMD and system files. Swapping Utilman with CMD or reinstalling Windows from a pendrive became my way of exploring. I showed these tricks to friends in the school lab, just loving the discovery of it all. There was never a moment where someone handed me the door; I've always been the kid finding the window.",
       },
       list: {
         short: [
-          "Studied CS at Jyothy Institute of Technology",
-          "Explored usability through class projects",
-          "Graduated with 8.7 CGPA",
+          "First PC experience in 2014",
+          "Got obsessed with CMD and system-level discovery",
+          "Developed a 'finding the window' mentality",
         ],
         medium: [
-          "Studied Computer Science while exploring how users interact with software",
-          "Ran quick usability walkthroughs and refined class project flows",
-          "Graduated with an 8.7 CGPA",
+          "Self-taught system management and OS installation by age 10",
+          "Learned to swap system files like Utilman to understand the OS",
+          "Built a foundation of curiosity and a deep love for machines",
         ],
         long: [
-          "Studied Computer Science at Jyothy Institute of Technology and became fascinated by the gap between technical correctness and user experience",
-          "Ran informal usability sessions for class projects and experimented with interface clarity",
-          "Graduated with an 8.7 CGPA, grounding my approach in people-first design thinking",
+          "Started with my father's PC in 2014, learning Kruti Dev 010 for Hindi typing",
+          "Explored the machine's limits through games like GTA and IGI",
+          "Mastered CMD tricks and system file swaps (Utilman) out of pure obsession",
+          "Gained a reputation in school as the kid who actually understood how PCs worked",
         ],
       },
     },
     {
-      title: "The Awakening",
-      yearRange: "Early 2023",
+      title: "The Pivot",
+      yearRange: "2023 - 2025",
       story: {
-        short:
-          "At Varcons Technologies, a “perfect” flow collapsed under user testing. Iterating on it improved engagement by 15 percent and taught me the value of designing with evidence, not assumptions.",
-        medium:
-          "Varcons Technologies was where theory finally met reality. A flow I had diagrammed flawlessly broke down the moment users interacted with it. Running tests, mapping journeys, and iterating quickly helped lift engagement by 15 percent and taught me to design with evidence rather than intuition.",
-        long: "My internship at Varcons Technologies reshaped how I thought about design. I built a feature I believed was airtight, then watched real users struggle with it. That moment shifted everything. I conducted moderated tests, mapped user journeys, fixed friction points, and rebuilt the flow. Those changes increased engagement by 15 percent and taught me one of the biggest lessons in product design: the real work begins after first contact with users.",
-      },
-      list: {
-        short: ["UX intern at Varcons", "Improved engagement by 15 percent"],
-        medium: [
-          "Conducted user testing at Varcons Technologies",
-          "Improved onboarding flow, increasing engagement by 15 percent",
-        ],
-        long: [
-          "Joined Varcons Technologies as a UX intern and learned to validate assumptions through testing",
-          "Redesigned a critical flow based on research insights, increasing engagement by 15 percent",
-        ],
-      },
-    },
-    {
-      title: "The Growth",
-      yearRange: "Mid 2024",
-      story: {
-        short:
-          "At WinWire Technologies, I interviewed 18 plus enterprise users and refined booking workflows, improving efficiency by 35 percent.",
-        medium:
-          "At WinWire, I led usability evaluations for enterprise workflows. Conducting 18 plus interviews and collaborating closely with engineering helped refine the booking experience and drove a 35 percent efficiency lift.",
-        long: "WinWire Technologies taught me how to design at enterprise scale. I interviewed over 18 users across multiple teams, mapped bottlenecks in booking workflows, and worked with engineering to balance feasibility with clarity. Through iteration cycles and fast validation loops, we improved booking efficiency by 35 percent and created a reusable testing framework for future features.",
+        short: "Built a YouTube channel to 15k subscribers, pivoted to Fiverr (2023-25) after monetization rejection, and spent 2025 reclaiming my health and technical focus at Angirasoft.",
+        medium: "During 2023-2025, I built GamerzReact to 15k subscribers. After monetization was rejected, I sold the channel and started freelancing on Fiverr. This period was also about personal recalibration—dropping from 107kg through a 5 AM gym routine and starting a software apprenticeship at Angirasoft in 2025 (during the break between 12th boards and college) to master C++ foundations.",
+        long: "By 10th grade (2023), I built GamerzReact to 15,000 subscribers. When YouTube rejected monetization, I sold the channel and moved to Fiverr, where I freelanced until 2025. Parallel to this, I had to fix my own direction. I had touched 107kg and was drifting; I spent the break between 12th boards and college (2025) hitting the gym at 5 AM and apprenticing at Angirasoft. It wasn't about a heroic comeback, just the quiet work of learning C++, mastering OOP, and getting back into my own corner.",
       },
       list: {
         short: [
-          "UX work at WinWire",
-          "Improved booking efficiency by 35 percent",
+          "Completed 10th in 2023 and 12th in 2025",
+          "Fiverr freelancing (2023-2025)",
+          "Angirasoft apprenticeship (2025 break)",
         ],
         medium: [
-          "Conducted user research at WinWire",
-          "Improved booking efficiency by 35 percent with iterative testing",
+          "Built and sold a 15k subscriber YouTube channel",
+          "Reclaimed health (from 107kg) through 5 AM gym discipline",
+          "Mastered C++ and OOP foundations at Angirasoft before college",
         ],
         long: [
-          "Led usability evaluations at WinWire Technologies, interviewing 18 plus enterprise users",
-          "Improved booking workflows by 35 percent through research-led iteration",
+          "Navigated YouTube monetization rejection by selling the channel and moving to Fiverr (2023-2025)",
+          "Fixed a period of drift by losing weight (from 107kg) and establishing a 5 AM routine in 2025",
+          "Completed a software apprenticeship at Angirasoft Pvt. Ltd. during the board-to-college transition",
+          "Developed a foundation in algorithmic thinking to solve LeetCode problems without panic",
         ],
       },
     },
     {
-      title: "The Innovation",
-      yearRange: "Late 2024",
+      title: "The Builder",
+      yearRange: "2025 - Present",
       story: {
-        short:
-          "Park EZ started as a personal frustration and grew into a validated product that reached the Smart India Hackathon finals with 95 percent satisfaction.",
-        medium:
-          "Park EZ was built from a simple pain point: finding parking. Interviews, prototypes, and pilots helped validate the concept. It reached the Smart India Hackathon finals with 95 percent satisfaction and reduced search time by 60 percent.",
-        long: "Park EZ began with a frustration I experienced daily: circling for parking. I turned that irritation into a design challenge by interviewing drivers, mapping journeys, prototyping flows, and validating the concept through pilots. The solution reached the Smart India Hackathon finals, earned 95 percent satisfaction, and reduced parking search time by 60 percent during testing.",
+        short: "Enrolled at PSIT Kanpur, built Hactiq and FinEase, won 2nd in Protech Hackathon, and reached millions on YouTube through data experiments.",
+        medium: "At PSIT Kanpur, I built Hactiq (habit tracker) and FinEase (AI finance dashboard), winning 2nd in the Protech Hackathon. I also ran cinematic Minecraft experiments that hit 2.2M views, focusing on understanding algorithms through data.",
+        long: "I walked into PSIT Kanpur with a new focus. I built Hactiq, a free habit tracker, because I saw others selling templates for profit. In Sem 1, I built FinEase, an AI-powered finance aggregator, and won 2nd place at the Protech Hackathon. I also ran a 100-video experiment (CoreByte) to understand the YouTube algorithm, hitting 2.2 million views. I ended Sem 1 with an 8.5 CGPA, finally feeling like I was competing in the field.",
       },
       list: {
-        short: ["Built Park EZ", "Hackathon finalist"],
+        short: [
+          "8.5 CGPA at PSIT Kanpur",
+          "Built Hactiq and FinEase (Hackathon 2nd place)",
+          "CoreByte experiment reached 2.2M views",
+        ],
         medium: [
-          "Created Park EZ to solve parking friction",
-          "Reached Smart India Hackathon finals",
+          "Achieved 8.5 CGPA in the first semester after 12th",
+          "Developed and deployed FinEase as a PWA with AI analysis",
+          "Hit 2.2 million views on YouTube through CoreByte experiment",
         ],
         long: [
-          "Designed Park EZ from personal frustration, validating it through interviews and pilots",
-          "Reached Smart India Hackathon finals with 95 percent satisfaction and 60 percent faster search time",
+          "Successfully transitioned to BTech at PSIT Kanpur with an 8.5 CGPA",
+          "Developed Hactiq with full authentication and real-time stats",
+          "Won 2nd place at the PSIT Protech Hackathon with FinEase",
+          "Conducted large-scale algorithm experiments through CoreByte",
         ],
       },
     },
     {
-      title: "What's Next",
-      yearRange: "2025-Present",
+      title: "Current Focus",
+      yearRange: "Sem 3 - Future",
       story: {
-        short:
-          "I’m now focused on scalable, user-centered systems backed by toolkits for research and fast validation.",
-        medium:
-          "With certifications from Google, Microsoft, and Meta, I'm now building toolkits like scripts, maps, and facilitation methods to help teams move faster from idea to validated user experience.",
-        long: "After earning certifications from Google, Microsoft, and Meta and building experience across consumer and enterprise, I'm now creating research scripts, facilitation tools, and service maps to help teams validate ideas quickly and confidently. My focus is on solving problems that need scalable, human-centered design.",
+        short: "Developing VaultDL and Shiq, while mastering cinematography and deep-diving into DSA.",
+        medium: "I'm currently building VaultDL (Windows media downloader) and Shiq (content production pipeline for creators). I'm also learning cinematography and practicing DSA daily to become a developer who thinks through problems cleanly.",
+        long: "Now in Sem 3, I'm diving deep into desktop development with VaultDL, a Windows application for media downloading with high-performance queue management. I'm also working on Shiq, a production pipeline for solo creators. Beyond code, I'm learning the physics of light and cinematography. My goal is to be a developer who doesn't just find solutions, but thinks through them cleanly, passing everything I learn forward.",
       },
       list: {
-        short: ["UX certifications", "Building research toolkits"],
+        short: [
+          "Building VaultDL (Desktop App) and Shiq",
+          "Learning cinematography and advanced DSA",
+          "Mentoring others through content",
+        ],
         medium: [
-          "Earned certifications from Google, Microsoft, and Meta",
-          "Building toolkits for scalable design",
+          "Mastering local file handling and performance in desktop apps",
+          "Developing a comprehensive production pipeline for creators (Shiq)",
+          "Sharpening problem-solving skills through daily DSA practice",
         ],
         long: [
-          "Completed UX certifications from Google, Microsoft, and Meta",
-          "Developing reusable research and facilitation toolkits for scalable, user-centered product design",
+          "Building VaultDL to solve the complexity of media downloading",
+          "Architecting Shiq to cover the entire content production lifecycle",
+          "Exploring the intersection of technology and filmmaking",
+          "Commitment to daily DSA to master clean, algorithmic thinking",
         ],
       },
     },
   ],
   y = [
-    { year: "2021", label: "Started CS Degree" },
-    { year: "2022", label: "Discovered UX" },
-    { year: "2023", label: "Varcons Internship" },
-    { year: "2024", label: "WinWire Internship" },
-    { year: "2024", label: "Park EZ Project" },
-    { year: "2024", label: "Hackathon Finalist" },
-    { year: "2025", label: "Certifications" },
+    { year: "2014", label: "First PC and getting obsessed with machines" },
+    { year: "2023", label: "GamerzReact YouTube channel (15k subscribers)" },
+    { year: "2023", label: "Professional video editing freelance on Fiverr" },
+    { year: "2025", label: "Software engineering apprenticeship at Angirasoft" },
+    { year: "2025", label: "Starting BTech CSE at PSIT Kanpur" },
+    { year: "2025", label: "CoreByte cinematic Minecraft data experiment" },
+    { year: "2026", label: "FinEase AI-powered finance aggregator" },
+    { year: "2026", label: "VaultDL high-performance desktop application" },
   ],
   x = { chapters: f, timeline: y },
   b = { prose: "Story", list: "List", timeline: "Timeline" },
@@ -422,7 +407,7 @@ Graduating with an 8.7 CGPA proved I could build technology, but understanding h
   c = x,
   N = () => {
     const [n, a] = h.useState("prose"),
-      [i, t] = h.useState("short"),
+      [i, t] = h.useState("medium"),
       s = c.timeline;
     return e.jsx("section", {
       id: "journey",
@@ -486,10 +471,44 @@ Graduating with an 8.7 CGPA proved I could build technology, but understanding h
   J = () =>
     e.jsxs(u, {
       children: [
+        e.jsx("div", {
+          className: "container mx-auto px-4 md:px-6 lg:px-8 relative",
+          children: e.jsx(g, {}),
+        }),
         e.jsxs("main", {
           id: "main-content",
           className: "container mx-auto px-4 md:px-6 lg:px-8 relative z-10",
-          children: [e.jsx(g, {}), e.jsx(N, {})],
+          children: [
+            e.jsx(N, {}),
+            e.jsxs("div", {
+              className:
+                "mx-auto max-w-7xl px-6 mt-20 flex flex-col items-center gap-3 border-t border-zinc-200 pt-10 sm:flex-row sm:justify-between pb-24",
+              children: [
+                e.jsx("p", {
+                  className:
+                    "text-[11px] uppercase tracking-[0.3em] text-zinc-400",
+                  children: "WANT THE EDITORIAL VERSION?",
+                }),
+                e.jsxs("div", {
+                  className: "flex gap-3",
+                  children: [
+                    e.jsx(m, {
+                      to: "/life",
+                      className:
+                        "rounded-full border border-zinc-900 px-5 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-900 hover:text-white",
+                      children: "Life",
+                    }),
+                    e.jsx(m, {
+                      to: "/projects",
+                      className:
+                        "rounded-full border border-zinc-300 px-5 py-2 text-sm font-semibold text-zinc-500 transition-colors hover:border-zinc-900 hover:text-zinc-900",
+                      children: "Projects",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
         }),
         e.jsx(p, {}),
       ],

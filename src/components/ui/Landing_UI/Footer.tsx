@@ -56,7 +56,7 @@ const x = "connect@mayank-dev.in",
         e.jsx("div", {
           className: "container mx-auto px-4 md:px-6 lg:px-8",
           children: e.jsxs("section", {
-            className: "py-16 md:py-24 text-center border-t border-black/5",
+            className: "py-8 md:py-12 text-center border-t border-black/5",
             children: [
               e.jsx("h4", {
                 className: "text-2xl md:text-4xl font-bold text-[#21180f] mb-4",

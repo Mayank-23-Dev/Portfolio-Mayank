@@ -5,9 +5,9 @@ var w = Object.getOwnPropertySymbols;
 var P = Object.prototype.hasOwnProperty,
   R = Object.prototype.propertyIsEnumerable;
 var v = (a, l, t) =>
-    l in a
-      ? C(a, l, { enumerable: !0, configurable: !0, writable: !0, value: t })
-      : (a[l] = t),
+  l in a
+    ? C(a, l, { enumerable: !0, configurable: !0, writable: !0, value: t })
+    : (a[l] = t),
   b = (a, l) => {
     for (var t in l || (l = {})) P.call(l, t) && v(a, t, l[t]);
     if (w) for (var t of w(l)) R.call(l, t) && v(a, t, l[t]);
@@ -17,12 +17,12 @@ var v = (a, l, t) =>
 var N = (a, l, t) =>
   new Promise((c, r) => {
     var n = (o) => {
-        try {
-          x(t.next(o));
-        } catch (u) {
-          r(u);
-        }
-      },
+      try {
+        x(t.next(o));
+      } catch (u) {
+        r(u);
+      }
+    },
       g = (o) => {
         try {
           x(t.throw(o));
@@ -58,13 +58,13 @@ import "../ui/Landing_UI/ConnectDropdown";
 import "../ui/_sharedIndex";
 const ie = () => {
   const [a, l] = p.useState({
-      name: "",
-      email: "",
-      company: "",
-      projectType: "",
-      timeline: "",
-      message: "",
-    }),
+    name: "",
+    email: "",
+    company: "",
+    projectType: "",
+    timeline: "",
+    message: "",
+  }),
     [t, c] = p.useState(!1),
     [r, n] = p.useState(null),
     g = p.useRef(null),
@@ -191,9 +191,9 @@ const ie = () => {
       N(null, null, function* () {
         if (
           (s.preventDefault(),
-          n(null),
-          c(!0),
-          !a.name.trim() || !a.email.trim() || !a.message.trim())
+            n(null),
+            c(!0),
+            !a.name.trim() || !a.email.trim() || !a.message.trim())
         ) {
           (n({
             tone: "error",
@@ -243,10 +243,10 @@ const ie = () => {
                 message: "",
               }))
             : n({
-                tone: "error",
-                message:
-                  "Oops! There was a problem sending your message. Please try again or email me directly.",
-              });
+              tone: "error",
+              message:
+                "Oops! There was a problem sending your message. Please try again or email me directly.",
+            });
         } catch (f) {
           n({
             tone: "error",
@@ -599,13 +599,13 @@ const ie = () => {
                               ],
                             }),
                             r &&
-                              e.jsx("div", {
-                                role: r.tone === "error" ? "alert" : "status",
-                                "aria-live":
-                                  r.tone === "error" ? "assertive" : "polite",
-                                className: `rounded-lg border px-4 py-3 text-sm font-medium ${r.tone === "success" ? "border-green-200 bg-green-50 text-green-700" : r.tone === "info" ? "border-blue-200 bg-blue-50 text-blue-700" : "border-red-200 bg-red-50 text-red-700"}`,
-                                children: r.message,
-                              }),
+                            e.jsx("div", {
+                              role: r.tone === "error" ? "alert" : "status",
+                              "aria-live":
+                                r.tone === "error" ? "assertive" : "polite",
+                              className: `rounded-lg border px-4 py-3 text-sm font-medium ${r.tone === "success" ? "border-green-200 bg-green-50 text-green-700" : r.tone === "info" ? "border-blue-200 bg-blue-50 text-blue-700" : "border-red-200 bg-red-50 text-red-700"}`,
+                              children: r.message,
+                            }),
                             e.jsx("button", {
                               type: "submit",
                               disabled: t,
@@ -613,20 +613,20 @@ const ie = () => {
                                 "daisy-button w-full py-4 text-lg flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed",
                               children: t
                                 ? e.jsxs(e.Fragment, {
-                                    children: [
-                                      e.jsx("div", {
-                                        className:
-                                          "animate-spin rounded-full h-5 w-5 border-b-2 border-black",
-                                      }),
-                                      "Sending...",
-                                    ],
-                                  })
+                                  children: [
+                                    e.jsx("div", {
+                                      className:
+                                        "animate-spin rounded-full h-5 w-5 border-b-2 border-black",
+                                    }),
+                                    "Sending...",
+                                  ],
+                                })
                                 : e.jsxs(e.Fragment, {
-                                    children: [
-                                      e.jsx(z, { className: "h-5 w-5" }),
-                                      "Send Message",
-                                    ],
-                                  }),
+                                  children: [
+                                    e.jsx(z, { className: "h-5 w-5" }),
+                                    "Send Message",
+                                  ],
+                                }),
                             }),
                           ],
                         }),
@@ -830,4 +830,3 @@ const ie = () => {
   );
 };
 export { ie as default };
-

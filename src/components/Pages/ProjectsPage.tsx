@@ -78,7 +78,7 @@ const V = () => {
       {
         name: "Gemini CLI",
         description: "AI-powered terminal assistant for workflow automation",
-        icon: "/images/play/gemini-color.svg",
+        icon: "/images/play/geminicli-color.svg",
         color: "bg-orange-100",
         tag: "AI",
       },

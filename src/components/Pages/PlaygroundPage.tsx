@@ -777,10 +777,10 @@ const Q = [
     author: "Eric Jorgenson",
   },
   {
-    src: "https://covers.openlibrary.org/b/isbn/9780465050659-M.jpg",
-    largeSrc: "https://covers.openlibrary.org/b/isbn/9780465050659-L.jpg",
-    title: "Design of Everyday Things",
-    author: "Don Norman",
+    src: "https://covers.openlibrary.org/b/isbn/9780761169253-M.jpg",
+    largeSrc: "https://covers.openlibrary.org/b/isbn/9780761169253-L.jpg",
+    title: "Steal Like an Artist",
+    author: "Austin Kleon",
   },
   {
     src: "https://covers.openlibrary.org/b/isbn/9781949759228-M.jpg",
@@ -821,8 +821,8 @@ const WORKFLOW_TOOLS = [
     author: "Open Source",
   },
   {
-    src: "/images/play/gemini-color.svg",
-    largeSrc: "/images/play/gemini-color.svg",
+    src: "/images/play/geminicli-color.svg",
+    largeSrc: "/images/play/geminicli-color.svg",
     title: "Gemini CLI",
     author: "AI Assistant",
   },

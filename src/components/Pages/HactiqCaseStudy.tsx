@@ -42,7 +42,7 @@ const HactiqCaseStudy = () =>
                 }),
                 e.jsx("span", {
                   className:
-                    "inline-flex border-2 border-black bg-yellow-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-black",
+                    "inline-flex border-2 border-red-600 bg-red-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-red-700",
                   children: "OFFLINE",
                 }),
               ],
