@@ -9,509 +9,548 @@ import "../ui/AppShell.js";
 import "../ui/_iconsVendor.js";
 import "../ui/Landing_UI/ConnectDropdown.js";
 import "../ui/_sharedIndex.js";
+
 const f = [
-    {
-      title: "The Window",
-      yearRange: "2014 - 2022",
-      story: {
-        short: "Started with my father's PC in 2014, learned typing to help him, and soon got obsessed with understanding how the machine worked from the inside out.",
-        medium: "My journey began in 2014 on my father's work computer. I learned to type to help him, but soon I was obsessed—learning to swap system files like Utilman with CMD and reinstalling Windows from scratch. It wasn't about being a hacker; I just loved those machines and needed to know how they worked. It was my first lesson in technical autonomy.",
-        long: "I remember the first computer I ever touched in 2014. It belonged to my father, who taught me how to type so I could help with his files. Once I had access, I couldn't stop. I found GTA, learned to hide games, and eventually got obsessed with CMD and system files. Swapping Utilman with CMD or reinstalling Windows from a pendrive became my way of exploring. I showed these tricks to friends in the school lab, just loving the discovery of it all. There was never a moment where someone handed me the door; I've always been the kid finding the window.",
-      },
-      list: {
-        short: [
-          "First PC experience in 2014",
-          "Got obsessed with CMD and system-level discovery",
-          "Developed a 'finding the window' mentality",
-        ],
-        medium: [
-          "Self-taught system management and OS installation by age 10",
-          "Learned to swap system files like Utilman to understand the OS",
-          "Built a foundation of curiosity and a deep love for machines",
-        ],
-        long: [
-          "Started with my father's PC in 2014, learning Kruti Dev 010 for Hindi typing",
-          "Explored the machine's limits through games like GTA and IGI",
-          "Mastered CMD tricks and system file swaps (Utilman) out of pure obsession",
-          "Gained a reputation in school as the kid who actually understood how PCs worked",
-        ],
-      },
+  {
+    title: "The Spark",
+    yearRange: "2014 - 2022",
+    story: {
+      short: "Dad's PC. Typing lessons in Kruti Dev 010. Fell in love with machines before I even knew what to call it.",
+      medium: "The first computer I ever touched, in 2014, belonged to my father. He taught me to type so I could help him organize files—though he had no idea what he was setting in motion. Once I had access, there was no going back. I discovered GTA and IGI, learned to download games I had no business downloading, and quietly filled drives with things my father never knew existed.",
+      long: "The first computer I ever touched, in 2014, belonged to my father, who used it for work documents. He taught me to type so I could help him organize files — though he had no idea what he was setting in motion. Once I had access, there was no going back. I discovered GTA and IGI, learned to download games I had no business downloading, and quietly filled drives with things my father never knew existed. That cycle — find a way in, get caught, find another way — has been the throughline of my story from the very beginning.",
     },
-    {
-      title: "The Pivot",
-      yearRange: "2023 - 2025",
-      story: {
-        short: "Built a YouTube channel to 15k subscribers, pivoted to Fiverr (2023-25) after monetization rejection, and spent 2025 reclaiming my health and technical focus at Angirasoft.",
-        medium: "During 2023-2025, I built GamerzReact to 15k subscribers. After monetization was rejected, I sold the channel and started freelancing on Fiverr. This period was also about personal recalibration—dropping from 107kg through a 5 AM gym routine and starting a software apprenticeship at Angirasoft in 2025 (during the break between 12th boards and college) to master C++ foundations.",
-        long: "By 10th grade (2023), I built GamerzReact to 15,000 subscribers. When YouTube rejected monetization, I sold the channel and moved to Fiverr, where I freelanced until 2025. Parallel to this, I had to fix my own direction. I had touched 107kg and was drifting; I spent the break between 12th boards and college (2025) hitting the gym at 5 AM and apprenticing at Angirasoft. It wasn't about a heroic comeback, just the quiet work of learning C++, mastering OOP, and getting back into my own corner.",
-      },
-      list: {
-        short: [
-          "Completed 10th in 2023 and 12th in 2025",
-          "Fiverr freelancing (2023-2025)",
-          "Angirasoft apprenticeship (2025 break)",
-        ],
-        medium: [
-          "Built and sold a 15k subscriber YouTube channel",
-          "Reclaimed health (from 107kg) through 5 AM gym discipline",
-          "Mastered C++ and OOP foundations at Angirasoft before college",
-        ],
-        long: [
-          "Navigated YouTube monetization rejection by selling the channel and moving to Fiverr (2023-2025)",
-          "Fixed a period of drift by losing weight (from 107kg) and establishing a 5 AM routine in 2025",
-          "Completed a software apprenticeship at Angirasoft Pvt. Ltd. during the board-to-college transition",
-          "Developed a foundation in algorithmic thinking to solve LeetCode problems without panic",
-        ],
-      },
+    list: {
+      short: [
+        "Dad's PC. Typing lessons in Kruti Dev 010. Never really left that chair after.",
+        "Found GTA. Found piracy. Got caught every time. Found a new route every time.",
+        "Fell in love with machines before I even knew what to call it.",
+      ],
+      medium: [
+        "First computer experience in 2014 via Dad's work machine",
+        "Mastered Kruti Dev 010 to help with father's professional files",
+        "Entered a loop of downloading games, getting caught, and finding new routes",
+        "Developed a foundational obsession with machine functionality",
+      ],
+      long: [
+        "Started with my father's PC in 2014, learning Kruti Dev 010 for Hindi typing",
+        "Mastered the machine's file system to hide gaming downloads like GTA and IGI",
+        "Spent years in a loop of discovery, restriction, and technical bypasses",
+        "Gained a reputation as the kid who knew machine secrets others didn't",
+      ],
     },
-    {
-      title: "The Builder",
-      yearRange: "2025 - Present",
-      story: {
-        short: "Enrolled at PSIT Kanpur, built Hactiq and FinEase, won 2nd in Protech Hackathon, and reached millions on YouTube through data experiments.",
-        medium: "At PSIT Kanpur, I built Hactiq (habit tracker) and FinEase (AI finance dashboard), winning 2nd in the Protech Hackathon. I also ran cinematic Minecraft experiments that hit 2.2M views, focusing on understanding algorithms through data.",
-        long: "I walked into PSIT Kanpur with a new focus. I built Hactiq, a free habit tracker, because I saw others selling templates for profit. In Sem 1, I built FinEase, an AI-powered finance aggregator, and won 2nd place at the Protech Hackathon. I also ran a 100-video experiment (CoreByte) to understand the YouTube algorithm, hitting 2.2 million views. I ended Sem 1 with an 8.5 CGPA, finally feeling like I was competing in the field.",
-      },
-      list: {
-        short: [
-          "8.5 CGPA at PSIT Kanpur",
-          "Built Hactiq and FinEase (Hackathon 2nd place)",
-          "CoreByte experiment reached 2.2M views",
-        ],
-        medium: [
-          "Achieved 8.5 CGPA in the first semester after 12th",
-          "Developed and deployed FinEase as a PWA with AI analysis",
-          "Hit 2.2 million views on YouTube through CoreByte experiment",
-        ],
-        long: [
-          "Successfully transitioned to BTech at PSIT Kanpur with an 8.5 CGPA",
-          "Developed Hactiq with full authentication and real-time stats",
-          "Won 2nd place at the PSIT Protech Hackathon with FinEase",
-          "Conducted large-scale algorithm experiments through CoreByte",
-        ],
-      },
+  },
+  {
+    title: "Under The Hood",
+    yearRange: "2022 - 2023",
+    story: {
+      short: "Cracked Windows login through CMD at 10. Just needed access badly enough.",
+      medium: "At ten, I wasn't just using computers — I was trying to take them apart and put them back together. I learned to swap out system files like Utilman for CMD to bypass the Windows login screen. I was reinstalling entire operating systems from pendrives I built myself, and chasing activation workarounds just to keep machines running.",
+      long: "At ten, I wasn't just using computers — I was trying to take them apart and put them back together. I learned to swap out system files like Utilman for CMD to bypass the Windows login screen. I was reinstalling entire operating systems from pendrives I built myself, and chasing activation workarounds just to keep machines running. I'd bring these tricks into the school computer lab to show friends, fascinated by what was happening underneath the interface.",
     },
-    {
-      title: "Current Focus",
-      yearRange: "Sem 3 - Future",
-      story: {
-        short: "Developing VaultDL and Shiq, while mastering cinematography and deep-diving into DSA.",
-        medium: "I'm currently building VaultDL (Windows media downloader) and Shiq (content production pipeline for creators). I'm also learning cinematography and practicing DSA daily to become a developer who thinks through problems cleanly.",
-        long: "Now in Sem 3, I'm diving deep into desktop development with VaultDL, a Windows application for media downloading with high-performance queue management. I'm also working on Shiq, a production pipeline for solo creators. Beyond code, I'm learning the physics of light and cinematography. My goal is to be a developer who doesn't just find solutions, but thinks through them cleanly, passing everything I learn forward.",
-      },
-      list: {
-        short: [
-          "Building VaultDL (Desktop App) and Shiq",
-          "Learning cinematography and advanced DSA",
-          "Mentoring others through content",
-        ],
-        medium: [
-          "Mastering local file handling and performance in desktop apps",
-          "Developing a comprehensive production pipeline for creators (Shiq)",
-          "Sharpening problem-solving skills through daily DSA practice",
-        ],
-        long: [
-          "Building VaultDL to solve the complexity of media downloading",
-          "Architecting Shiq to cover the entire content production lifecycle",
-          "Exploring the intersection of technology and filmmaking",
-          "Commitment to daily DSA to master clean, algorithmic thinking",
-        ],
-      },
+    list: {
+      short: [
+        "Cracked Windows login through CMD at 10. Just needed access.",
+        "Built bootable pendrives. Reinstalled OS. Activated everything from scratch.",
+        "Started showing tricks to friends. Realised knowledge is its own kind of power.",
+      ],
+      medium: [
+        "Swapped system files (Utilman with CMD) to bypass Windows security",
+        "Self-taught OS reinstallation and manual activation methods",
+        "Built bootable pendrives and managed system-level recovery",
+      ],
+      long: [
+        "Developed deep familiarity with Windows system architecture early on",
+        "Used Utilman to CMD swaps as a gateway to system administration",
+        "Internalized that there is always a way through if you understand the system",
+      ],
     },
-  ],
-  y = [
-    { year: "2014", label: "First PC and getting obsessed with machines" },
-    { year: "2023", label: "GamerzReact YouTube channel (15k subscribers)" },
-    { year: "2023", label: "Professional video editing freelance on Fiverr" },
-    { year: "2025", label: "Software engineering apprenticeship at Angirasoft" },
-    { year: "2025", label: "Starting BTech CSE at PSIT Kanpur" },
-    { year: "2025", label: "CoreByte cinematic Minecraft data experiment" },
-    { year: "2026", label: "FinEase AI-powered finance aggregator" },
-    { year: "2026", label: "VaultDL high-performance desktop application" },
-  ],
-  x = { chapters: f, timeline: y },
-  b = { prose: "Story", list: "List", timeline: "Timeline" },
-  w = ({ value: n, onChange: a }) => {
-    const i = ["prose", "list", "timeline"];
-    return e.jsx("div", {
-      className: "flex items-center gap-6 text-sm",
-      children: i.map((t) => {
-        const s = n === t;
-        return e.jsx(
-          "button",
-          {
+  },
+  {
+    title: "The Pivot",
+    yearRange: "2023 - 2025",
+    story: {
+      short: "NotGamerzReact hit millions of views. YouTube rejected monetization. Sold the channel. Opened Fiverr same week.",
+      medium: "By Class 11, I had my own laptop and started teaching myself video editing in Premiere Pro. I launched NotGamerzReact — high-energy gaming montages and meme edits — and grew it to 15,000 subscribers and millions of views. When monetization got rejected, I sold the channel and opened a Fiverr account the same week.",
+      long: "By Class 11, I had my own laptop and started teaching myself video editing in Premiere Pro. I launched NotGamerzReact — high-energy gaming montages and meme edits — and grew it to 15,000 subscribers and millions of views. When monetization got rejected over content eligibility, I made a quick calculation: sold the channel, and opened a Fiverr account the same week. I started editing for major creators and learned early that when one door closes, the next is usually already open.",
+    },
+    list: {
+      short: [
+        "Taught myself Premiere Pro CC 2014. Laptop could just about run it.",
+        "NotGamerzReact hit 15k subs and millions of views. YouTube rejected monetization.",
+        "Sold the channel. Opened Fiverr the same week. Edited for creators with 300K+ subs.",
+      ],
+      medium: [
+        "Mastered professional editing workflows under hardware constraints",
+        "Built and sold a digital asset after monetization rejection",
+        "Started professional freelancing on Fiverr in 2023",
+        "Worked with major creators like Slice of Sabby (300k+ subscribers)",
+      ],
+      long: [
+        "Developed professional editing workflows under hardware constraints",
+        "Managed high-volume content production for NotGamerzReact",
+        "Built a successful freelance business on Fiverr in 2023-2025",
+        "Learned asset valuation by selling my first digital channel asset",
+      ],
+    },
+  },
+  {
+    title: "The Drift",
+    yearRange: "2025",
+    story: {
+      short: "Looked in the mirror and didn't like who was looking back. Gym at 5 AM. Apprenticeship. Changed the circle.",
+      medium: "Then came a quiet drift — I gained weight I wasn't proud of and nearly failed Class 11. So I made a deliberate set of choices to take my health and self-respect back. I saw a dietician, started hitting the gym at 5 AM, and landed an apprenticeship at Angirasoft.",
+      long: "Then came a quiet drift — I gained weight I wasn't proud of and nearly failed Class 11. So I made a deliberate set of choices to take my health and self-respect back. I saw a dietician, started hitting the gym at 5 AM, and landed an apprenticeship at Angirasoft, where I trained in C++, OOP, and DSA until LeetCode problems stopped feeling like panic attacks. The stretch between boards and college is what actually changed me — by the end of it, I finally felt like I was back in my own corner.",
+    },
+    list: {
+      short: [
+        "Technically doing things. Not really present in any of it.",
+        "Looked in the mirror one day and genuinely didn't like who was looking back.",
+        "Gym at 5 AM. Angirasoft apprenticeship. Changed the circle. Changed the weight.",
+      ],
+      medium: [
+        "Reclaimed physical health and self-respect through rigorous discipline",
+        "Completed software apprenticeship at Angirasoft Pvt. Ltd.",
+        "Mastered C++ foundations, OOP, and started deep-diving into DSA",
+        "Shifted mindset from passive consumption to active building",
+      ],
+      long: [
+        "Completed a professional software apprenticeship in 2025",
+        "Transformed physical health and discipline during the gap year",
+        "Built a strong foundation in C++ and object-oriented programming",
+        "Adopted a 'doing the work' mindset inspired by Naval and Austin Kleon",
+      ],
+    },
+  },
+  {
+    title: "Building",
+    yearRange: "2025 - Present",
+    story: {
+      short: "Built Hactiq, claimed 2nd in Hackathon with FinEase, and hit millions through data experiments.",
+      medium: "I walked into PSIT Kanpur for my first semester carrying that new discipline with me. I built Hactiq for free and the next semester, I built FinEase, which won 2nd place at the Protech Hackathon. Alongside that, I ran CoreByte on YouTube and Instagram, racking up millions of views through experimentation.",
+      long: "I walked into PSIT Kanpur for my first semester carrying that new discipline with me. I built Hactiq because I saw people charging for what should've been free templates — so I made it free. The next semester, I built FinEase to untangle the mess of scattered digital payments, and it won 2nd place at the Protech Hackathon. Alongside that, I ran CoreByte on YouTube and Instagram, racking up millions of views purely through data-driven experimentation. After a stretch where I thought I'd burned myself out, I came out the other end with strong grades and a real sense of finally competing in the right field.",
+    },
+    list: {
+      short: [
+        "First sem: built Hactiq from scratch, made it free, ended with strong grades.",
+        "Ran 100-video experiments on YT & Insta. Millions of views. Pure data collection.",
+        "FinEase → Hackathon 2nd place. Only team with a working deployed product.",
+      ],
+      medium: [
+        "Developed Hactiq as a free consistency tool for students",
+        "Claimed 2nd place at PSIT Protech Hackathon with FinEase",
+        "Reached millions through algorithmic experiments on CoreByte",
+        "Alongside managing strong academic performance in BTech first year",
+      ],
+      long: [
+        "Successfully transitioned to BTech at PSIT Kanpur with strong grades",
+        "Developed FinEase to centralize Indian digital payments",
+        "Conducted algorithm experiments through CoreByte purely for data",
+        "Proved my ability to ship functional products under pressure",
+      ],
+    },
+  },
+  {
+    title: "Right Now",
+    yearRange: "Sem 3 - Now",
+    story: {
+      short: "DSA daily. Built VaultDL. Shiq in progress. Figuring things out and passing it forward.",
+      medium: "The work keeps widening. I'm deep into desktop development with VaultDL and building Shiq — the tool I wish I'd had on day one. Beyond code, I'm studying film and lighting. The pattern stays the same: learn something, use it, and pass it forward as fast as I can.",
+      long: "The work keeps widening. I'm deep into desktop application development with VaultDL, which supports hundreds of platforms through high-performance queue management. I'm also building Shiq — the tool I wish I'd had on day one, a full production pipeline for creators. Beyond code, I'm studying the physics of film and lighting. The pattern stays the same: learn something, use it, and pass it forward as fast as I can — for everyone sitting where I once sat.",
+    },
+    list: {
+      short: [
+        "DSA every day. Not for exams. To actually think through problems cleanly.",
+        "Built VaultDL — a Windows app because everything else needed a terminal.",
+        "Shiq in progress. Learning to film properly. Passing it forward immediately.",
+      ],
+      medium: [
+        "Mastering desktop development with VaultDL (yt-dlp based)",
+        "Architecting Shiq: the production pipeline tool for solo creators",
+        "Sharpening filmmaking knowledge: light, composition, viewer psychology",
+      ],
+      long: [
+        "Architecting VaultDL to solve the complexity of media downloading",
+        "Building Shiq to cover the entire content production lifecycle",
+        "Exploring the intersection of storytelling, film, and engineering",
+        "Commitment to daily DSA to master clean, algorithmic thinking",
+      ],
+    },
+  },
+];
+
+const y = [
+  { year: "2014", label: "First PC and getting obsessed with machines" },
+  { year: "2023", label: "NotGamerzReact YouTube channel (15k subscribers)" },
+  { year: "2023", label: "Professional video editing freelance on Fiverr" },
+  { year: "2025", label: "Software engineering apprenticeship at Angirasoft" },
+  { year: "2025", label: "Starting BTech CSE at PSIT Kanpur" },
+  { year: "2025", label: "CoreByte cinematic Minecraft data experiment" },
+  { year: "2026", label: "FinEase AI-powered finance aggregator" },
+  { year: "2026", label: "VaultDL high-performance desktop application" },
+];
+
+const x = { chapters: f, timeline: y };
+const b = { prose: "Story", list: "List", timeline: "Timeline" };
+
+const w_comp = ({ value: n, onChange: a }) => {
+  const i = ["prose", "list", "timeline"];
+  return e.jsx("div", {
+    className: "flex items-center gap-6 text-sm",
+    children: i.map((t) => {
+      const s = n === t;
+      return e.jsx(
+        "button",
+        {
+          type: "button",
+          className: [
+            "transition-colors duration-200",
+            s ? "font-medium text-zinc-900" : "text-zinc-400 hover:text-zinc-600",
+          ].join(" "),
+          onClick: () => a(t),
+          children: b[t],
+        },
+        t
+      );
+    }),
+  });
+};
+
+const j_comp = ({ value: n, onChange: a }) => {
+  const i = ["short", "medium", "long"],
+    t = i.indexOf(n),
+    s = () => {
+      t > 0 && a(i[t - 1]);
+    },
+    r = () => {
+      t < i.length - 1 && a(i[t + 1]);
+    };
+  return e.jsxs("div", {
+    className: "flex items-center gap-4 text-sm",
+    children: [
+      e.jsx("span", { className: "text-zinc-400", children: "Length" }),
+      e.jsxs("div", {
+        className: "flex items-center gap-3",
+        children: [
+          e.jsx("button", {
             type: "button",
             className: [
-              "transition-colors duration-200",
-              s
-                ? "font-medium text-zinc-900"
-                : "text-zinc-400 hover:text-zinc-600",
+              "flex h-5 w-5 items-center justify-center transition-colors",
+              t > 0 ? "text-zinc-900 hover:text-zinc-600" : "text-zinc-300 cursor-not-allowed",
             ].join(" "),
-            onClick: () => a(t),
-            children: b[t],
-          },
-          t,
-        );
+            onClick: s,
+            disabled: t === 0,
+            "aria-label": "Decrease length",
+            children: e.jsx("span", { className: "text-lg leading-none", children: "−" }),
+          }),
+          e.jsx("div", {
+            className: "flex gap-1",
+            children: i.map((o) =>
+              e.jsx(
+                "div",
+                {
+                  className: `h-1 w-1 rounded-full transition-colors ${o === n ? "bg-zinc-900" : "bg-zinc-200"}`,
+                },
+                o
+              )
+            ),
+          }),
+          e.jsx("button", {
+            type: "button",
+            className: [
+              "flex h-5 w-5 items-center justify-center transition-colors",
+              t < i.length - 1 ? "text-zinc-900 hover:text-zinc-600" : "text-zinc-300 cursor-not-allowed",
+            ].join(" "),
+            onClick: r,
+            disabled: t === i.length - 1,
+            "aria-label": "Increase length",
+            children: e.jsx("span", { className: "text-lg leading-none", children: "+" }),
+          }),
+        ],
       }),
-    });
-  },
-  j = ({ value: n, onChange: a }) => {
-    const i = ["short", "medium", "long"],
-      t = i.indexOf(n),
-      s = () => {
-        t > 0 && a(i[t - 1]);
-      },
-      r = () => {
-        t < i.length - 1 && a(i[t + 1]);
-      };
-    return e.jsxs("div", {
-      className: "flex items-center gap-4 text-sm",
-      children: [
-        e.jsx("span", { className: "text-zinc-400", children: "Length" }),
-        e.jsxs("div", {
-          className: "flex items-center gap-3",
+    ],
+  });
+};
+
+const v_comp = ({ chapters: n, lengthMode: a }) =>
+  e.jsx("div", {
+    className: "space-y-12",
+    children: n.map((i) => {
+      const t = i.story[a];
+      return e.jsxs(
+        "article",
+        {
+          className: "group",
           children: [
-            e.jsx("button", {
-              type: "button",
-              className: [
-                "flex h-5 w-5 items-center justify-center transition-colors",
-                t > 0
-                  ? "text-zinc-900 hover:text-zinc-600"
-                  : "text-zinc-300 cursor-not-allowed",
-              ].join(" "),
-              onClick: s,
-              disabled: t === 0,
-              "aria-label": "Decrease length",
-              children: e.jsx("span", {
-                className: "text-lg leading-none",
-                children: "−",
-              }),
+            e.jsxs("div", {
+              className: "mb-3 flex items-baseline gap-3",
+              children: [
+                e.jsx("span", {
+                  className: "text-xs font-medium uppercase tracking-wider text-zinc-400",
+                  children: i.yearRange,
+                }),
+                e.jsx("h3", {
+                  className: "text-sm font-medium text-zinc-900",
+                  children: i.title,
+                }),
+              ],
             }),
             e.jsx("div", {
-              className: "flex gap-1",
-              children: i.map((o) =>
-                e.jsx(
-                  "div",
+              className: "relative",
+              children: e.jsx(d, {
+                mode: "wait",
+                children: e.jsx(
+                  l.div,
                   {
-                    className: `h-1 w-1 rounded-full transition-colors ${o === n ? "bg-zinc-900" : "bg-zinc-200"}`,
+                    initial: { opacity: 0 },
+                    animate: { opacity: 1 },
+                    exit: { opacity: 0 },
+                    transition: { duration: 0.3 },
+                    children: t.split("\n\n").map((s, r) =>
+                      e.jsx(
+                        "p",
+                        {
+                          className: "mb-4 max-w-2xl text-left text-lg leading-relaxed text-zinc-600 transition-colors group-hover:text-zinc-900 last:mb-0 sm:text-justify",
+                          children: s,
+                        },
+                        r
+                      )
+                    ),
                   },
-                  o,
+                  a
                 ),
-              ),
-            }),
-            e.jsx("button", {
-              type: "button",
-              className: [
-                "flex h-5 w-5 items-center justify-center transition-colors",
-                t < i.length - 1
-                  ? "text-zinc-900 hover:text-zinc-600"
-                  : "text-zinc-300 cursor-not-allowed",
-              ].join(" "),
-              onClick: r,
-              disabled: t === i.length - 1,
-              "aria-label": "Increase length",
-              children: e.jsx("span", {
-                className: "text-lg leading-none",
-                children: "+",
               }),
             }),
           ],
-        }),
-      ],
-    });
-  },
-  v = ({ chapters: n, lengthMode: a }) =>
-    e.jsx("div", {
-      className: "space-y-12",
-      children: n.map((i) => {
-        const t = i.story[a];
-        return e.jsxs(
-          "article",
-          {
-            className: "group",
-            children: [
-              e.jsxs("div", {
-                className: "mb-3 flex items-baseline gap-3",
-                children: [
-                  e.jsx("span", {
-                    className:
-                      "text-xs font-medium uppercase tracking-wider text-zinc-400",
-                    children: i.yearRange,
-                  }),
-                  e.jsx("h3", {
-                    className: "text-sm font-medium text-zinc-900",
-                    children: i.title,
-                  }),
-                ],
-              }),
-              e.jsx("div", {
-                className: "relative",
-                children: e.jsx(d, {
-                  mode: "wait",
-                  children: e.jsx(
-                    l.div,
-                    {
-                      initial: { opacity: 0 },
-                      animate: { opacity: 1 },
-                      exit: { opacity: 0 },
-                      transition: { duration: 0.3 },
-                      children: t
-                        .split(
-                          `
-
-`,
-                        )
-                        .map((s, r) =>
-                          e.jsx(
-                            "p",
-                            {
-                              className:
-                                "mb-4 max-w-2xl text-left text-lg leading-relaxed text-zinc-600 transition-colors group-hover:text-zinc-900 last:mb-0 sm:text-justify",
-                              children: s,
-                            },
-                            r,
-                          ),
-                        ),
-                    },
-                    a,
-                  ),
-                }),
-              }),
-            ],
-          },
-          i.title,
-        );
-      }),
+        },
+        i.title
+      );
     }),
-  k = ({ chapters: n, lengthMode: a }) => {
-    const i = [
-      "bg-daisy-yellow",
-      "bg-daisy-green",
-      "bg-daisy-purple",
-      "bg-daisy-light-blue",
-      "bg-daisy-blue",
-      "bg-daisy-orange",
-    ];
-    return e.jsx("div", {
-      className: "space-y-10",
-      children: n.map((t) => {
-        const s = i[t.title.length % i.length],
-          r = t.list[a];
-        return e.jsxs(
-          "section",
-          {
-            className: "space-y-3",
-            children: [
-              e.jsxs("div", {
+  });
+
+const k_comp = ({ chapters: n, lengthMode: a }) => {
+  const i = [
+    "bg-daisy-yellow",
+    "bg-daisy-green",
+    "bg-daisy-purple",
+    "bg-daisy-light-blue",
+    "bg-daisy-blue",
+    "bg-daisy-orange",
+  ];
+  return e.jsx("div", {
+    className: "space-y-10",
+    children: n.map((t, idx) => {
+      const s = i[idx % i.length],
+        r = t.list[a];
+      return e.jsxs(
+        "section",
+        {
+          className: "space-y-3",
+          children: [
+            e.jsxs("div", {
+              className: "flex items-baseline gap-3",
+              children: [
+                e.jsx("span", {
+                  className: "text-xs font-medium uppercase tracking-wider text-zinc-400",
+                  children: t.yearRange,
+                }),
+                e.jsx("h3", {
+                  className: "text-sm font-medium text-zinc-900",
+                  children: t.title,
+                }),
+              ],
+            }),
+            e.jsx("ul", {
+              className: "space-y-3 max-w-2xl",
+              children: e.jsx(d, {
+                mode: "wait",
+                children: e.jsx(
+                  l.div,
+                  {
+                    initial: { opacity: 0 },
+                    animate: { opacity: 1 },
+                    exit: { opacity: 0 },
+                    transition: { duration: 0.2 },
+                    children: r.map((o, m_idx) =>
+                      e.jsxs(
+                        "li",
+                        {
+                          className: "flex items-start gap-3 text-base text-zinc-600 mb-3 last:mb-0",
+                          children: [
+                            e.jsx("span", {
+                              className: `mt-2 h-2 w-2 shrink-0 rounded-full border border-black ${s}`,
+                            }),
+                            e.jsx("span", {
+                              className: "leading-relaxed",
+                              children: o,
+                            }),
+                          ],
+                        },
+                        m_idx
+                      )
+                    ),
+                  },
+                  a
+                ),
+              }),
+            }),
+          ],
+        },
+        t.title
+      );
+    }),
+  });
+};
+
+const I_comp = ({ events: n }) => {
+  const a = [
+    "bg-daisy-yellow",
+    "bg-daisy-green",
+    "bg-daisy-purple",
+    "bg-daisy-light-blue",
+    "bg-daisy-blue",
+    "bg-daisy-orange",
+  ];
+  return e.jsx("div", {
+    className: "relative border-l border-zinc-200 ml-3 space-y-8 py-2",
+    children: n.map((i, t) =>
+      e.jsxs(
+        l.div,
+        {
+          initial: { opacity: 0, x: -10 },
+          animate: { opacity: 1, x: 0 },
+          transition: { delay: t * 0.05, duration: 0.3 },
+          className: "relative pl-8",
+          children: [
+            e.jsx("div", {
+              className: `absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full border border-black ${a[t % a.length]}`,
+            }),
+            e.jsx("div", {
+              className: "flex flex-col gap-1",
+              children: e.jsxs("div", {
                 className: "flex items-baseline gap-3",
                 children: [
                   e.jsx("span", {
-                    className:
-                      "text-xs font-medium uppercase tracking-wider text-zinc-400",
-                    children: t.yearRange,
-                  }),
-                  e.jsx("h3", {
                     className: "text-sm font-medium text-zinc-900",
-                    children: t.title,
+                    children: i.label,
+                  }),
+                  e.jsx("span", {
+                    className: "text-xs text-zinc-400",
+                    children: i.year,
                   }),
                 ],
               }),
-              e.jsx("ul", {
-                className: "space-y-3 max-w-2xl",
-                children: e.jsx(d, {
-                  mode: "wait",
-                  children: e.jsx(
-                    l.div,
-                    {
-                      initial: { opacity: 0 },
-                      animate: { opacity: 1 },
-                      exit: { opacity: 0 },
-                      transition: { duration: 0.2 },
-                      children: r.map((o, m) =>
-                        e.jsxs(
-                          "li",
-                          {
-                            className:
-                              "flex items-start gap-3 text-base text-zinc-600 mb-3 last:mb-0",
-                            children: [
-                              e.jsx("span", {
-                                className: `mt-2 h-2 w-2 shrink-0 rounded-full border border-black ${s}`,
-                              }),
-                              e.jsx("span", {
-                                className: "leading-relaxed",
-                                children: o,
-                              }),
-                            ],
-                          },
-                          m,
-                        ),
-                      ),
-                    },
-                    a,
-                  ),
-                }),
-              }),
-            ],
-          },
-          t.title,
-        );
-      }),
-    });
-  },
-  I = ({ events: n }) => {
-    const a = [
-      "bg-daisy-yellow",
-      "bg-daisy-green",
-      "bg-daisy-purple",
-      "bg-daisy-light-blue",
-      "bg-daisy-blue",
-      "bg-daisy-orange",
-    ];
-    return e.jsx("div", {
-      className: "relative border-l border-zinc-200 ml-3 space-y-8 py-2",
-      children: n.map((i, t) =>
-        e.jsxs(
-          l.div,
-          {
-            initial: { opacity: 0, x: -10 },
-            animate: { opacity: 1, x: 0 },
-            transition: { delay: t * 0.05, duration: 0.3 },
-            className: "relative pl-8",
-            children: [
-              e.jsx("div", {
-                className: `absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full border border-black ${a[t % a.length]}`,
-              }),
-              e.jsx("div", {
-                className: "flex flex-col gap-1",
-                children: e.jsxs("div", {
-                  className: "flex items-baseline gap-3",
-                  children: [
-                    e.jsx("span", {
-                      className: "text-sm font-medium text-zinc-900",
-                      children: i.label,
-                    }),
-                    e.jsx("span", {
-                      className: "text-xs text-zinc-400",
-                      children: i.year,
-                    }),
-                  ],
-                }),
-              }),
-            ],
-          },
-          `${i.year}-${i.label}-${t}`,
-        ),
-      ),
-    });
-  },
-  c = x,
-  N = () => {
-    const [n, a] = h.useState("prose"),
-      [i, t] = h.useState("medium"),
-      s = c.timeline;
-    return e.jsx("section", {
-      id: "journey",
-      className: "mx-auto max-w-7xl px-6 pt-4 pb-24",
-      children: e.jsxs("div", {
-        className: "grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-24",
-        children: [
-          e.jsx("div", {
-            className: "lg:col-span-3",
-            children: e.jsx("h2", {
-              className: "sticky top-24 text-2xl font-normal text-zinc-900",
-              children: "Journey",
             }),
-          }),
-          e.jsxs("div", {
-            className: "lg:col-span-9",
-            children: [
-              e.jsxs("div", {
-                className:
-                  "mb-12 flex w-full max-w-2xl flex-wrap items-center gap-8 border-b border-zinc-200 pb-6",
-                children: [
-                  e.jsx(w, { value: n, onChange: a }),
-                  n !== "timeline" &&
-                    e.jsxs(e.Fragment, {
-                      children: [
-                        e.jsx("div", { className: "h-4 w-px bg-zinc-300" }),
-                        e.jsx(j, { value: i, onChange: t }),
-                      ],
-                    }),
-                ],
-              }),
-              e.jsx("div", {
-                className: "min-h-[400px]",
-                children: e.jsx(d, {
-                  mode: "wait",
-                  children: e.jsxs(
-                    l.div,
-                    {
-                      initial: { opacity: 0, y: 10 },
-                      animate: { opacity: 1, y: 0 },
-                      exit: { opacity: 0, y: -10 },
-                      transition: { duration: 0.3, ease: "easeInOut" },
-                      children: [
-                        n === "prose" &&
-                          e.jsx(v, { chapters: c.chapters, lengthMode: i }),
-                        n === "list" &&
-                          e.jsx(k, { chapters: c.chapters, lengthMode: i }),
-                        n === "timeline" && e.jsx(I, { events: s }),
-                      ],
-                    },
-                    n,
-                  ),
-                }),
-              }),
-            ],
-          }),
-        ],
-      }),
-    });
-  },
-  J = () =>
-    e.jsxs(u, {
+          ],
+        },
+        `${i.year}-${i.label}-${t}`
+      )
+    ),
+  });
+};
+
+const c = x;
+
+const N_comp = () => {
+  const [n, a] = h.useState("prose"),
+    [i, t] = h.useState("medium"),
+    s = c.timeline;
+  return e.jsx("section", {
+    id: "journey",
+    className: "mx-auto max-w-7xl px-6 pt-4 pb-24",
+    children: e.jsxs("div", {
+      className: "grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-24",
       children: [
         e.jsx("div", {
-          className: "container mx-auto px-4 md:px-6 lg:px-8 relative",
-          children: e.jsx(g, {}),
+          className: "lg:col-span-3",
+          children: e.jsx("h2", {
+            className: "sticky top-24 text-2xl font-normal text-zinc-900",
+            children: "Journey",
+          }),
         }),
-        e.jsxs("main", {
-          id: "main-content",
-          className: "container mx-auto px-4 md:px-6 lg:px-8 relative z-10",
+        e.jsxs("div", {
+          className: "lg:col-span-9",
           children: [
-            e.jsx(N, {}),
             e.jsxs("div", {
-              className:
-                "mx-auto max-w-7xl px-6 mt-20 flex flex-col items-center gap-3 border-t border-zinc-200 pt-10 sm:flex-row sm:justify-between pb-24",
+              className: "mb-12 flex w-full max-w-2xl flex-wrap items-center gap-8 border-b border-zinc-200 pb-6",
               children: [
-                e.jsx("p", {
-                  className:
-                    "text-[11px] uppercase tracking-[0.3em] text-zinc-400",
-                  children: "WANT THE EDITORIAL VERSION?",
-                }),
-                e.jsxs("div", {
-                  className: "flex gap-3",
+                e.jsx(w_comp, { value: n, onChange: a }),
+                n !== "timeline" &&
+                e.jsxs(e.Fragment, {
                   children: [
-                    e.jsx(m, {
-                      to: "/life",
-                      className:
-                        "rounded-full border border-zinc-900 px-5 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-900 hover:text-white",
-                      children: "Life",
-                    }),
-                    e.jsx(m, {
-                      to: "/projects",
-                      className:
-                        "rounded-full border border-zinc-300 px-5 py-2 text-sm font-semibold text-zinc-500 transition-colors hover:border-zinc-900 hover:text-zinc-900",
-                      children: "Projects",
-                    }),
+                    e.jsx("div", { className: "h-4 w-px bg-zinc-300" }),
+                    e.jsx(j_comp, { value: i, onChange: t }),
                   ],
                 }),
               ],
             }),
+            e.jsx("div", {
+              className: "min-h-[400px]",
+              children: e.jsx(d, {
+                mode: "wait",
+                children: e.jsxs(
+                  l.div,
+                  {
+                    initial: { opacity: 0, y: 10 },
+                    animate: { opacity: 1, y: 0 },
+                    exit: { opacity: 0, y: -10 },
+                    transition: { duration: 0.3, ease: "easeInOut" },
+                    children: [
+                      n === "prose" && e.jsx(v_comp, { chapters: c.chapters, lengthMode: i }),
+                      n === "list" && e.jsx(k_comp, { chapters: c.chapters, lengthMode: i }),
+                      n === "timeline" && e.jsx(I_comp, { events: s }),
+                    ],
+                  },
+                  n
+                ),
+              }),
+            }),
           ],
         }),
-        e.jsx(p, {}),
       ],
-    });
-export { J as default };
+    }),
+  });
+};
 
+const J = () =>
+  e.jsxs(u, {
+    children: [
+      e.jsx("div", {
+        className: "container mx-auto px-4 md:px-6 lg:px-8 relative",
+        children: e.jsx(g, {}),
+      }),
+      e.jsxs("main", {
+        id: "main-content",
+        className: "container mx-auto px-4 md:px-6 lg:px-8 relative z-10",
+        children: [
+          e.jsx(N_comp, {}),
+          e.jsxs("div", {
+            className: "mx-auto max-w-7xl px-6 mt-20 flex flex-col items-center gap-3 border-t border-zinc-200 pt-10 sm:flex-row sm:justify-between pb-24",
+            children: [
+              e.jsx("p", {
+                className: "text-[11px] uppercase tracking-[0.3em] text-zinc-400",
+                children: "WANT THE EDITORIAL VERSION?",
+              }),
+              e.jsxs("div", {
+                className: "flex gap-3",
+                children: [
+                  e.jsx(m, {
+                    to: "/life",
+                    className: "rounded-full border border-zinc-900 px-5 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-900 hover:text-white",
+                    children: "Life",
+                  }),
+                  e.jsx(m, {
+                    to: "/projects",
+                    className: "rounded-full border border-zinc-300 px-5 py-2 text-sm font-semibold text-zinc-500 transition-colors hover:border-zinc-900 hover:text-zinc-900",
+                    children: "Projects",
+                  }),
+                ],
+              }),
+            ],
+          }),
+        ],
+      }),
+      e.jsx(p, {}),
+    ],
+  });
+
+export { J as default };

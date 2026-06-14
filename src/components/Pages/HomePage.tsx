@@ -131,7 +131,7 @@ const R = ({
                 const colors = {
                   LIVE: "border-green-700 bg-green-100 text-green-800",
                   "IN PRODUCTION": "border-yellow-400 bg-yellow-50 text-yellow-700",
-                  OFFLINE: "border-red-600 bg-red-50 text-red-700",
+                  OFFLINE: "bg-red-500 text-white border-red-600 font-bold",
                 };
                 const colorClass =
                   colors[B.toUpperCase()] ||

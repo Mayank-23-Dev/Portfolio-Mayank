@@ -103,7 +103,7 @@ const V = () => {
         summary: "Built Shiq to eliminate the chaos of managing content ideas, scripts, assets, and publishing schedules across platforms. It gives solo creators a unified studio — from first draft to published post.",
         image: "/images/case%20studies/Shiq/thumbnail.webp",
         link: "/projects/shiq",
-        badge: "In Production",   // ← add this
+        badge: "IN PRODUCTION",
       },
       {
         id: "finease",
@@ -114,6 +114,7 @@ const V = () => {
           "Built FinEase to solve scattered spending visibility across UPI apps, wallets, subscriptions, and cash. It combines smart tracking, budgeting, analytics, receipt scanning, recurring transaction monitoring, and AI-generated financial insights.",
         image: "/images/case studies/postyai/thumbnail.webp",
         link: "/projects/finease",
+        badge: "LIVE",
       },
       {
         id: "hactiq",
@@ -124,6 +125,7 @@ const V = () => {
           "Built Hactiq from a personal need to understand daily consistency without streak pressure. It uses a clean monthly trend view, habit heatmap, and lightweight insights to help students and professionals stay aware and improve steadily.",
         image: "/images/case studies/couriermgmt/thumbnail.webp",
         link: "/projects/hactiq",
+        badge: "OFFLINE",
       },
     ],
     b = [
@@ -219,11 +221,18 @@ const V = () => {
                               children: "Coming Soon",
                             }),
                           !o && s.badge &&
-                            e.jsx("span", {
-                              className:
-                                "inline-flex w-fit shrink-0 border-2 border-black bg-green-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-green-900",
-                              children: s.badge,
-                            }),
+                            (() => {
+                              const colors = {
+                                LIVE: "bg-green-100 text-green-900 border-green-700",
+                                "IN PRODUCTION": "bg-yellow-50 text-yellow-700 border-yellow-400",
+                                OFFLINE: "bg-red-500 text-white border-red-600 font-bold",
+                              };
+                              const colorClass = colors[s.badge.toUpperCase()] || "bg-green-100 text-green-900 border-black";
+                              return e.jsx("span", {
+                                className: `inline-flex w-fit shrink-0 border-2 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] ${colorClass}`,
+                                children: s.badge,
+                              });
+                            })(),
                         ],
                       }),
                     e.jsx("p", {
