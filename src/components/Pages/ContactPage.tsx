@@ -223,7 +223,7 @@ const ie = () => {
             timestamp: new Date().toISOString(),
             source: "portfolio-contact",
           });
-          (yield fetch("https://formspree.io/f/mdkznvaa", {
+          (yield fetch("https://formspree.io/f/mnjylpyn", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(f),
