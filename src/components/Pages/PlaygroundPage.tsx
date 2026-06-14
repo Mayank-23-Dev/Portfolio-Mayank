@@ -764,7 +764,7 @@ const le = n.lazy(() => import("../ui/Playground_UI/ComponentsShowcase"));
 const J = [
   { src: "/images/feed/memory-02.webp" },
   { src: "/images/feed/memory-03.webp" },
-  { src: "/images/feed/memory-06.webp" },
+  { src: "/images/feed/memory-04.webp" },
   { src: "/images/feed/memory-07.webp" },
   { src: "/images/feed/memory-08.webp" },
   { src: "/images/feed/memory-09.webp" },
