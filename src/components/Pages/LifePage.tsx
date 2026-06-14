@@ -183,7 +183,7 @@ const D = () =>
                       e.jsx("p", {
                         className:
                           "mt-1.5 text-center font-handwritten text-[11px] text-zinc-400",
-                        children: "Second Year",
+                        children: "Yeah!! That's Me 😏",
                       }),
                     ],
                   }),
