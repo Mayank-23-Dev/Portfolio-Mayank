@@ -13,7 +13,7 @@ const ShiqCaseStudy = () =>
   e.jsxs(i, {
     children: [
       e.jsx("div", {
-        className: "container mx-auto px-4 md:px-6 lg:px-8",
+        className: "container mx-auto px-4 md:px-5 lg:px-8",
         children: e.jsx(r, {}),
       }),
       e.jsx("main", {
