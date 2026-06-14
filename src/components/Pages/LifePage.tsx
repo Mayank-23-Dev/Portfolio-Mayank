@@ -201,8 +201,8 @@ const D = () =>
                       e.jsxs("div", {
                         className: "space-y-6 text-left body-text text-[17px] sm:text-[0.95rem] leading-[1.85] sm:leading-[1.8] text-zinc-700 font-sans",
                         children: [
-                          e.jsx(a.p, s(t({}, i(0.2)), { children: "I remember the first computer I ever touched. It belonged to my father. He used it for work like Microsoft Office and documents. He did work on it. I was a kid watching from the side. He taught me how to type on that computer. I learned English first then Kruti Dev 010 so I could type in Hindi so that I could actually help my father with his files." })),
-                          e.jsx(a.p, s(t({}, i(0.3)), { children: "I do not think he had any idea what he was starting. Because once I had access to that machine I could not stop. I found GTA. I found IGI. I found out how to download games I was not supposed to download. I filled up the drive with things my father did not know existed. He would find them. Delete everything. I would find a way back in. That loop—I still love those days—discovering new ways to download and hide games and get caught then again figure out another route has honestly been my story." })),
+                          e.jsx(a.p, s(t({}, i(0.2)), { children: "I remember the first computer I ever touched. It belonged to my father. He used it for work like Microsoft Office and documents. He did work on it. I was a kid watching from the side. He taught me how to type on that computer. I learned English first then Kruti Dev 010 so that I could type in Hindi so that I could actually help my father with his files." })),
+                          e.jsx(a.p, s(t({}, i(0.3)), { children: "I don't think so he had any idea what he was building in me. Because once I had access to that machine I got so obssesed with that I found lots of ways to spend my time on I found GTA. I found IGI. I found out how to download games that I was not supposed to download. I filled up the drive with things my father did not know existed. He would find them. Delete everything. I would find a way back in. That loop—I still love those days—discovering new ways to download and hide games and get caught then again figure out another route has honestly been my story." })),
                         ]
                       })
                     ]
@@ -224,7 +224,7 @@ const D = () =>
                       e.jsxs("div", {
                         className: "space-y-6 text-left body-text text-[17px] sm:text-[0.95rem] leading-[1.85] sm:leading-[1.8] text-zinc-700 font-sans",
                         children: [
-                          e.jsx(a.p, s(t({}, i(0.2)), { children: "By the time I was ten I was already obsessed. I was swapping system files like Utilman with CMD to navigate the Windows login and reinstalling Windows from a pendrive I made myself. I was figuring out how to activate it just so I could keep using the machine. Nobody taught me any of that. I just needed access enough to figure it out. I showed the tricks to my friends on the PCs in my School Computer Lab—I was the kid who knew his way around machines in a way nobody else did yet. That felt like something then." })),
+                          e.jsx(a.p, s(t({}, i(0.2)), { children: "By the time I was ten I was already obsessed. I was swapping system files like Utilman with CMD to crack the Windows login and reinstalling Windows from a bootable drive that I booted from myself. I was figuring out how to activate it just so I could keep using the machine. Nobody taught me any of that there the curiousness about how stuff works in the inside was always there in me. I just needed access enough to figure it out. I showed the tricks to my friends on the PCs in my School Computer Lab—I was the kid who knew his way around machines in a way nobody else did yet. That felt like something then." })),
                         ]
                       })
                     ]
@@ -234,7 +234,7 @@ const D = () =>
                     children: [
                       e.jsx(a.p, s(t({}, i(0.1)), {
                         className: "text-[1.1rem] text-zinc-800 font-medium italic text-left",
-                        children: "I am telling you this because I want you to understand from the start there was never a moment where someone handed me the door. I have always been the kid finding the window."
+                        children: "I am telling you this because I want you to understand, from the start, that no one ever handed me the manual. I have always been the kid who took things apart out of curiosity, just to figure them out for himself."
                       })),
                     ]
                   }),
@@ -249,7 +249,7 @@ const D = () =>
                         children: [
                           e.jsx(a.p, s(t({}, i(0.2)), { children: "By the time I reached Class 11 I had a laptop from the COVID period. It was the machine that was entirely mine. There were no one's files on it. Nobody was watching what I did with it. I started learning video editing. Not out of passion at first honestly. I saw that editors were making money online. That felt like a path. I started on Premiere Pro CC 2014 because my laptop could run that version without lagging. I just taught myself from there." })),
                           e.jsx(a.p, s(t({}, i(0.3)), { children: "That turned into a YouTube channel called NotGamerzReact. I made gaming montages, meme edits, long-form videos of creators gameplay cut together with energy and timing. No strategy. Just a kid who had learned to edit and wanted to put something out. That channel hit thousands of subscribers. One video crossed millions of views. I thought this was the beginning of something. Then YouTube rejected my monetization application. The content was not eligible. I was using peoples gameplay. That had a ceiling I had not seen coming." })),
-                          e.jsx(a.p, s(t({}, i(0.4)), { children: "So I did the math quickly—the money was not coming from here. I sold the channel for a small amount to a guy named Nishant. I opened a Fiverr account the week. I started editing for creators—one of them had hundreds of thousands of subscribers. I kept moving. I did not stop to grieve it. That is how I have always operated. When something closes I do not stand at that door. I find the next one already open." })),
+                          e.jsx(a.p, s(t({}, i(0.4)), { children: "So I did the math quickly—the money was not coming from here. I sold the channel for a small amount to a guy named Nishant. I opened a Fiverr account the week. I started editing for creators—one of them had hundreds of thousands of subscribers. I kept moving. I did not stop to grieve it. That is how I have always operated. When something closes I don't stand at that door. I find the next one already open." })),
                         ]
                       })
                     ]
