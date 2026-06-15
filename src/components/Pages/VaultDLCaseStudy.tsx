@@ -143,6 +143,80 @@ const VaultDLCaseStudy = () =>
                 ],
               }),
             }),
+            /* ── How to Download ── */
+            e.jsx("section", {
+              className: "mt-8",
+              style: { marginTop: "32px" },
+              children: e.jsxs("div", {
+                className: "border-2 border-black bg-white p-6 md:p-7",
+                children: [
+                  e.jsx("h2", {
+                    className: "text-xl font-bold mb-4",
+                    children: "How to Download",
+                  }),
+                  e.jsxs("div", {
+                    className: "space-y-4 text-stone-700",
+                    style: { fontSize: "15px", lineHeight: "1.8" },
+                    children: [
+                      e.jsxs("ol", {
+                        className: "space-y-3",
+                        children: [
+                          e.jsxs("li", {
+                            children: [
+                              e.jsx("strong", { children: "Step 1:" }),
+                              " Click ",
+                              e.jsx("span", {
+                                className: "bg-green-200 px-1 rounded",
+                                children: '"Download .exe"',
+                              }),
+                              " button",
+                            ],
+                          }),
+                          e.jsxs("li", {
+                            children: [
+                              e.jsx("strong", { children: "Step 2:" }),
+                              ' A red Windows SmartScreen warning will appear saying "Windows protected your PC"',
+                            ],
+                          }),
+                          e.jsxs("li", {
+                            children: [
+                              e.jsx("strong", { children: "Step 3:" }),
+                              " Click ",
+                              e.jsx("span", {
+                                className: "bg-red-200 px-1 rounded",
+                                children: '"More info"',
+                              }),
+                              " on that screen",
+                            ],
+                          }),
+                          e.jsxs("li", {
+                            children: [
+                              e.jsx("strong", { children: "Step 4:" }),
+                              " Click ",
+                              e.jsx("span", {
+                                className: "bg-red-200 px-1 rounded",
+                                children: '"Run anyway"',
+                              }),
+                              " to proceed with installation",
+                            ],
+                          }),
+                        ],
+                      }),
+                      e.jsxs("p", {
+                        className: "mt-6",
+                        children: [
+                          e.jsx("span", {
+                            className: "bg-yellow-200 px-1 rounded",
+                            children: "Don't worry!",
+                          }),
+                          " This warning appears because the app is new and doesn't yet have a verified publisher signature, but it is completely safe and open source.",
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            }),
             /* ── Legal Note ── */
             e.jsx("section", {
               className: "mt-8",
