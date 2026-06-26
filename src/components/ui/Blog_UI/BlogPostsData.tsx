@@ -1,113 +1,151 @@
 const t = [
-    {
-      slug: "how-to-use-claude-fable-5-for-free",
-      title: "How to Use Claude Fable 5 for FREE (Secret Offer Unlocks Mythos!) 🚀",
-      subtitle:
-        "Discover how to access Anthropic's powerful Claude Fable 5 model completely free using GitLab's 30-day Ultimate trial — no credit card required.",
-      date: "2026-06-13",
-      displayDate: "June 13, 2026",
-      readingTime: "6 min read",
-      excerpt:
-        "Discover how to access Anthropic's powerful Claude Fable 5 model completely free using GitLab's 30-day Ultimate trial — no credit card required.",
-      coverImage: "https://cdn.analyticsvidhya.com/wp-content/uploads/2026/06/I-Tested-Claude-Fable-5_-Can-Anthropics-Newest-AI-Deliver-on-the-Hype_.webp",
-      tags: ["AI Tools", "Free AI", "Claude", "GitLab", "Developer Tips"],
-      sections: [
-        {
-          heading: "Introduction",
-          paragraphs: [
-            "Are you looking for a way to use Anthropic's brand new Claude Fable 5 model without spending a dime? In this guide, we'll walk you through a completely free workaround using GitLab's Ultimate 30-day trial to get full, unlocked access to the Fable 5 AI model — no credit card needed.",
-            "We'll also look at Fable 5's coding capabilities, review key benchmarks, compare it head-to-head with Claude Opus, and show you a live demo of building a responsive website from scratch.",
-          ],
-        },
-        {
-          heading: "What is Claude Fable 5 & The Mythos Class?",
-          paragraphs: [
-            "Anthropic recently launched its new frontier model class named Mythos. During testing, the Mythos model began uncovering numerous security vulnerabilities in software. Because of the potential risks, Anthropic delayed its full public release and first shared it with security researchers and cybersecurity companies to patch those vulnerabilities.",
-            "To bring this technology to developers safely, Anthropic created a toned-down version of the Mythos class — not quite as raw, but still incredibly powerful — and released it as Claude Fable 5.",
-          ],
-        },
-        {
-          heading: "✨ Key Strengths of Claude Fable 5",
-          points: [
-            "One-Shot Debugging: Identifies and fixes complex codebase bugs in a single prompt — no multi-turn iteration needed.",
-            "Speed: Performs dramatically faster than older generation models.",
-            "Web Design & Game Logic: Generates complete frontend UI code, layout styling, and interactive game logic in one go.",
-          ],
-        },
-        {
-          heading: "Claude Fable 5 vs. Claude Opus: The Benchmarks",
-          points: [
-            "10% Higher Performance on standard coding and reasoning benchmarks compared to Claude Opus.",
-            "Efficiency Gains: Requires fewer prompt tokens to reach the correct solution, saving significant time and context window budget.",
-          ],
-        },
-        {
-          heading: "Step-by-Step: How to Activate GitLab's Free Trial to Unlock Fable 5",
-          paragraphs: [
-            "GitLab currently offers a 30-day trial of GitLab Ultimate, which includes full integration with Anthropic's Claude models — including Fable 5 — completely free and without a credit card.",
-          ],
-        },
-        {
-          heading: "Step 1 · Sign Up on GitLab",
-          points: [
-            "Go to gitlab.com",
-            "Click Sign In → choose Google, GitHub, or Email",
-            "If using GitHub, authorize the GitLab app",
-            "Verify your email with the code sent to your inbox",
-          ],
-        },
-        {
-          heading: "Step 2 · Set Up Your Profile & Group",
-          points: [
-            "Role → select Software Developer",
-            'Select "I want to explore GitLab"',
-            "Click Create a New Project → Just Me",
-            'Name your group and project (e.g., "TicTacToe"), keep README checked → Create Project',
-          ],
-        },
-        {
-          heading: "Step 3 · Activate the GitLab Ultimate Free Trial",
-          points: [
-            "Once your repository is created, look on the right side of the dashboard",
-            "Click Start a Free Trial",
-            "Enter company name, select country → Activate My Free Trial (no credit card required)",
-          ],
-        },
-        {
-          heading: "Step 4 · Access Claude Fable 5",
-          points: [
-            "Open your GitLab project",
-            "On the right side, find the model selector",
-            "Search or type Fable 5 → select it to activate",
-          ],
-        },
-        {
-          heading: "Live Demo: Coding a Tic-Tac-Toe Game with Fable 5",
-          paragraphs: [
-            'Once Fable 5 is active, prompt it inside the GitLab editor chat: "Create a TicTacToe game with HTML, CSS, and JavaScript. Just create a single index.html file."',
-          ],
-          points: [
-            "Fable 5 automatically writes the complete HTML, CSS, and JavaScript",
-            "GitLab creates a temporary edit branch with your new files",
-            "Review changes → click Merge → all commits merge cleanly into main",
-          ],
-        },
-        {
-          heading: "Test it Locally",
-          points: [
-            "Download the ZIP from your GitLab repository",
-            "Extract the archive on your PC",
-            "Double-click index.html → play your newly built AI game!",
-          ],
-        },
-        {
-          heading: "Summary & Next Steps",
-          paragraphs: [
-            "With GitLab's 30-day Ultimate trial, you can access one of the most powerful coding LLMs on the market today for absolutely free. If you want to explore more free AI coding tools, check out our guide on 5 Free Alternatives to Claude Code.",
-          ],
-        },
-      ],
-    },
+  {
+    slug: "dsa-ai-mentor-approach",
+    title: "I Stopped Using AI as a Shortcut. Here's What I Did Instead.",
+    subtitle:
+      "How replacing instant code generation with a strict, Socratic AI mentor forced me to struggle, retain algorithmic patterns, and finally master Linked Lists.",
+    date: "2026-06-26",
+    displayDate: "June 26, 2026",
+    readingTime: "5 min read",
+    excerpt:
+      "We've all been there: get stuck on a LeetCode problem, copy-paste it into an LLM, skim the clean solution, and close the tab thinking we learned something. It's a lie. Here is how I broke the cycle and built a custom prompt that turned Claude into a brutal, question-first DSA mentor.",
+    coverImage: "/images/Blog/DSA_AI_MENTOR.png",
+    tags: ["Learning", "DSA", "AI Tools", "Career"],
+    sections: [
+      {
+        paragraphs: [
+          "I was trapped in a loop of false productivity.",
+          "Every time I hit a wall with Data Structures and Algorithms (DSA), my workflow was identical: copy the problem statement, paste it into an LLM, skim the clean solution it spit out, nod in agreement, and mark the problem as 'solved'.",
+          "Fifty problems later, I realized a depressing truth: I had retained absolutely nothing. I was merely sightseeing in someone else's codebase.",
+          "A month ago, Linked Lists broke me. Not with a complex graph or a dynamic programming problem, but a simple pointer manipulation. I blanked completely. That quiet feeling of closing the browser tab and thinking, 'maybe software engineering isn't for me' crept in.",
+          "But instead of quitting, I decided to change how I practiced. I didn't ban AI; I changed how it treated me.",
+        ],
+      },
+      {
+        heading: "The Illusion of Speed",
+        paragraphs: [
+          "AI tools are built to minimize friction. If you ask for code, you get it in three seconds.",
+          "But when it comes to learning, friction is the feature, not the bug. In learning science, the feeling of being stuck is when your brain actually builds the neural pathways needed for pattern recognition. If you bypass the struggle, you bypass the learning.",
+          "By receiving instant answers, I was optimizing for a green checkmark on LeetCode rather than deep comprehension. I was solving four problems a day but couldn't write a simple list reversal from scratch 48 hours later.",
+        ],
+      },
+      {
+        heading: "The Pivot: The Socratic AI Mentor",
+        paragraphs: [
+          "To break this cycle, I built a custom system prompt that turns the LLM from a code generator into a Socratic mentor.",
+          "The rules are strict. It is forbidden from giving me code unless I explicitly ask. Instead, it must guide me through questions, hint at patterns without naming them, and force me to think.",
+          "Here are the core principles of the Socratic approach:",
+        ],
+        points: [
+          "It never reveals the final algorithm or solution upfront.",
+          "It asks me to explain the constraints and clarify edge cases first.",
+          "It provides exactly one tiny hint at a time, then pauses for my code or thoughts.",
+          "It analyzes my approach, pointing out time and space complexities rather than rewriting my code.",
+        ],
+      },
+      {
+        paragraphs: [
+          "It's annoying. That's the point. The intellectual discomfort is where the actual synthesis and memory retention happen.",
+        ],
+      },
+      {
+        heading: "The Mentor Prompt (Copy & Use)",
+        paragraphs: [
+          "Copy and paste this system prompt into Claude, ChatGPT, or Gemini at the start of your next practice session:",
+        ],
+        code: `You are my dedicated DSA & LeetCode mentor.
+
+Core Philosophy: Never teach what I can discover. Never solve what I can think through.
+
+STRICT RULES — No exceptions:
+- Never provide complete solution or full code unless I explicitly say "give me the optimized solution"
+- Never jump to the final algorithm or pattern immediately
+- Never assume missing constraints — always ask first
+- Never give the next hint until I've attempted the current step
+
+Your Responsibilities:
+- Start by asking clarifying questions about constraints, edge cases, and input/output format
+- Let me propose my approach first — then validate it
+- Help me identify the core pattern (e.g., two pointers, sliding window, DP, graph, greedy, etc.)
+- Break the problem into small logical steps and guide me using progressive hints only
+- If my approach is incorrect or inefficient, explain why and gently redirect me
+- Highlight edge cases and common pitfalls without solving them for me
+- Only when I explicitly say "give me the optimized solution", provide the full solution
+
+Your Exact Workflow — Follow this order every time:
+
+Phase 1 — Clarify Constraints
+When I share a problem, immediately ask about:
+- Input size and value ranges
+- Edge cases (empty input, negatives, duplicates)
+- Expected output format
+- Any special constraints
+Do NOT comment on the problem itself yet.
+
+Phase 2 — Ask for My Approach First
+Once constraints are clear, ask:
+"What's your initial thought or approach?"
+Do NOT hint at any pattern yet. Wait for my response.
+
+Phase 3 — Validate My Approach
+- If correct: affirm it and ask me to break it into steps myself
+- If suboptimal: ask "What's the time complexity of that?" to help me notice the gap on my own
+- If wrong: ask a targeted question that exposes the flaw without revealing the fix
+
+Phase 4 — Pattern Identification (only if I'm stuck)
+Guide with questions like:
+- "Have you seen a similar problem structure before?"
+- "What does the problem remind you of?"
+- "What changes as you move through the input?"
+Never name the pattern directly — let me arrive at it.
+
+Phase 5 — Progressive Hints Only
+- Give exactly one small hint at a time
+- Wait for my response before giving the next hint
+- Each hint should be a question or a nudge, not a statement
+
+Phase 6 — Edge Cases & Pitfalls
+Surface edge cases as questions, not warnings:
+- "What happens if the array is empty?"
+- "What if all elements are the same?"
+- "Does your approach handle negative numbers?"
+
+Phase 7 — Optimized Solution (only on explicit request)
+Only when I say "give me the optimized solution", provide:
+- Full algorithm walkthrough
+- Clean, production-quality commented code
+- Time & space complexity analysis
+- Common follow-up variants of the problem
+
+Your default opening for every new problem:
+"Got it! Before we dive in — let me ask a few quick questions about the constraints..."
+(after constraints) "Okay! Now, what's your first instinct on how to approach this?"`,
+      },
+      {
+        heading: "How to Set It Up",
+        paragraphs: [
+          "To make this process seamless and avoid copy-pasting the prompt every time, you can set it up as a persistent Project in ChatGPT:",
+        ],
+        points: [
+          "Open ChatGPT in your browser.",
+          "Create a new Project (usually found in the sidebar or navigation menu).",
+          "Give your new project a title, for example, \"Leetcode Mentor\".",
+          "Go to the 'Project Instructions' section in the project setup/settings panel.",
+          "Paste the prompt copied from above into the instructions field and save. Every new chat you start within this project will now automatically adopt the Socratic mentor persona.",
+        ],
+      },
+      {
+        heading: "The Friction is Worth It",
+        paragraphs: [
+          "I'm not going to lie: using this system is slow. A problem that used to take me five minutes of copy-pasting now takes 30 to 40 minutes of active thinking and back-and-forth debugging.",
+          "It is frustrating. But it works.",
+          "For the first time, concepts are actually sticking. Last week, I sat down and solved a medium Linked List problem without a single hint, recognizing the slow/fast pointer pattern naturally. A month ago, that would have felt like magic.",
+          "I'm currently 100 problems in. I still have a long way to go, but the path forward is clear. If you find yourself stuck in the copy-paste loop, try this prompt. Let your brain struggle a little—it's the only way to grow.",
+        ],
+      },
+    ],
+  },
+
     {
       slug: "learning-is-no-longer-about-knowing-more",
       title: "Learning Is No Longer About Knowing More",
@@ -118,6 +156,7 @@ const t = [
       readingTime: "8 min read",
       excerpt:
         "A note on why learning now depends less on collecting information and more on building better judgment, compression, and action.",
+      coverImage: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80",
       tags: ["Learning", "AI", "Judgment"],
       sections: [
         {

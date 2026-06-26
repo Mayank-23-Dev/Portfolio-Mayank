@@ -50,6 +50,38 @@ const h = (a = 0) => ({
       .toLowerCase()
       .replace(/\s+/g, "-")
       .replace(/[^\w-]/g, ""),
+  CodeBlock = ({ code }: { code: string }) => {
+    const [copied, setCopied] = p.useState(false);
+    const handleCopy = async () => {
+      try {
+        await navigator.clipboard.writeText(code);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (err) {
+        console.error("Failed to copy text", err);
+      }
+    };
+    return e.jsxs("div", {
+      className: "relative my-6 group",
+      children: [
+        e.jsx("pre", {
+          className:
+            "overflow-x-auto rounded-lg border border-zinc-200/80 bg-zinc-50/50 p-5 font-mono text-[13px] text-zinc-800 leading-relaxed shadow-sm max-w-full",
+          children: e.jsx("code", {
+            className: "block whitespace-pre-wrap break-words",
+            children: code,
+          }),
+        }),
+        e.jsx("button", {
+          id: "copy-code-block-button",
+          onClick: handleCopy,
+          className:
+            "absolute right-3 top-3 rounded border border-zinc-200 bg-white px-2.5 py-1 text-[11px] font-medium text-zinc-500 shadow-sm transition-all hover:bg-zinc-50 hover:text-zinc-800 active:scale-95",
+          children: copied ? "Copied!" : "Copy",
+        }),
+      ],
+    });
+  },
   G = () => {
     const { slug: a } = E(),
       t = a ? C(a) : void 0,
@@ -273,6 +305,8 @@ const h = (a = 0) => ({
                                           ),
                                         ),
                                       }),
+                                    s.code &&
+                                      e.jsx(CodeBlock, { code: s.code }),
                                   ],
                                 },
                                 `${(n = s.heading) != null ? n : "section"}-${i}`,

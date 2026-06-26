@@ -1,5 +1,6 @@
 import { a as React } from "./_reactVendor";
 import { u as useLocation } from "./_reactVendor";
+import { g as getBlogPost } from "./Blog_UI/BlogPostsData";
 
 const SEO_DATA: Record<string, { title: string; description: string }> = {
   "/": {
@@ -37,7 +38,20 @@ export const SEOManager = () => {
   const path = location.pathname;
 
   React.useEffect(() => {
-    const data = SEO_DATA[path] || SEO_DATA["/"];
+    let data = SEO_DATA[path];
+    if (!data && path.startsWith("/blog/")) {
+      const slug = path.substring(6);
+      const post = getBlogPost(slug);
+      if (post) {
+        data = {
+          title: `${post.title} | Mayank Dev`,
+          description: post.subtitle || post.excerpt,
+        };
+      }
+    }
+    if (!data) {
+      data = SEO_DATA["/"];
+    }
     
     // Update Title
     document.title = data.title;

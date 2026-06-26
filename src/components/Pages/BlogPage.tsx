@@ -44,7 +44,7 @@ const m = (t = 0) => ({
         a.jsxs("main", {
           id: "main-content",
           className:
-            "mx-auto w-full max-w-3xl px-6 pb-24 pt-10 md:px-8 md:pt-16",
+            "mx-auto w-full max-w-5xl px-6 pb-24 pt-10 md:px-8 md:pt-16",
           children: [
             a.jsx(
               r.h1,
@@ -60,32 +60,64 @@ const m = (t = 0) => ({
                 className: "mt-6 border-t border-zinc-300/80",
               }),
             ),
-            a.jsx("ul", {
-              className: "mt-0",
+            a.jsx("div", {
+              className: "mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6",
               children: u.map((t, e) =>
                 a.jsx(
-                  r.li,
+                  r.div,
                   n(s({}, m(0.1 + e * 0.06)), {
-                    className: "border-b border-zinc-200/70",
+                    className: "group flex flex-col bg-white border border-zinc-200/50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300",
                     children: a.jsxs(f, {
                       to: `/blog/${t.slug}`,
-                      className:
-                        "group flex items-baseline justify-between gap-6 py-5 transition-opacity hover:opacity-60",
+                      className: "flex flex-col h-full",
                       children: [
-                        a.jsx("span", {
-                          className:
-                            "text-[15px] font-semibold leading-snug text-zinc-950",
-                          children: t.title,
+                        // Image Container
+                        a.jsx("div", {
+                          className: "relative w-full aspect-[16/10] overflow-hidden bg-zinc-50 shrink-0 border-b border-zinc-100",
+                          children: t.coverImage
+                            ? a.jsx("img", {
+                                src: t.coverImage,
+                                alt: t.title,
+                                className: "w-full h-full object-cover transition-transform duration-500 group-hover:scale-105",
+                                loading: "lazy",
+                              })
+                            : a.jsx("div", {
+                                className: "w-full h-full bg-[#e8e8e2] flex items-center justify-center text-zinc-500 font-medium text-xs tracking-wider uppercase",
+                                children: t.tags[0],
+                              }),
                         }),
-                        a.jsxs("span", {
-                          className:
-                            "flex shrink-0 items-baseline gap-6 text-[13px] text-zinc-400",
+                        // Content Area
+                        a.jsxs("div", {
+                          className: "p-5 flex flex-col flex-1",
                           children: [
-                            t.tags[0] && a.jsx("span", { children: t.tags[0] }),
-                            a.jsx("time", {
-                              dateTime: t.date,
-                              className: "tabular-nums",
-                              children: b(t.date),
+                            // Category Tag
+                            t.tags[0] &&
+                              a.jsx("span", {
+                                className: "text-[11px] font-semibold text-emerald-600 uppercase tracking-wider",
+                                children: t.tags[0],
+                              }),
+                            // Title
+                            a.jsx("h3", {
+                              className: "text-[16px] font-bold text-zinc-900 mt-2 line-clamp-2 leading-snug group-hover:text-emerald-700 transition-colors flex-1",
+                              children: t.title,
+                            }),
+                            // Excerpt
+                            a.jsx("p", {
+                              className: "text-[13px] text-zinc-500 mt-2 line-clamp-2 font-normal leading-relaxed",
+                              children: t.excerpt || t.subtitle,
+                            }),
+                            // Footer row (Date & Read time)
+                            a.jsxs("div", {
+                              className: "flex items-center gap-3 mt-4 pt-3 border-t border-zinc-100 text-[12px] text-zinc-400 font-medium",
+                              children: [
+                                a.jsx("time", {
+                                  dateTime: t.date,
+                                  className: "tabular-nums",
+                                  children: t.displayDate,
+                                }),
+                                a.jsx("span", { children: "•" }),
+                                a.jsx("span", { children: t.readingTime }),
+                              ],
                             }),
                           ],
                         }),
