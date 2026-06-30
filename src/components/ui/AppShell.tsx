@@ -31,6 +31,7 @@ import {
 import { X as Cs } from "./_iconsVendor";
 import { A as Ts, m as Ps } from "./_animationVendor";
 import { SEOManager } from "./SEOManager";
+import { g as getBlogPost } from "./Blog_UI/BlogPostsData";
 var ps = Object.defineProperty,
   ms = Object.defineProperties;
 var hs = Object.getOwnPropertyDescriptors;
@@ -5637,6 +5638,26 @@ const xc = () => {
       aliasOf: P.ridexpress,
     },
     {
+      path: P.blog,
+      title: "Developer Blog India | AI Tools & Coding Tutorials | Mayank Dev",
+      description:
+        "Insights from a student developer. Coding tutorials, AI tool guides, and developer tips by Mayank Dev, tech content creator from India.",
+      keywords: oe(se, [
+        "Developer Blog",
+        "Coding Tutorials",
+        "AI Tools",
+        "Developer Tips",
+        "Student Developer",
+      ]),
+      canonicalPath: P.blog,
+      ogImage: Xe,
+      ogImageAlt: "Developer Blog preview for Mayank Dev portfolio.",
+      ogType: "website",
+      schemaKind: "website",
+      indexable: !0,
+      prerender: !0,
+    },
+    {
       path: P.playground,
       title: "Playground | Mayank Dev",
       description:
@@ -5682,7 +5703,27 @@ function Lc(e) {
   return t === "*" || t === "/" ? `${Fe}/` : `${Fe}${t}`;
 }
 function _c(e) {
-  return Nn.get(ze(e)) || Nn.get("*");
+  const t = ze(e);
+  if (t.startsWith("/blog/")) {
+    const slug = t.substring(6);
+    const post = getBlogPost(slug);
+    if (post) {
+      return {
+        path: t,
+        title: `${post.title} | Mayank Dev`,
+        description: post.subtitle || post.excerpt,
+        keywords: post.tags || [],
+        canonicalPath: t,
+        ogImage: post.coverImage || Xe,
+        ogImageAlt: post.title,
+        ogType: "article",
+        schemaKind: "article",
+        indexable: true,
+        prerender: true,
+      };
+    }
+  }
+  return Nn.get(t) || Nn.get("*");
 }
 function Ic(e) {
   return !e || !e.aliasOf ? e : Nn.get(ze(e.aliasOf)) || e;

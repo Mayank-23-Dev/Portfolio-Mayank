@@ -299,7 +299,27 @@ const h = (a = 0) => ({
                                             {
                                               className:
                                                 "border-l border-zinc-300 pl-4",
-                                              children: c,
+                                              children: typeof c === "string" && c.includes(" — ") ? (() => {
+                                                const parts = c.split(" — ");
+                                                const keyword = parts[0];
+                                                const rest = parts.slice(1).join(" — ");
+                                                let colorClass = "bg-green-200 text-green-900";
+                                                if (keyword.includes("HEAD") || keyword.includes("BODY") || keyword.includes("ROBOTS")) {
+                                                  colorClass = "bg-red-200 text-red-900";
+                                                } else if (keyword.includes("SCHEMA") || keyword.includes("ASSETS") || keyword.includes("PREVENTION")) {
+                                                  colorClass = "bg-yellow-200 text-yellow-900";
+                                                }
+                                                return e.jsxs("span", {
+                                                  children: [
+                                                    e.jsx("span", {
+                                                      className: `${colorClass} px-1.5 py-0.5 rounded font-bold text-xs uppercase tracking-wide mr-1.5`,
+                                                      children: keyword,
+                                                    }),
+                                                    " — ",
+                                                    rest,
+                                                  ],
+                                                });
+                                              })() : c,
                                             },
                                             `${i}-pt-${o}`,
                                           ),
