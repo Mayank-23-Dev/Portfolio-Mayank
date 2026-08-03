@@ -5,7 +5,7 @@ export const routePaths = {
   questionLibrary: "/projects/question-library",
   hactiq: "/projects/hactiq",
   finease: "/projects/finease",
-  shiq: "/projects/shiq",        // ← add this
+  shiq: "/projects/shiq",
   vaultdl: "/projects/vaultdl",
   journey: "/journey",
   contact: "/contact",
