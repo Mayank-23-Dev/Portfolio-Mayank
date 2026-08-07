@@ -1,5 +1,162 @@
 const t = [
   {
+    slug: "ultimate-guide-ai-agent-skills-cli",
+    title: "The Complete Guide to Agent Skills: CLI Tools, skills.sh, and Custom Skill Creation",
+    subtitle:
+      "How to empower AI models and CLI agents with modular skills, discover community skills on skills.sh, and package external APIs into reusable agent workflows.",
+    date: "2026-08-07",
+    displayDate: "August 7, 2026",
+    readingTime: "6 min read",
+    excerpt:
+      "AI models become exponentially more capable when equipped with specialized skills. Here is a complete walkthrough on adding skills to standard AI & CLI tools, leveraging skills.sh, and building custom agent skills from scratch.",
+    coverImage: "/images/Blog/ai_agent_skills_guide.jpg",
+    tags: ["AI Agents", "CLI Tools", "Developer Tools", "Tutorial"],
+    sections: [
+      {
+        paragraphs: [
+          "Large language models are exceptional generalists, but when thrown into complex engineering, scientific computing, or automated CLI workflows, standard prompt engineering quickly runs into boundaries.",
+          "If you ask an AI model to analyze a genomic sequence, configure an Android SDK, interact with an obscure REST API, or follow strict enterprise deployment rules, it often lacks domain-specific instructions, exact file conventions, and tool definitions.",
+          "This is where Agent Skills enter the picture. A Skill is a modular, self-contained package of instructions, tool scripts, and reference documentation that equips an AI agent with instant, deep expertise for specific domain tasks.",
+          "Whether you are building with web-based AI platforms or managing autonomous terminal agents via command-line interfaces (CLI), understanding how to find, install, and create skills is the single biggest unlock for modern AI workflows.",
+        ],
+      },
+      {
+        heading: "1. Understanding Skill Architecture: Standard AI vs CLI Skills",
+        paragraphs: [
+          "Before diving into installation, it helps to understand what actually happens when an AI agent loads a skill.",
+          "In standard web-based AI tools, a skill acts as an extended context module that gets selectively injected into the conversation system prompt when relevant triggers are detected.",
+          "In CLI AI agents (such as Antigravity CLI, Claude Code, or terminal-based autonomous agents), skills operate at a much deeper level:",
+        ],
+        points: [
+          "LOCAL FILE ACCESS — CLI skills reside directly inside designated directories (such as ~/.config/agent/skills/ or project-level .agents/skills/), granting agents immediate access to execution tools.",
+          "DETERMINISTIC INSTRUCTIONS — Built around a standardized SKILL.md file with YAML metadata headers, the agent reads pre-flight rules, step-by-step procedures, and validation requirements before taking action.",
+          "DYNAMIC SCRIPTING — Skills can bundle dedicated helper scripts (in Python, Bash, or Node.js) that the CLI agent can run locally without needing to write throwaway code from scratch.",
+          "CONTEXT RETRIEVAL — CLI skills enable lazy-loading of heavy documentation or API reference files only when specific triggers match, saving context window space.",
+        ],
+      },
+      {
+        heading: "2. Finding & Installing Skills via skills.sh",
+        paragraphs: [
+          "The biggest challenge with agent skills used to be discovery—where do developers find reliable, community-audited skills? That problem is solved by [skills.sh](https://skills.sh), the central ecosystem and registry for AI and CLI agent skills.",
+          "[skills.sh](https://skills.sh) hosts hundreds of verified skills across software engineering, cloud infrastructure, computational biology, mobile app development, and database querying.",
+          "Here is how you search and install skills into your environment using [skills.sh](https://skills.sh):",
+        ],
+        points: [
+          "SEARCH THE HUB — Visit [skills.sh](https://skills.sh) to search for skills by framework, language, or domain (e.g., firebase-firestore, android-cli, pubmed-database).",
+          "CLI ONE-LINER — Install any public skill directly into your project workspace or global agent registry with the CLI installer tool.",
+          "VERIFY INSTALLATION — Once installed, your agent automatically detects the SKILL.md manifest during its initialization pass.",
+        ],
+        code: `# Install a skill globally for your CLI agent from skills.sh
+npx skills-cli install firebase-firestore --global
+
+# Install a specific community skill directly into your current project workspace
+npx skills-cli install @skills/android-cli --path ./.agents/skills
+
+# List all active skills available to your current CLI session
+npx skills-cli list`,
+      },
+      {
+        heading: "Step-by-Step Skill Installation in Claude (Settings & CLI)",
+        paragraphs: [
+          "Adding a skill to Claude is fast and flexible. You can upload skills directly via the Claude app Settings interface or install them for Claude Code in your terminal. Here is the point-by-point walkthrough:",
+        ],
+        points: [
+          "OPEN CLAUDE SETTINGS — Launch Claude (Desktop or Web) and click on your profile/account menu in the navigation panel, then select 'Settings'.",
+          "NAVIGATE TO SKILLS — In the Settings sidebar menu, click on the 'Skills' tab to open your skill management dashboard.",
+          "UPLOAD SKILL — Click the 'Add Skill' / 'Upload Skill' button at the top right of the panel.",
+          "SELECT SKILL FILE — Upload your SKILL.md manifest file or skill zip package downloaded from [skills.sh](https://skills.sh) (or paste the custom SKILL.md template).",
+          "SAVE & ENABLE — Click 'Save' to activate the skill. Claude will now recognize the skill across all your conversations whenever matching triggers are detected.",
+          "CLAUDE CODE CLI — For terminal users, run 'npx skills-cli install <skill-name> --agent claude' or manually place your SKILL.md inside '.claude/skills/<skill-name>/'.",
+        ],
+        code: `# Quick CLI setup for Claude Code:
+npx skills-cli install @skills/firebase-firestore --agent claude
+
+# Verify active skills in terminal:
+claude --list-skills`,
+      },
+      {
+        heading: "3. How to Create Custom Skills for Your Agents",
+        paragraphs: [
+          "While [skills.sh](https://skills.sh) provides a vast catalog of open-source skills, you will often need custom skills tailored to your team's internal tools, proprietary APIs, or project standards.",
+          "Creating a custom skill is straightforward. A skill is represented as a directory containing a mandatory SKILL.md file and optional supporting files (scripts, templates, references).",
+          "Here is the standard folder layout for an Agent Skill:",
+        ],
+        code: `my-custom-skill/
+├── SKILL.md              # Main instruction file with YAML metadata & step-by-step guidance
+├── scripts/              # Optional helper scripts (Python, Bash, JS) executed by the agent
+│   └── api_helper.py
+├── templates/            # Boilerplate file templates or code patterns
+│   └── template.config.json
+└── references/           # Detailed reference docs lazy-loaded when needed
+    └── API_DOCUMENTATION.md`,
+      },
+      {
+        heading: "The SKILL.md Specification",
+        paragraphs: [
+          "The core of every skill is SKILL.md. It begins with YAML frontmatter defining the skill's name, description, and execution requirements, followed by detailed Markdown instructions.",
+          "Here is a production-ready SKILL.md template you can copy and customize for your own tools:",
+        ],
+        code: `---
+name: custom-deployment-guard
+description: Safely packages, validates, and deploys microservices to staging or production environments. Use when the user requests cloud deployment, deployment verification, or release builds.
+version: 1.0.0
+tools_required:
+  - run_command
+  - view_file
+---
+
+# Custom Deployment Guard Skill
+
+## When to Activate
+Activate this skill whenever the user mentions:
+- Deploying services to staging or production
+- Running pre-deployment validation scripts
+- Checking release configuration status
+
+## Execution Workflow
+Follow these steps in strict order:
+
+1. **Environment Check**:
+   Inspect the environment configuration file using \`view_file\`.
+   Ensure all required keys (\`DATABASE_URL\`, \`API_KEY\`) are defined before proceeding.
+
+2. **Pre-flight Build Verification**:
+   Execute the local validation script:
+   \`\`\`bash
+   python3 scripts/api_helper.py --check-health
+   \`\`\`
+
+3. **Deployment Step**:
+   Run the deployment pipeline:
+   \`\`\`bash
+   npm run deploy:staging
+   \`\`\`
+
+4. **Post-Deployment Audit**:
+   Verify HTTP response status 200 from the health endpoint before confirming success to the user.`,
+      },
+      {
+        heading: "4. Best Practices for High-Performance Skills",
+        paragraphs: [
+          "To ensure your custom agent skills perform reliably across different AI models and CLI environments, follow these engineering principles:",
+        ],
+        points: [
+          "EXPLICIT TRIGGERS — Write clear, unambiguous 'When to Activate' descriptions in your YAML header so the agent knows exactly when to load the skill.",
+          "FAIL-SAFE INSTRUCTIONS — Always include validation and fallback steps if a script or shell command encounters an exit code non-zero failure.",
+          "MINIMAL CONTEXT OVERHEAD — Keep the main SKILL.md focused on action steps. Place heavy documentation in a references/ directory so the agent reads it only when necessary.",
+          "COMMUNITY PUBLISHING — Once your skill is battle-tested, share it with the developer community by submitting a pull request to skills.sh!",
+        ],
+      },
+      {
+        heading: "Supercharge Your AI Workflows",
+        paragraphs: [
+          "Skills transform AI from passive chat assistants into context-aware, autonomous execution engines.",
+          "By leveraging community skills on skills.sh and building custom skills for your own codebase, you can automate complex devops tasks, enforce architecture patterns, and elevate your CLI developer experience to the next level.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "one-prompt-seo-optimization",
     title: "I Automated My Entire SEO Workflow with a Single Prompt. Here's How.",
     subtitle:

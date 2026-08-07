@@ -82,6 +82,39 @@ const h = (a = 0) => ({
       ],
     });
   },
+  renderTextWithLinks = (text: any) => {
+    if (typeof text !== "string") return text;
+    const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s)]+)/g;
+    const elements = [];
+    let lastIdx = 0;
+    let m;
+    while ((m = linkRegex.exec(text)) !== null) {
+      if (m.index > lastIdx) {
+        elements.push(text.substring(lastIdx, m.index));
+      }
+      const label = m[1] || m[3];
+      const url = m[2] || m[3];
+      elements.push(
+        e.jsx(
+          "a",
+          {
+            href: url,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className:
+              "text-emerald-600 font-medium underline underline-offset-2 hover:text-emerald-800 transition-colors",
+            children: label,
+          },
+          `link-${m.index}`
+        )
+      );
+      lastIdx = linkRegex.lastIndex;
+    }
+    if (lastIdx < text.length) {
+      elements.push(text.substring(lastIdx));
+    }
+    return elements.length > 0 ? elements : text;
+  },
   G = () => {
     const { slug: a } = E(),
       t = a ? C(a) : void 0,
@@ -284,7 +317,7 @@ const h = (a = 0) => ({
                                         children: s.paragraphs.map((c, o) =>
                                           e.jsx(
                                             "p",
-                                            { children: c },
+                                            { children: renderTextWithLinks(c) },
                                             `${i}-p-${o}`,
                                           ),
                                         ),
@@ -316,10 +349,10 @@ const h = (a = 0) => ({
                                                       children: keyword,
                                                     }),
                                                     " — ",
-                                                    rest,
+                                                    renderTextWithLinks(rest),
                                                   ],
                                                 });
-                                              })() : c,
+                                              })() : renderTextWithLinks(c),
                                             },
                                             `${i}-pt-${o}`,
                                           ),
