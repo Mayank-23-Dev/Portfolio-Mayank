@@ -19,6 +19,7 @@ import { h as E, a as p, N as I, L as b } from "../ui/_reactVendor";
 import { H as B } from "../ui/Landing_UI/Header";
 import { g as C } from "../ui/Blog_UI/BlogPostsData";
 import { m as d } from "../ui/_animationVendor";
+import { P } from "../ui/Landing_UI/PaperBackground";
 import "../ui/Landing_UI/MenuToggleIcon";
 import "../ui/AppShell";
 import "../ui/_iconsVendor";
@@ -66,7 +67,7 @@ const h = (a = 0) => ({
       children: [
         e.jsx("pre", {
           className:
-            "overflow-x-auto rounded-lg border border-zinc-200/80 bg-zinc-50/50 p-5 font-mono text-[13px] text-zinc-800 leading-relaxed shadow-sm max-w-full",
+            "overflow-x-auto rounded-none border-2 border-black bg-white p-5 font-mono text-[13px] text-zinc-800 leading-relaxed shadow-[3px_3px_0px_0px_rgba(0,0,0,0.18)] max-w-full",
           children: e.jsx("code", {
             className: "block whitespace-pre-wrap break-words",
             children: code,
@@ -76,7 +77,7 @@ const h = (a = 0) => ({
           id: "copy-code-block-button",
           onClick: handleCopy,
           className:
-            "absolute right-3 top-3 rounded border border-zinc-200 bg-white px-2.5 py-1 text-[11px] font-medium text-zinc-500 shadow-sm transition-all hover:bg-zinc-50 hover:text-zinc-800 active:scale-95",
+            "absolute right-3 top-3 rounded-none border-2 border-black bg-daisy-green px-2.5 py-1 text-[11px] font-mono font-bold text-black shadow-[1px_1px_0px_0px_rgba(0,0,0,0.18)] transition-all hover:bg-emerald-300 active:translate-x-0.5 active:translate-y-0.5",
           children: copied ? "Copied!" : "Copy",
         }),
       ],
@@ -162,15 +163,15 @@ const h = (a = 0) => ({
         t && (document.title = `${t.title} | Mayank Dev`);
       }, [t]),
       t
-        ? e.jsxs("div", {
-            className: "min-h-screen bg-[#faf9f6] text-zinc-900",
+        ? e.jsxs(P, {
+            className: "text-zinc-900",
             children: [
               e.jsx("div", {
                 className:
                   "pointer-events-none fixed bottom-0 left-0 right-0 z-40 h-28",
                 style: {
                   background:
-                    "linear-gradient(to top, #faf9f6 0%, transparent 100%)",
+                    "linear-gradient(to top, rgba(250,246,239,0.95) 0%, transparent 100%)",
                 },
               }),
               e.jsx("div", {
@@ -287,7 +288,7 @@ const h = (a = 0) => ({
                                 src: t.coverImage,
                                 alt: t.title,
                                 className:
-                                  "w-full object-cover aspect-[16/9] border border-zinc-200/70",
+                                  "w-full object-cover aspect-[16/9] border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.18)]",
                                 loading: "eager",
                               }),
                             }),

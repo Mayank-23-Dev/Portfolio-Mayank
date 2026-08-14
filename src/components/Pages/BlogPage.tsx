@@ -19,6 +19,7 @@ import { L as f } from "../ui/_reactVendor";
 import { H as j } from "../ui/Landing_UI/Header";
 import { b as u } from "../ui/Blog_UI/BlogPostsData";
 import { m as r } from "../ui/_animationVendor";
+import { P } from "../ui/Landing_UI/PaperBackground";
 import "../ui/Landing_UI/MenuToggleIcon";
 import "../ui/AppShell";
 import "../ui/_iconsVendor";
@@ -34,8 +35,8 @@ const m = (t = 0) => ({
     return `${i}/${e}`;
   },
   D = () =>
-    a.jsxs("div", {
-      className: "min-h-screen bg-[#faf9f6] text-zinc-900",
+    a.jsxs(P, {
+      className: "text-zinc-900",
       children: [
         a.jsx("div", {
           className: "container relative mx-auto px-4 md:px-6 lg:px-8",
@@ -66,14 +67,14 @@ const m = (t = 0) => ({
                 a.jsx(
                   r.div,
                   n(s({}, m(0.1 + e * 0.06)), {
-                    className: "group flex flex-col bg-white border border-zinc-200/50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300",
+                    className: "group flex flex-col bg-white border-2 border-black rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.18)] hover:shadow-[7px_7px_0px_0px_rgba(0,0,0,0.25)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200 overflow-hidden",
                     children: a.jsxs(f, {
                       to: `/blog/${t.slug}`,
                       className: "flex flex-col h-full",
                       children: [
                         // Image Container
                         a.jsx("div", {
-                          className: "relative w-full aspect-[16/10] overflow-hidden bg-zinc-50 shrink-0 border-b border-zinc-100",
+                          className: "relative w-full aspect-[16/10] overflow-hidden bg-zinc-100 shrink-0 border-b-2 border-black",
                           children: t.coverImage
                             ? a.jsx("img", {
                                 src: t.coverImage,
@@ -82,41 +83,46 @@ const m = (t = 0) => ({
                                 loading: "lazy",
                               })
                             : a.jsx("div", {
-                                className: "w-full h-full bg-[#e8e8e2] flex items-center justify-center text-zinc-500 font-medium text-xs tracking-wider uppercase",
+                                className: "w-full h-full bg-[#e8e8e2] flex items-center justify-center text-zinc-500 font-mono text-xs tracking-wider uppercase font-bold",
                                 children: t.tags[0],
                               }),
                         }),
                         // Content Area
                         a.jsxs("div", {
-                          className: "p-5 flex flex-col flex-1",
+                          className: "p-5 flex flex-col flex-1 bg-white",
                           children: [
                             // Category Tag
                             t.tags[0] &&
                               a.jsx("span", {
-                                className: "text-[11px] font-semibold text-emerald-600 uppercase tracking-wider",
+                                className: "inline-flex w-fit border-2 border-black bg-daisy-green px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-black font-mono shadow-[1px_1px_0px_0px_rgba(0,0,0,0.18)]",
                                 children: t.tags[0],
                               }),
                             // Title
                             a.jsx("h3", {
-                              className: "text-[16px] font-bold text-zinc-900 mt-2 line-clamp-2 leading-snug group-hover:text-emerald-700 transition-colors flex-1",
+                              className: "text-[17px] md:text-[18px] font-bold text-zinc-900 mt-3 line-clamp-2 leading-snug group-hover:text-emerald-700 transition-colors flex-1",
                               children: t.title,
                             }),
                             // Excerpt
                             a.jsx("p", {
-                              className: "text-[13px] text-zinc-500 mt-2 line-clamp-2 font-normal leading-relaxed",
+                              className: "text-[13px] md:text-[14px] text-zinc-600 mt-2 line-clamp-2 font-normal leading-relaxed",
                               children: t.excerpt || t.subtitle,
                             }),
                             // Footer row (Date & Read time)
                             a.jsxs("div", {
-                              className: "flex items-center gap-3 mt-4 pt-3 border-t border-zinc-100 text-[12px] text-zinc-400 font-medium",
+                              className: "flex items-center justify-between gap-3 mt-4 pt-3 border-t-2 border-black/10 text-[11px] md:text-[12px] text-zinc-500 font-mono",
                               children: [
                                 a.jsx("time", {
                                   dateTime: t.date,
-                                  className: "tabular-nums",
+                                  className: "tabular-nums font-semibold",
                                   children: t.displayDate,
                                 }),
-                                a.jsx("span", { children: "•" }),
-                                a.jsx("span", { children: t.readingTime }),
+                                a.jsxs("div", {
+                                  className: "flex items-center gap-1.5",
+                                  children: [
+                                    a.jsx("span", { children: "•" }),
+                                    a.jsx("span", { children: t.readingTime }),
+                                  ],
+                                }),
                               ],
                             }),
                           ],
