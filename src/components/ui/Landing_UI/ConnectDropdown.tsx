@@ -18,7 +18,7 @@ var v = (m, f, n) =>
     o((n = n.apply(m, f)).next());
   });
 import { j as t } from "../_uiVendor";
-import { a as c, L as Link } from "../_reactVendor";
+import { a as c } from "../_reactVendor";
 import { b as _ } from "../_sharedIndex";
 import { p as h } from "../AppShell";
 import { m as x, A as j } from "../_animationVendor";
@@ -319,43 +319,43 @@ const y = "connect@mayank-dev.in",
                           },
                           e.label,
                         )
-                      : e.external
-                        ? t.jsxs(
-                            x.a,
-                            {
-                              href: e.href,
-                              target: "_blank",
-                              rel: "noopener noreferrer",
-                              initial: { opacity: 0, x: 10 },
-                              animate: { opacity: 1, x: 0 },
-                              exit: { opacity: 0, x: 10 },
-                              transition: { duration: 0.15, delay: s * 0.05 },
-                              onClick: () => b(e),
-                              className: `
+                      : t.jsxs(
+                          x.a,
+                          {
+                            href: e.href,
+                            target: e.external ? "_blank" : void 0,
+                            rel: e.external ? "noopener noreferrer" : void 0,
+                            initial: { opacity: 0, x: 10 },
+                            animate: { opacity: 1, x: 0 },
+                            exit: { opacity: 0, x: 10 },
+                            transition: { duration: 0.15, delay: s * 0.05 },
+                            onClick: () => b(e),
+                            className: `
                       flex items-center gap-3 px-4 py-3 
                       text-sm font-medium 
                       transition-colors duration-150
                       ${n ? "text-white hover:bg-daisy-green hover:text-black" : "text-black hover:bg-daisy-green"}
                       ${s !== w.length - 1 ? (n ? "border-b border-white/20" : "border-b border-black/10") : ""}
                     `,
-                              style: { fontFamily: "'Sora', sans-serif" },
-                              children: [
-                                t.jsx("span", {
-                                  className: "flex-shrink-0",
-                                  children: e.Icon,
-                                }),
-                                t.jsxs("span", {
-                                  className: "relative",
-                                  children: [
-                                    e.label,
-                                    e.tag &&
-                                      t.jsx("span", {
-                                        className:
-                                          "absolute -top-2 -right-8 text-[7px] font-semibold uppercase px-1 py-px bg-daisy-green text-black rounded-[2px] leading-none",
-                                        children: e.tag,
-                                      }),
-                                  ],
-                                }),
+                            style: { fontFamily: "'Sora', sans-serif" },
+                            children: [
+                              t.jsx("span", {
+                                className: "flex-shrink-0",
+                                children: e.Icon,
+                              }),
+                              t.jsxs("span", {
+                                className: "relative",
+                                children: [
+                                  e.label,
+                                  e.tag &&
+                                    t.jsx("span", {
+                                      className:
+                                        "absolute -top-2 -right-8 text-[7px] font-semibold uppercase px-1 py-px bg-daisy-green text-black rounded-[2px] leading-none",
+                                      children: e.tag,
+                                    }),
+                                ],
+                              }),
+                              e.external &&
                                 t.jsx("svg", {
                                   className: "w-3 h-3 ml-auto opacity-40",
                                   fill: "none",
@@ -368,44 +368,10 @@ const y = "connect@mayank-dev.in",
                                     d: "M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14",
                                   }),
                                 }),
-                              ],
-                            },
-                            e.label,
-                          )
-                        : t.jsxs(
-                            Link,
-                            {
-                              to: e.href,
-                              onClick: () => b(e),
-                              className: `
-                      flex items-center gap-3 px-4 py-3 
-                      text-sm font-medium 
-                      transition-colors duration-150
-                      ${n ? "text-white hover:bg-daisy-green hover:text-black" : "text-black hover:bg-daisy-green"}
-                      ${s !== w.length - 1 ? (n ? "border-b border-white/20" : "border-b border-black/10") : ""}
-                    `,
-                              style: { fontFamily: "'Sora', sans-serif" },
-                              children: [
-                                t.jsx("span", {
-                                  className: "flex-shrink-0",
-                                  children: e.Icon,
-                                }),
-                                t.jsxs("span", {
-                                  className: "relative",
-                                  children: [
-                                    e.label,
-                                    e.tag &&
-                                      t.jsx("span", {
-                                        className:
-                                          "absolute -top-2 -right-8 text-[7px] font-semibold uppercase px-1 py-px bg-daisy-green text-black rounded-[2px] leading-none",
-                                        children: e.tag,
-                                      }),
-                                  ],
-                                }),
-                              ],
-                            },
-                            e.label,
-                          );
+                            ],
+                          },
+                          e.label,
+                        );
                   }),
                 }),
               }),

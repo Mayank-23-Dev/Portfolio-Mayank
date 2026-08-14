@@ -133,11 +133,43 @@
 </head>
 
 <body>
-  <div id="initial-loader" aria-hidden="true">
+  <div id="initial-loader" aria-hidden="true" title="Double-click or double-tap to skip">
     <div id="initial-loader-shell">
       <div id="initial-loader-stage">Mayank Dev</div>
+      <div class="loader-skip-hint">Double click or tap to skip</div>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var loader = document.getElementById('initial-loader');
+      if (!loader) return;
+      var lastTap = 0;
+      function skipLoader() {
+        if (typeof window.__skipInitialLoader === 'function') {
+          window.__skipInitialLoader();
+        } else {
+          try { sessionStorage.setItem('mayank-dev-portfolio:initial-loader-seen', 'true'); } catch (e) {}
+          document.documentElement.classList.add('app-ready');
+          setTimeout(function () {
+            document.documentElement.classList.add('loader-hidden');
+          }, 1100);
+        }
+      }
+      loader.addEventListener('dblclick', function (e) {
+        e.preventDefault();
+        skipLoader();
+      });
+      loader.addEventListener('touchend', function (e) {
+        var now = Date.now();
+        if (now - lastTap < 350) {
+          e.preventDefault();
+          skipLoader();
+        }
+        lastTap = now;
+      }, { passive: false });
+    })();
+  </script>
 
   <div id="root"></div>
 
@@ -203,6 +235,31 @@
       align-items: center;
       justify-content: center;
       text-wrap: balance;
+    }
+
+    .loader-skip-hint {
+      margin-top: 1.25rem;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(17, 24, 39, 0.4);
+      user-select: none;
+      pointer-events: none;
+      opacity: 0;
+      animation: fadeInHint 0.8s ease-out 0.6s forwards;
+    }
+
+    @keyframes fadeInHint {
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes loaderEnter {

@@ -21,6 +21,7 @@ import { F as f } from "../ui/Landing_UI/Footer";
 import { P as j } from "../ui/Landing_UI/PaperBackground";
 import { B as y } from "../ui/Playground_UI/BookCover";
 import { m as a } from "../ui/_animationVendor";
+import { GsapAnimatedDoodle } from "../ui/GsapAnimatedDoodle";
 import "../ui/Landing_UI/MenuToggleIcon";
 import "../ui/AppShell";
 import "../ui/_iconsVendor";
@@ -83,24 +84,24 @@ const D = () =>
         children: [
           e.jsx("div", {
             className:
-              "absolute top-8 -left-6 opacity-50 hidden lg:block transform -rotate-12",
-            children: e.jsx("img", {
+              "absolute top-8 -left-6 opacity-75 hidden lg:block z-10",
+            children: e.jsx(GsapAnimatedDoodle, {
               src: "/images/graphics/Music-Headphone--Streamline-Beveled-Scribbles.png",
-              alt: "",
-              "aria-hidden": "true",
+              alt: "Headphones doodle",
+              type: "headphone",
+              initialRotate: -12,
               className: "w-28 h-28 mix-blend-multiply",
-              loading: "lazy",
             }),
           }),
           e.jsx("div", {
             className:
-              "absolute top-12 -right-8 opacity-50 hidden lg:block transform rotate-12",
-            children: e.jsx("img", {
+              "absolute top-12 -right-8 opacity-75 hidden lg:block z-10",
+            children: e.jsx(GsapAnimatedDoodle, {
               src: "/images/graphics/Small-Flowers-Doodle--Streamline-Beveled-Scribbles.png",
-              alt: "",
-              "aria-hidden": "true",
+              alt: "Flower doodle",
+              type: "flower",
+              initialRotate: 12,
               className: "w-32 h-32 mix-blend-multiply",
-              loading: "lazy",
             }),
           }),
           e.jsx("section", {
@@ -157,13 +158,13 @@ const D = () =>
             children: [
               e.jsx("div", {
                 className:
-                  "absolute -right-16 top-0 opacity-50 hidden lg:block transform -rotate-6",
-                children: e.jsx("img", {
+                  "absolute -right-16 top-0 opacity-85 hidden lg:block z-10",
+                children: e.jsx(GsapAnimatedDoodle, {
                   src: "/images/graphics/Idea-Light-Bulb--Streamline-Beveled-Scribbles.png",
-                  alt: "",
-                  "aria-hidden": "true",
+                  alt: "Idea Light Bulb",
+                  type: "bulb",
+                  initialRotate: -6,
                   className: "w-24 h-24 mix-blend-multiply",
-                  loading: "lazy",
                 }),
               }),
               e.jsx(

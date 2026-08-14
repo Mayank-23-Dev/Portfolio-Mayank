@@ -212,6 +212,25 @@ function cn() {
       rr.classList.add("loader-hidden");
     }, Is));
 }
+try {
+  (window as any).__skipInitialLoader = cn;
+  const initialLoaderEl = document.getElementById("initial-loader");
+  if (initialLoaderEl) {
+    initialLoaderEl.addEventListener("dblclick", (e) => {
+      e.preventDefault();
+      cn();
+    });
+    let lastLoaderTap = 0;
+    initialLoaderEl.addEventListener("touchend", (e) => {
+      const now = Date.now();
+      if (now - lastLoaderTap < 350) {
+        e.preventDefault();
+        cn();
+      }
+      lastLoaderTap = now;
+    });
+  }
+} catch (e) {}
 function Ws() {
   return Q(this, null, function* () {
     if (Os()) {

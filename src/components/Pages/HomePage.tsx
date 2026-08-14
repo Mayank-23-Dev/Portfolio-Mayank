@@ -7,6 +7,7 @@ import { F as M } from "../ui/Landing_UI/Footer";
 import { P } from "../ui/Landing_UI/PaperBackground";
 import { c as C } from "../ui/AppShell";
 import { m as D } from "../ui/_animationVendor";
+import { GsapAnimatedDoodle } from "../ui/GsapAnimatedDoodle";
 import "../ui/Landing_UI/MenuToggleIcon";
 import "../ui/Landing_UI/ConnectDropdown";
 import "../ui/_sharedIndex";
@@ -612,13 +613,13 @@ Creation`,
                     children: [
                       e.jsx("div", {
                         className:
-                          "absolute top-1/4 -right-12 opacity-50 hidden lg:block transform rotate-12",
-                        children: e.jsx("img", {
+                          "absolute top-1/4 -right-12 opacity-60 hidden lg:block z-10",
+                        children: e.jsx(GsapAnimatedDoodle, {
                           src: "/images/graphics/Small-Flowers-Doodle--Streamline-Beveled-Scribbles.png",
-                          alt: "",
-                          "aria-hidden": "true",
+                          alt: "Flower doodle",
+                          type: "flower",
+                          initialRotate: 12,
                           className: "w-32 h-32 mix-blend-multiply",
-                          loading: "lazy",
                         }),
                       }),
                       e.jsx("h2", {
@@ -721,14 +722,13 @@ Creation`,
                     children: [
                       e.jsx("div", {
                         className:
-                          "absolute top-8 -left-8 opacity-70 hidden lg:block",
-                        children: e.jsx("img", {
+                          "absolute top-8 -left-8 opacity-85 hidden lg:block z-10",
+                        children: e.jsx(GsapAnimatedDoodle, {
                           src: "/images/graphics/Idea-Light-Bulb--Streamline-Beveled-Scribbles.png",
-                          alt: "",
-                          "aria-hidden": "true",
-                          className:
-                            "w-28 h-28 transform -rotate-12 mix-blend-multiply",
-                          loading: "lazy",
+                          alt: "Idea Light Bulb",
+                          type: "bulb",
+                          initialRotate: -12,
+                          className: "w-28 h-28 mix-blend-multiply",
                         }),
                       }),
                       e.jsx("h2", {
@@ -772,14 +772,13 @@ Creation`,
                     children: [
                       e.jsx("div", {
                         className:
-                          "absolute top-1/4 -left-10 opacity-70 hidden lg:block",
-                        children: e.jsx("img", {
+                          "absolute top-1/4 -left-10 opacity-85 hidden lg:block z-10",
+                        children: e.jsx(GsapAnimatedDoodle, {
                           src: "/images/graphics/Music-Headphone--Streamline-Beveled-Scribbles.png",
-                          alt: "",
-                          "aria-hidden": "true",
-                          className:
-                            "w-28 h-28 transform -rotate-12 mix-blend-multiply",
-                          loading: "lazy",
+                          alt: "Headphones doodle",
+                          type: "headphone",
+                          initialRotate: -12,
+                          className: "w-28 h-28 mix-blend-multiply",
                         }),
                       }),
                       e.jsxs("div", {
