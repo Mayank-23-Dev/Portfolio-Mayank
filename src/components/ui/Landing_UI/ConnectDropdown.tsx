@@ -18,7 +18,7 @@ var v = (m, f, n) =>
     o((n = n.apply(m, f)).next());
   });
 import { j as t } from "../_uiVendor";
-import { a as c } from "../_reactVendor";
+import { a as c, L as Link } from "../_reactVendor";
 import { b as _ } from "../_sharedIndex";
 import { p as h } from "../AppShell";
 import { m as x, A as j } from "../_animationVendor";
@@ -29,6 +29,25 @@ const y = "connect@mayank-dev.in",
       label: "Email",
       Icon: t.jsx(N, { className: "w-4 h-4" }),
       action: "copy-email",
+    },
+    {
+      label: "Contact",
+      href: "/contact",
+      Icon: t.jsxs("svg", {
+        className: "w-4 h-4",
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: 2,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        children: [
+          t.jsx("path", {
+            d: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z",
+          }),
+        ],
+      }),
+      external: !1,
     },
     {
       label: "Instagram",
@@ -300,43 +319,43 @@ const y = "connect@mayank-dev.in",
                           },
                           e.label,
                         )
-                      : t.jsxs(
-                          x.a,
-                          {
-                            href: e.href,
-                            target: e.external ? "_blank" : void 0,
-                            rel: e.external ? "noopener noreferrer" : void 0,
-                            initial: { opacity: 0, x: 10 },
-                            animate: { opacity: 1, x: 0 },
-                            exit: { opacity: 0, x: 10 },
-                            transition: { duration: 0.15, delay: s * 0.05 },
-                            onClick: () => b(e),
-                            className: `
+                      : e.external
+                        ? t.jsxs(
+                            x.a,
+                            {
+                              href: e.href,
+                              target: "_blank",
+                              rel: "noopener noreferrer",
+                              initial: { opacity: 0, x: 10 },
+                              animate: { opacity: 1, x: 0 },
+                              exit: { opacity: 0, x: 10 },
+                              transition: { duration: 0.15, delay: s * 0.05 },
+                              onClick: () => b(e),
+                              className: `
                       flex items-center gap-3 px-4 py-3 
                       text-sm font-medium 
                       transition-colors duration-150
                       ${n ? "text-white hover:bg-daisy-green hover:text-black" : "text-black hover:bg-daisy-green"}
                       ${s !== w.length - 1 ? (n ? "border-b border-white/20" : "border-b border-black/10") : ""}
                     `,
-                            style: { fontFamily: "'Sora', sans-serif" },
-                            children: [
-                              t.jsx("span", {
-                                className: "flex-shrink-0",
-                                children: e.Icon,
-                              }),
-                              t.jsxs("span", {
-                                className: "relative",
-                                children: [
-                                  e.label,
-                                  e.tag &&
-                                    t.jsx("span", {
-                                      className:
-                                        "absolute -top-2 -right-8 text-[7px] font-semibold uppercase px-1 py-px bg-daisy-green text-black rounded-[2px] leading-none",
-                                      children: e.tag,
-                                    }),
-                                ],
-                              }),
-                              e.external &&
+                              style: { fontFamily: "'Sora', sans-serif" },
+                              children: [
+                                t.jsx("span", {
+                                  className: "flex-shrink-0",
+                                  children: e.Icon,
+                                }),
+                                t.jsxs("span", {
+                                  className: "relative",
+                                  children: [
+                                    e.label,
+                                    e.tag &&
+                                      t.jsx("span", {
+                                        className:
+                                          "absolute -top-2 -right-8 text-[7px] font-semibold uppercase px-1 py-px bg-daisy-green text-black rounded-[2px] leading-none",
+                                        children: e.tag,
+                                      }),
+                                  ],
+                                }),
                                 t.jsx("svg", {
                                   className: "w-3 h-3 ml-auto opacity-40",
                                   fill: "none",
@@ -349,10 +368,44 @@ const y = "connect@mayank-dev.in",
                                     d: "M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14",
                                   }),
                                 }),
-                            ],
-                          },
-                          e.label,
-                        );
+                              ],
+                            },
+                            e.label,
+                          )
+                        : t.jsxs(
+                            Link,
+                            {
+                              to: e.href,
+                              onClick: () => b(e),
+                              className: `
+                      flex items-center gap-3 px-4 py-3 
+                      text-sm font-medium 
+                      transition-colors duration-150
+                      ${n ? "text-white hover:bg-daisy-green hover:text-black" : "text-black hover:bg-daisy-green"}
+                      ${s !== w.length - 1 ? (n ? "border-b border-white/20" : "border-b border-black/10") : ""}
+                    `,
+                              style: { fontFamily: "'Sora', sans-serif" },
+                              children: [
+                                t.jsx("span", {
+                                  className: "flex-shrink-0",
+                                  children: e.Icon,
+                                }),
+                                t.jsxs("span", {
+                                  className: "relative",
+                                  children: [
+                                    e.label,
+                                    e.tag &&
+                                      t.jsx("span", {
+                                        className:
+                                          "absolute -top-2 -right-8 text-[7px] font-semibold uppercase px-1 py-px bg-daisy-green text-black rounded-[2px] leading-none",
+                                        children: e.tag,
+                                      }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            e.label,
+                          );
                   }),
                 }),
               }),

@@ -204,10 +204,19 @@ const F = () =>
                           to: "/blog",
                           "data-sound": "nav",
                           className:
-                            "text-white font-semibold py-3 px-4 transition-all duration-150 hover:bg-white hover:text-black focus:outline-none active:scale-[0.98] text-lg cursor-pointer",
+                            "text-white font-semibold py-3 px-4 transition-all duration-150 hover:bg-white hover:text-black focus:outline-none active:scale-[0.98] text-lg cursor-pointer border-b border-white/20",
                           onClick: () => a(!1),
                           style: { fontFamily: "'Sora', sans-serif" },
                           children: "Blogs",
+                        }),
+                        e.jsx(d, {
+                          to: "/contact",
+                          "data-sound": "nav",
+                          className:
+                            "text-white font-semibold py-3 px-4 transition-all duration-150 hover:bg-white hover:text-black focus:outline-none active:scale-[0.98] text-lg cursor-pointer",
+                          onClick: () => a(!1),
+                          style: { fontFamily: "'Sora', sans-serif" },
+                          children: "Contact",
                         }),
                         e.jsxs("div", {
                           className: "pt-4 mt-2 border-t border-white/20",
