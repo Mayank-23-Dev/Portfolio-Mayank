@@ -141,7 +141,7 @@ const F = () =>
                     style: {
                       transition: "all 0.25s cubic-bezier(0.23, 1, 0.32, 1)",
                     },
-                    children: "Blog",
+                    children: "Blogs",
                   }),
                 ],
               }),
@@ -224,7 +224,7 @@ const F = () =>
                             "text-black font-semibold py-3 px-4 transition-all duration-150 hover:bg-black hover:text-white focus:outline-none active:scale-[0.98] text-lg cursor-pointer",
                           onClick: () => t(!1),
                           style: { fontFamily: "'Sora', sans-serif" },
-                          children: "Blog",
+                          children: "Blogs",
                         }),
                         e.jsxs("div", {
                           className: "pt-4 mt-2 border-t border-black/10",

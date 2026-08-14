@@ -432,15 +432,15 @@ const $ = e.jsxs("svg", {
         badge: "LIVE",
       },
       {
-        title: "Shiq",
+        title: "Hactiq",
         description:
-          "A personal content production studio for solo creators — from idea capture and scripting to scheduling and publishing, all in one place.",
+          "Clarity-first habit tracker built to understand daily consistency and trends without streak pressure.",
         color: "purple",
         rotate: "right",
-        img: "/images/case%20studies/Shiq/thumbnail.webp",
-        link: "/projects/shiq",
+        img: "/images/case%20studies/couriermgmt/thumbnail.webp",
+        link: "/projects/hactiq",
         isDevelopment: !0,
-        badge: "In Production",
+        badge: "LIVE",
       },
       {
         title: "FinEase",
@@ -525,7 +525,7 @@ Creation`,
                             e.jsx("p", {
                               className: "text-base font-medium leading-snug",
                               children:
-                                "Currently building Shiq & sharpening DSA + React.",
+                                "Currently building products & sharpening DSA + React.",
                             }),
                           ],
                         }),
@@ -575,7 +575,7 @@ Creation`,
                               className:
                                 "text-lg lg:text-xl font-medium leading-snug",
                               children:
-                                "Currently building Shiq & sharpening DSA + React.",
+                                "Currently building products & sharpening DSA + React.",
                             }),
                           ],
                         }),
@@ -995,7 +995,7 @@ Creation`,
                                             className:
                                               "bg-green-200 px-1 rounded",
                                             children:
-                                              "Shiq and real-world projects",
+                                              "Hactiq and real-world projects",
                                           }),
                                           " on the side. 🚀",
                                         ],
@@ -1248,7 +1248,7 @@ Creation`,
                                       e.jsx("span", {
                                         className: "bg-green-200 px-1 rounded",
                                         children:
-                                          "Shiq and real-world projects",
+                                          "Hactiq and real-world projects",
                                       }),
                                       " on the side. 🚀",
                                     ],
@@ -1390,7 +1390,7 @@ Creation`,
                               }),
                               e.jsx("p", {
                                 className: "text-sm md:text-base leading-relaxed text-stone-600",
-                                children: "Currently, I am working on Shiq, a personal content production studio designed specifically for solo creators. Shiq streamlines the entire workflow—from idea capture and scripting to scheduling and publishing—all in one place. These projects represent my commitment to being a top-tier full stack developer Kanpur has to offer."
+                                children: "These projects represent my commitment to being a top-tier full stack developer Kanpur has to offer, delivering reliable, high-performance applications with clean user experiences."
                               }),
                             ]
                           }),
@@ -1455,7 +1455,7 @@ Creation`,
                               }),
                               e.jsx("p", {
                                 className: "text-sm md:text-base leading-relaxed text-stone-600",
-                                children: "As we move towards 2026, the role of a developer is shifting from just writing code to becoming an architect of intelligent systems. My vision for this portfolio is to serve as a beacon for other young developers in India who are navigating this transition. By focusing on high-impact projects like Shiq and FinEase, I aim to demonstrate how technology can be harnessed to empower individuals and small businesses alike. My commitment to continuous learning and community engagement remains at the core of everything I build."
+                                children: "As we move towards 2026, the role of a developer is shifting from just writing code to becoming an architect of intelligent systems. My vision for this portfolio is to serve as a beacon for other young developers in India who are navigating this transition. By focusing on high-impact projects like Hactiq, VaultDL, and FinEase, I aim to demonstrate how technology can be harnessed to empower individuals and small businesses alike. My commitment to continuous learning and community engagement remains at the core of everything I build."
                               }),
                             ]
                           }),

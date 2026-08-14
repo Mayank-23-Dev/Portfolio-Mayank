@@ -51,7 +51,7 @@ const m = (t = 0) => ({
               n(s({}, m(0)), {
                 className:
                   "font-handwritten text-4xl text-zinc-950 md:text-5xl",
-                children: "Writing",
+                children: "Blogs",
               }),
             ),
             a.jsx(

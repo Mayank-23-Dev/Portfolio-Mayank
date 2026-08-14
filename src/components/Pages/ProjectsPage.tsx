@@ -125,7 +125,7 @@ const V = () => {
           "Built Hactiq from a personal need to understand daily consistency without streak pressure. It uses a clean monthly trend view, habit heatmap, and lightweight insights to help students and professionals stay aware and improve steadily.",
         image: "/images/case studies/couriermgmt/thumbnail.webp",
         link: "/projects/hactiq",
-        badge: "OFFLINE",
+        badge: "LIVE",
       },
     ],
     b = [

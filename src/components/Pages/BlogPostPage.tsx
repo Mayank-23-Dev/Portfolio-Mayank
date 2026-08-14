@@ -197,7 +197,7 @@ const h = (a = 0) => ({
                             to: "/blog",
                             className:
                               "block text-[11px] uppercase tracking-[0.24em] text-zinc-400 transition-colors hover:text-zinc-900",
-                            children: "← Writing",
+                            children: "← Back to Blogs",
                           }),
                         }),
                         e.jsx("nav", {
@@ -242,7 +242,7 @@ const h = (a = 0) => ({
                               to: "/blog",
                               className:
                                 "text-[11px] uppercase tracking-[0.24em] text-zinc-400 transition-colors hover:text-zinc-900",
-                              children: "← Writing",
+                              children: "← Back to Blogs",
                             }),
                           }),
                         ),
