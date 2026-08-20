@@ -337,11 +337,16 @@ const h = (a = 0) => ({
                                                 const parts = c.split(" — ");
                                                 const keyword = parts[0];
                                                 const rest = parts.slice(1).join(" — ");
-                                                let colorClass = "bg-green-200 text-green-900";
-                                                if (keyword.includes("HEAD") || keyword.includes("BODY") || keyword.includes("ROBOTS")) {
-                                                  colorClass = "bg-red-200 text-red-900";
-                                                } else if (keyword.includes("SCHEMA") || keyword.includes("ASSETS") || keyword.includes("PREVENTION")) {
-                                                  colorClass = "bg-yellow-200 text-yellow-900";
+                                                let colorClass = "bg-emerald-200 text-emerald-950 font-bold";
+                                                const uKw = keyword.toUpperCase();
+                                                if (uKw.includes("HEAD") || uKw.includes("BODY") || uKw.includes("ROBOTS") || uKw.includes("AUDIT") || uKw.includes("VERIF") || uKw.includes("ERROR")) {
+                                                  colorClass = "bg-rose-200 text-rose-950 font-bold";
+                                                } else if (uKw.includes("SCHEMA") || uKw.includes("ASSETS") || uKw.includes("PREVENTION") || uKw.includes("ATMOSPHERE") || uKw.includes("GLOW") || uKw.includes("CARD") || uKw.includes("SPOTLIGHT")) {
+                                                  colorClass = "bg-amber-200 text-amber-950 font-bold";
+                                                } else if (uKw.includes("LENIS") || uKw.includes("SMOOTH") || uKw.includes("SCROLL") || uKw.includes("SYNC") || uKw.includes("RAF") || uKw.includes("PHASE 2")) {
+                                                  colorClass = "bg-cyan-200 text-cyan-950 font-bold";
+                                                } else if (uKw.includes("GSAP") || uKw.includes("TRIGGER") || uKw.includes("SVG") || uKw.includes("CONNECTOR") || uKw.includes("BEZIER") || uKw.includes("REVEAL")) {
+                                                  colorClass = "bg-purple-200 text-purple-950 font-bold";
                                                 }
                                                 return e.jsxs("span", {
                                                   children: [
